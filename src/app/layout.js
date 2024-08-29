@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import localFont from '@next/font/local'
 import "./globals.css";
+import Footer from './components/common/footer'
 
 const inter = Inter({ subsets: ["latin"] });
 const monaSans = localFont({
@@ -25,7 +26,7 @@ const monaSans = localFont({
       weight: '700',
       style: 'normal'
     },
-    
+
   ]
 })
 export const metadata = {
@@ -36,7 +37,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={monaSans.className}>{children}</body>
+      <body className={monaSans.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
