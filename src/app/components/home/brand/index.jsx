@@ -22,10 +22,10 @@ const Index = () => {
             <div className="w-[100%]">
                 <h2 className="text-[2.9rem] sm:text-[3.2rem] text-center sm:text-left font-[700] mb-[3rem]">Trusted By The <span className="text-accent-100">Brands Globally</span></h2>
                 <div className="hidden sm:flex items-center justify-between w-[100%]">
-                    {brands.map((item, i) => <Image src={item} key={i} className={`h-auto ${i == 4 ? "w-[6rem]" : ''}`} width={150} height={100} />)}
+                    {brands.map((item, i) => <Image src={item} key={i} className={`h-auto ${i == 4 ? "w-[6rem]" : 'w-[18rem]'}`} width={150} height={100} />)}
                 </div>
                 <div className="sm:hidden">
-                    <Carousel showDots={true} removeArrowOnDeviceType={["tablet", "mobile", 'desktop']} responsive={responsive}>
+                    <Carousel showDots={true} autoPlay={true} autoPlaySpeed={1000} infinite={true} removeArrowOnDeviceType={["tablet", "mobile", 'desktop']} responsive={responsive}>
                         {brands.map((item, i) => <Image src={item} key={i} className={`h-auto ${i == 4 ? "w-[6rem]" : ''}`} width={150} height={100} />)}
                     </Carousel>
                 </div>
