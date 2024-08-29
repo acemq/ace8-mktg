@@ -95,7 +95,7 @@ const Index = () => {
             role: 'AceMQ offers comprehensive microservices design, development, and refactoring services that strictly adhere to industry best practices, including loose coupling and the 12Factor approach.'
         },
     ]
-    
+
     return (
         <section>
             <ServiceMobile services={services_mobile} />
@@ -128,13 +128,13 @@ const ServiceMobile = ({ services }) => {
     }
 
     return (
-        <div className="flex flex-col items-center mt-[2rem] px-[3rem] sm:px-[10rem] sm:hidden">
+        <div className="flex flex-col items-center mt-[5rem] px-[3rem] sm:px-[10rem] sm:hidden">
             <div className="border border-accent-300 px-[2.4rem] rounded-[2rem] py-[.8rem]">
                 <p className="text-[1rem]">Services We Provide</p>
             </div>
 
-            <h2 className="text-[2.5rem] font-[700] w-[220px] text-center mt-[1.8rem]">What We Can <span className="text-accent-300">Do</span>  <span className="font-[500]">For You:</span></h2>
-            <p className="text-center text-[1.1rem] mb-[2rem]">We are a diverse Team of engineers with 100's of years of  experience in software development. We leverage our experience and proven methodologies to bring extreme value to any dev shop.</p>
+            <h2 className="text-[2.5rem] font-[700] w-[220px] text-center mt-[1rem]">What We Can <span className="text-accent-300">Do</span>  <span className="font-[500]">For You:</span></h2>
+            <p className="text-center text-[1.3rem] mb-[2rem]">We are a diverse Team of engineers with 100's of years of  experience in software development. We leverage our experience and proven methodologies to bring extreme value to any dev shop.</p>
             <div className="bg-[#161B22] rounded-[.8rem] w-[100%] px-[1.8rem] py-[1rem]">
                 <div className="bg-[#11161E] py-[2.5rem]">
                     <div className="flex px-[2.8rem] gap-[1rem] font-[600] text-[2rem]">
@@ -145,7 +145,7 @@ const ServiceMobile = ({ services }) => {
                         {_services.map((service, index) => {
                             return (
                                 <React.Fragment key={index}>
-                                    {!service.default && <li onClick={() => toggleModal(index)} className={`flex px-[2.8rem] py-[.8rem] gap-[1rem]`}><Image src={service.image} width={17} height={17} /> <p className="text-[1.3rem]">{service.Name}</p></li>}
+                                    {!service.default && <li onClick={() => toggleModal(index)} className={`flex px-[2.8rem] py-[.8rem] justify-between w-[100%] items-center`}> <div className="flex gap-[1rem]"><Image src={service.image} width={17} height={17} /> <p className="text-[1.3rem]">{service.Name}</p></div><img src="/angle-right.svg" className="w-[2.5rem]" alt="right angle" /></li>}
                                     <AnimatePresence>
                                         {service.active && !service.default && <Modal service={service} toggleModal={toggleModal} id={index} />}
                                     </AnimatePresence>
@@ -279,8 +279,8 @@ const Modal = ({ service, toggleModal, id }) => {
     }
     return (
         <motion.div {...useAnime(modal)} className="fixed w-[100vw] h-[100svh] inset-0 z-30">
-            <motion.div {...useAnime(backdrop)} className="bg-[#0000002f] w-[100vw] h-[100svh] fixed inset-0"></motion.div>
-            <div className="fixed flex flex-col z-40 top-1/2 left-1/2 rounded-[2rem] -translate-x-1/2 -translate-y-1/2 w-[30rem] bg-[#161B22] py-[5rem] px-[2rem]">
+            <motion.div {...useAnime(backdrop)} className="bg-[#0009] w-[100vw] h-[100svh] fixed inset-0"></motion.div>
+            <div className="fixed flex flex-col z-40 top-1/2 left-1/2 rounded-[2rem] -translate-x-1/2 -translate-y-1/2 w-[30rem] bg-[#161B22] py-[3rem] px-[2rem]">
                 <h2 className="text-[1.8rem] mb-[1rem] font-[700]">{service.Name}</h2>
                 <p className="text-[1.2rem]">{service.role}</p>
                 <button className="self-end text-[1.2rem] mt-[2rem] py-[.6rem] px-[1rem] bg-red-500 rounded-[.3rem]" onClick={() => toggleModal(id)}>close</button>

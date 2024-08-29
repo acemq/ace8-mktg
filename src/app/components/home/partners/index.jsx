@@ -26,7 +26,7 @@ const Index = () => {
     ]
 
     return (
-        <section className="px-[3rem] pb-[5rem] sm:px-[10rem] sm:mt-[10rem]">
+        <section className="px-[3rem] pb-[5rem] sm:px-[10rem] mt-[8rem]  sm:mt-[10rem]">
             <div className="sm:bg-black sm:flex sm:pr-[10rem] sm:justify-between">
                 <h4 className="font-[700] text-[2.3rem] sm:text-[2.7rem] sm:w-[48rem] text-center sm:text-start sm:p-[8rem]">Strategically Aligned With <span className="text-accent-200">Industry Leaders</span></h4>
 
