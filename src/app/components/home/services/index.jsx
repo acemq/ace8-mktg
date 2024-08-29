@@ -1,6 +1,16 @@
+'use client';
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from 'framer-motion'
 const Index = () => {
     const services = [
+        {
+            image: '/settings.svg',
+            Name: 'Featured Services',
+            active: true,
+            default: true,
+            defualtImage: 'featured.png'
+        },
         {
             image: '/devsec.svg',
             Name: 'DevSecOps',
@@ -8,21 +18,16 @@ const Index = () => {
             role: 'Bridging the gap between development,  security, and operations. Achieve efficient and secure software delivery through collaboration, automation, and a security-first approach.'
         },
         {
-            image: '/service.svg',
-            Name: 'Environment as a service',
-            active: false
+            image: '/environment_has_a_service.svg',
+            Name: 'Onboarding as a service',
+            active: false,
+            role: 'Accelerate software delivery with our streamlined CI/CD solution, including automated onboarding and customizable off-boarding for efficient development cycles. Spin up entire environments in hours not days.'
         },
         {
             image: '/manag.svg',
             Name: 'Incident Management',
             active: false,
             role: 'Top-notch full-stack  incident management services that prioritize preparation, documentation, and proactive measures to minimize downtime and avoid loss of revenue.'
-        },
-        {
-            image: '/settings.svg',
-            Name: 'DevSecOps',
-            active: false,
-            role: 'Bridging the gap between development,  security, and operations. Achieve efficient and secure software delivery through collaboration, automation, and a security-first approach.'
         },
         {
             image: '/message.svg',
@@ -45,17 +50,70 @@ const Index = () => {
         {
             image: '/testing.svg',
             Name: 'Automated Testing',
-            active: true,
+            active: false,
             role: 'your e-commerce application. Our unique approach includes AI-enhanced test code, seamless  CI/CD integration, and crowd-sourced test case development to save time and resources. '
         },
     ]
+
+    const services_mobile = [...services]
+
+    const features = [
+        {
+            image: '/broker.svg',
+            Name: 'Message Brokers ',
+            active: false,
+            role: 'Your trusted partner for seamless integration of message brokers. With troubleshooting expertise, consulting and assessment services, and comprehensive support, we optimize performance and ensure smooth operations for your technology stack.'
+        },
+        {
+            image: '/data__analytic_inte.svg',
+            Name: 'Data Analytics Integration ',
+            active: false,
+            role: 'Differentiating through our unique integration approach. Seamlessly integrate e-commerce data with Databricks/Snowflake. Design consulting, cost optimization, and fault tolerance ensure efficient, uninterrupted access to critical data.'
+        },
+        {
+            image: '/automated_testing.svg',
+            Name: 'Automated Testing ',
+            active: false,
+            role: 'your e-commerce application. Our unique approach includes AI-enhanced test code, seamless  CI/CD integration, and crowd-sourced test case development to save time and resources. '
+        },
+        {
+            image: '/onboarding_service.svg',
+            Name: 'Onboarding as a Service',
+            active: false,
+            role: 'Accelerate software delivery with our streamlined  CI/CD solution, including automated onboarding and customizable off-boarding for efficient development cycles. Spin up entire environments in hours not days.'
+        },
+        {
+            image: '/incident_management.svg',
+            Name: 'Incident Management',
+            active: false,
+            role: 'Accelerate software delivery with our streamlined  CI/CD solution, including automated onboarding and customizable off-boarding for efficient development cycles. Spin up entire environments in hours not days.'
+        },
+        {
+            image: '/refactoring.svg',
+            Name: 'Microservices Design, Development & Refactoring',
+            active: false,
+            role: 'AceMQ offers comprehensive microservices design, development, and refactoring services that strictly adhere to industry best practices, including loose coupling and the 12Factor approach.'
+        },
+    ]
+    
     return (
         <section>
-            <ServiceMobile services={services} />
+            <ServiceMobile services={services_mobile} />
             <ServiceDesktop services={services} />
-            <div className=" responsive-grid px-[3rem] sm:px-[10rem] mt-[6rem] flex  flex-col-reverse gap-y-[2rem]">
-                { services.map((service, index) => <Card service={service} key={index} />) }
+            <div className=" px-[3rem] sm:px-[10rem] mt-[6rem] ">
+                <div className="responsive-grid flex flex-col-reverse gap-y-[2rem]">
+                    {features.map((service, index) => <Card service={service} key={index} />)}
+                </div>
+                <div className="pl-[8rem] pr-[4rem] py-[7rem] hidden bg-black sm:flex justify-between w-[100%] mt-[4rem]">
+                    <div className="w-[450px]">
+                        <img src="/_devsecops.svg" className="w-[6rem]" alt="icon" />
+                        <h3 className="font-[600] mb-1 text-[2rem] sm:mb-[2rem] text-center sm:text-start">DevSecOps</h3>
+                        <p className="text-[1.2rem] sm:text-[1.7rem] text-center sm:text-start">Bridging the gap between development,  security, and operations. Achieve efficient and secure software delivery through collaboration, automation, and a security-first approach.</p>
+                    </div>
+                    <Image width={657} height={361} className="w-[50rem]" src="/infinity.png" alt="" />
+                </div>
             </div>
+
         </section>
     );
 }
@@ -63,6 +121,12 @@ const Index = () => {
 export default Index;
 
 const ServiceMobile = ({ services }) => {
+    const [_services, setServices] = useState(services)
+
+    const toggleModal = (id) => {
+        setServices(prevServices => prevServices.map((item, i) => id == i ? { ...item, active: !item.active } : { ...item, active: false }))
+    }
+
     return (
         <div className="flex flex-col items-center mt-[2rem] px-[3rem] sm:px-[10rem] sm:hidden">
             <div className="border border-accent-300 px-[2.4rem] rounded-[2rem] py-[.8rem]">
@@ -78,7 +142,16 @@ const ServiceMobile = ({ services }) => {
                         <h4>Our Services</h4>
                     </div>
                     <ul className="mt-[3rem] flex flex-col gap-[1.5rem]">
-                        {services.map((service, index) => <li className={`flex px-[2.8rem] py-[.8rem] gap-[1rem] ${service.active ? "bg-accent-300" : ''}`} key={index}><Image src={service.image} width={17} height={17} /> <p className="text-[1.3rem]">{service.Name}</p></li>)}
+                        {_services.map((service, index) => {
+                            return (
+                                <React.Fragment key={index}>
+                                    {!service.default && <li onClick={() => toggleModal(index)} className={`flex px-[2.8rem] py-[.8rem] gap-[1rem]`}><Image src={service.image} width={17} height={17} /> <p className="text-[1.3rem]">{service.Name}</p></li>}
+                                    <AnimatePresence>
+                                        {service.active && !service.default && <Modal service={service} toggleModal={toggleModal} id={index} />}
+                                    </AnimatePresence>
+                                </React.Fragment>
+                            )
+                        })}
                     </ul>
                 </div>
             </div>
@@ -87,6 +160,11 @@ const ServiceMobile = ({ services }) => {
 }
 
 const ServiceDesktop = ({ services }) => {
+    const [_services, setServices] = useState(services)
+
+    const toggleActive = (id) => {
+        setServices(prevServices => prevServices.map((item, i) => id == i ? { ...item, active: true } : { ...item, active: false }))
+    }
     return (
         <div className="px-[3rem] sm:px-[10rem] sm:flex gap-x-[4rem] hidden">
             <div className="overflow-hidden sm:w-[3.7rem] h-[50rem] hidden sm:block">
@@ -102,24 +180,38 @@ const ServiceDesktop = ({ services }) => {
                         <p className="text-[1.5rem]">We are a diverse Team of engineers with 100's of years of  experience in software development. We leverage our experience and proven methodologies to bring extreme value to any dev shop.</p>
                     </div>
                 </div>
-                <div className="flex bg-[#161B22] p-[1.5rem] gap-x-[2rem]">
+                <div className="flex bg-[#161B22] p-[1.5rem]  gap-x-[2rem]">
                     <div className="bg-[#11161E] py-[2.5rem]">
-                        <div className="flex px-[2.8rem] gap-[1rem] pt-[3rem]">
+                        {/* <div className="flex px-[2.8rem] gap-[1rem] pt-[3rem]">
                             <Image src="/settings.svg" className="w-[2.5rem] h-[2.5rem]" width={17} height={17} alt="" />
                             <h4 className="font-[600] text-[1.5rem]">Featured Services</h4>
-                        </div>
-                        <ul className="mt-[1.5rem] flex flex-col gap-[1.5rem]">
-                            {services.map((service, index) => <li className={`flex px-[2.8rem] py-[.8rem] gap-[1rem] ${service.active ? "bg-accent-300" : ''}`} key={index}><Image src={service.image} className="w-[2.5rem] h-[2.5rem]" width={17} height={17} /> <p className="text-[1.3rem]">{service.Name}</p></li>)}
+                        </div> */}
+                        <ul className="mt-[1.5rem] flex flex-col gap-[1.5rem] sm:gap-[.5rem]">
+                            {_services.map((service, index) => <li onClick={() => toggleActive(index)} className={`flex px-[2.8rem] py-[.8rem] hover:bg-accent-300  hover:cursor-pointer rounded-[.5rem] gap-[1rem] ${service.active ? "bg-accent-300" : ''}`} key={index}><Image src={service.image} className="w-[2.5rem] h-[2.5rem]" alt="icon" width={17} height={17} /> <p className="text-[1.3rem]">{service.Name}</p></li>)}
                         </ul>
                     </div>
-                    <div className="bg-[#0D1117] p-[1.5rem] rounded-[1rem]">
-                        <div className="bg-[#161B22] rounded-[.8rem]">
-                            <div className="px-[3rem] mb-[3rem] pt-[3rem]">
-                                <Image src='/testing.svg' width={84} height={84} />
-                                <h2 className="font-[700] text-[2.5rem] w-[15rem]">Automated Testing</h2>
+                    <div className="bg-[#0D1117] p-[1.5rem] rounded-[1rem]" >
+                        {_services.map((item, i) => item.active && (
+                            <div className="bg-[#161B22] pb-[1.5rem] px-[3rem] h-[100%] rounded-[.8rem]" key={item.Name}>
+                                {
+                                    item.default ? (
+                                        <div className="pt-[3rem] w-[27rem] flex flex-col">
+                                            <h2 className="font-[700] text-[2.5rem]">{item.Name}</h2>
+                                            <img src={item.defualtImage} className="w-[20rem] self-center mt-[8rem]" alt="featured_icon" />
+                                        </div>
+                                    ) : (
+                                        <React.Fragment>
+                                            <div className="mb-[3rem] pt-[3rem]">
+                                                <Image src={item.image} alt="icon" className="w-[8rem] h-[8rem]" width={84} height={84} />
+                                                <h2 className="font-[700] text-[2.5rem] w-[20rem]">{item.Name}</h2>
+                                            </div>
+                                            {/* <Image src='/automated-testing.png' alt="icon" className="w-[25rem] h-[20rem]" width={396} height={367} /> */}
+                                            <p className="w-[27rem] text-[1.4rem]">{item.role}</p>
+                                        </React.Fragment>
+                                    )
+                                }
                             </div>
-                            <Image src='/automated-testing.png' width={396} height={367} />
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -130,8 +222,69 @@ const ServiceDesktop = ({ services }) => {
 
 const Card = ({ service }) => (
     <div className="bg-black py-[1.8rem] sm:py-[2.5rem] px-[1.2rem] sm:px-[1.6rem] w-[100%] sm:w-[40rem] flex flex-col items-center sm:items-start">
-        <img src={service.image} className="w-[6rem] h-[6rem]" alt="icon" />
+        <img src={service.image} className="w-[4rem] h-[6rem]" alt="icon" />
         <h4 className="font-[600] mb-1 text-[2rem] sm:mb-[2rem] text-center sm:text-start">{service.Name}</h4>
         <p className="text-[1.2rem] sm:text-[1.7rem] text-center sm:text-start">{service.role}</p>
     </div>
 )
+
+const Modal = ({ service, toggleModal, id }) => {
+
+    useEffect(() => {
+        if (service.active) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [service.active]);
+    const useAnime = (variants) => {
+        return {
+            initial: 'initial',
+            animate: 'animate',
+            exit: 'exit',
+            variants
+        }
+    }
+    const modal = {
+        initial: {
+            scale: .7,
+            opacity: 0
+        },
+        animate: {
+            scale: 1,
+            duration: .7,
+            opacity: 1,
+        },
+        exit: {
+            duration: .7,
+            opacity: 0
+        }
+    }
+    const backdrop = {
+        initial: {
+            opacity: 0
+        },
+        animate: {
+            duration: .7,
+            opacity: 1,
+            transition: 'ease-in'
+        },
+        exit: {
+            duration: .7,
+            opacity: 0
+        }
+    }
+    return (
+        <motion.div {...useAnime(modal)} className="fixed w-[100vw] h-[100svh] inset-0 z-30">
+            <motion.div {...useAnime(backdrop)} className="bg-[#0000002f] w-[100vw] h-[100svh] fixed inset-0"></motion.div>
+            <div className="fixed flex flex-col z-40 top-1/2 left-1/2 rounded-[2rem] -translate-x-1/2 -translate-y-1/2 w-[30rem] bg-[#161B22] py-[5rem] px-[2rem]">
+                <h2 className="text-[1.8rem] mb-[1rem] font-[700]">{service.Name}</h2>
+                <p className="text-[1.2rem]">{service.role}</p>
+                <button className="self-end text-[1.2rem] mt-[2rem] py-[.6rem] px-[1rem] bg-red-500 rounded-[.3rem]" onClick={() => toggleModal(id)}>close</button>
+            </div>
+        </motion.div>
+    );
+}

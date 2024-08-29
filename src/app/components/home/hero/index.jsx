@@ -1,6 +1,8 @@
+import Image from "next/image";
 const Index = () => {
     return (
-        <section className="pt-[4.5rem] sm:pt-[15rem] sm:bg-blend-lighten pl-[3rem] md:pl-[10rem] pb-[15rem] sm:pb-[0] bg-hero-background-mobile md:bg-hero-background-desktop bg-cover bg-no-repeat bg-bottom">
+        <section className="pt-[4.5rem] sm:pt-[15rem] sm:bg-blend-lighten pl-[3rem] md:pl-[10rem] pb-[15rem] sm:pb-[0] bg-hero-background-mobile bg-cover sm:bg-none bg-no-repeat bg-bottom relative">
+            <Image src='/hero_bg.png' className="mask hidden sm:block absolute w-[100%] object-cover top-[0] z-[0] left-0 h-[100%] even" width={1920} height={896} alt="background-image" />
             <div className="flex items-start relative gap-x-[4rem]">
                 <img src="/mile_1.png" className="hidden sm:w-[3.7rem] sm:mt-[3rem] sm:block" alt="line" />
                 <div className="">

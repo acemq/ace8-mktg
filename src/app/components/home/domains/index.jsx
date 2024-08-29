@@ -2,49 +2,49 @@ import Image from "next/image";
 const Index = () => {
     const domains = [
         {
-            image: '/architecture.png',
+            image: '/advanced_architecture.svg',
             name: 'Advanced Architectures',
             title: '(AceEA)',
             role: 'Our team of experts excels in designing and implementing advanced technology enterprise architectures, ensuring your systems are not just up to date, but ahead of the curve.'
         },
         {
-            image: '/queuing.png',
+            image: '/messaging_queuing.svg',
             name: 'Messaging Queuing',
             title: '(AceMQ)',
             role: 'Seamless communication is the backbone of any successful enterprise. Ace8 specializes in crafting robust messaging queuing solutions to optimize your data flow and enhance collaboration.'
         },
         {
-            image: '/devops.png',
+            image: '/devsecops.svg',
             name: 'DevSecOps',
             title: '(AceEA)',
             role: 'Security is at the core of everything we do. With our DevSecOps practices, we seamlessly integrate security into the development process, providing you with a robust and secure foundation.'
         },
         {
-            image: '/cloudNative.png',
+            image: '/cloud_native.svg',
             name: 'Cloud-Native',
             title: '(AceCloud)',
             role: 'Ace8 pioneers Cloud-Native solutions, leveraging the power of the cloud to enhance scalability, flexibility, and efficiency. Transform your business operations with our expert cloud services.'
         },
         {
-            image: '/extreme_automation.png',
+            image: '/extreme_automation.svg',
             name: 'Extreme Automation',
             title: 'AceAutomate',
             role: 'Efficiency is key. Ace8 excels in Extreme Automation, optimizing your workflows and processes, allowing your business to operate at maximum productivity.'
         },
         {
-            image: '/data_managment.png',
+            image: '/data_management.svg',
             name: 'Data Management and Solutions',
             title: '(AceData)',
             role: 'Unlock the full potential of your data with Ace8\'s comprehensive Data Management and Solutions. From storage to analytics, we ensure your data is a valuable asset, not a challenge.'
         },
         {
-            image: '/incident.png',
+            image: '/support_incident.svg',
             name: 'Support and Incident Management',
             title: '(AceFortify)',
             role: 'Our dedicated support and incident management services guarantee that your systems remain operational, minimizing downtime and ensuring a seamless experience for your users.'
         },
         {
-            image: '/code.png',
+            image: '/microservices.svg',
             name: 'Microservices/ Code/Development',
             title: '(AceMS)',
             role: 'Agility with our Microservices/Code/Development expertise. Ace8 empowers you to build and scale applications with ease, fostering innovation and rapid development cycles.'
@@ -73,7 +73,7 @@ const DomiansMobile = ({ domains }) => (
 
 
 const DomainsDesktop = ({ domains }) => (
-    <section className="hidden sm:flex px-[3rem] sm:px-[10rem] gap-x-[4rem] flex ">
+    <section className="hidden sm:flex px-[3rem] sm:px-[10rem] gap-x-[4rem]">
         <img src="/mile_4.png" alt="arrow" className="hidden sm:w-[3.7rem] sm:block" />
         <div className="flex flex-col">
             <div className="">
@@ -108,17 +108,17 @@ const DomainDesktop = ({ domain, id }) => {
             case 1:
                 return 'top-[0] left-[30rem]'
             case 2:
-                return 'top-[0] left-[60rem]'
+                return 'top-[0] right-[30rem]'
             case 3:
-                return 'top-[10rem] left-[90rem]'
+                return 'top-[10rem] right-[0]'
             case 4:
                 return 'top-[47rem] left-[0]'
             case 5:
                 return 'top-[57rem] left-[30rem]'
             case 6:
-                return 'top-[57rem] left-[60rem]'
+                return 'top-[57rem] right-[30rem]'
             case 7:
-                return 'top-[47rem] left-[90rem]'
+                return 'top-[47rem] right-[0]'
             default:
                 break;
         }
