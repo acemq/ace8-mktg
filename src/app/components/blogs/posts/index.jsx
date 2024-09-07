@@ -77,7 +77,7 @@ const Index = () => {
 
                     <Link href={''} className="font-[700] text-[1.4rem] pr-[1rem] sm:hidden mb-[3rem] border-b-[2px] border-[#5747A5]">Read Post</Link>
                 </div>
-                <div className="sm:responsive-grid flex flex-col items-center mt-[3rem] sm:mt-[0]">
+                <div className="responsive-grid mt-[3rem] sm:mt-[0]">
                     {posts.map((post, index) => <Post post={post} key={index}  style={''} />)}
                 </div>
                 <button className="btn border-[#8167FF] border-[2px] text-[#8167FF] self-center sm:mt-[4.5rem]">View More</button>
@@ -93,7 +93,7 @@ const Date = ({ style }) => (<p className={`flex gap-[.5rem] ${style} items-cent
 
 const Post = ({ style, post }) => {
     return (
-        <div className={`${style} flex flex-col w-[250px] sm:w-[35rem] self-center`}>
+        <div className={`${style} flex flex-col w-[25rem] mx-auto sm:w-[35rem] self-center`}>
             <Date style={'self-end  mb-[1rem] sm:hidden'} />
             <img src={post.image} alt="blog_post" className="" />
             <p className="text-[#8167FF] mb-[.5rem]">{post.header}</p>
