@@ -2,7 +2,9 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import MaxContainer from '../maxContainer/index'
+import { usePathname } from "next/navigation";
 const Index = () => {
+    const pathName = usePathname()
     const [open, setOpen] = useState(false)
     const toggleNav = () => {
         setOpen(prevOpen => !prevOpen)
@@ -19,7 +21,28 @@ const Index = () => {
         };
     }, [open]);
 
-    const NavItems = ['Home', 'About Us', 'Services', 'Blog', 'Customer Stories']
+    const navItems = [
+        {
+            label: 'Home',
+            link:  '/'
+        },
+        {
+            label: 'About us',
+            link: '/About'
+        },
+        {
+            label: 'Service',
+            link: '/Service'
+        },
+        {
+            label:  'Blog',
+            link:  '/Blog'
+        },
+        {
+            label: 'Customer Stories',
+            link: '/stories'
+        }
+    ]
     return (
         <nav className={` bg-black `}>
             <MaxContainer>
@@ -28,7 +51,7 @@ const Index = () => {
                         <img src="/ace_logo.png" className="w-[7.6rem] lg:w-[10rem] lg:mr-[10rem]" alt="logo" />
                         <div className={`fixed lg:static z-20 w-[100vw] lg:w-auto h-[100vh] lg:h-auto bg-black inset-0 lg:inset-auto px-[2rem] sm:px-0 transition-all duration-500  ease-[cubic-bezier(0.65, 0, 0.35, 1)] ${open ? 'translate-x-0' : 'translate-x-[100%] lg:translate-x-0'}`}>
                             <ul className="mt-[7rem] lg:mt-0 lg:flex">
-                                {NavItems.map((item, i) => (<Link key={i} href={`/${item}`} className="py-[1rem] lg:px-[1rem] lg:ml-[2rem] block"><li className="text-[1.5rem] lg:text-[1.3] lg:font-normal font-medium">{item}</li></Link>))}
+                                {navItems.map((item, i) => (<Link key={i} href={item.link} className="py-[1rem] lg:px-[1rem] lg:ml-[2rem] block"><li className={`text-[1.5rem] ${pathName === item.link ? 'text-accent-100 border-b border-accent-100' : ''} lg:text-[1.3] lg:font-normal font-medium`}>{item.label}</li></Link>))}
                             </ul>
                         </div>
 

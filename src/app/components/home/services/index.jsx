@@ -101,7 +101,7 @@ const Index = () => {
             <ServiceMobile services={services_mobile} />
             <ServiceDesktop services={services} />
             <div className=" px-[3rem] sm:px-[10rem] mt-[6rem] ">
-                <div className="responsive-grid flex flex-col-reverse gap-y-[2rem]">
+                <div className="responsive-grid flex flex-col-reverse">
                     {features.map((service, index) => <Card service={service} key={index} />)}
                 </div>
                 <div className="pl-[8rem] pr-[4rem] py-[7rem] hidden bg-black sm:flex justify-between w-[100%] mt-[4rem]">
@@ -177,7 +177,7 @@ const ServiceDesktop = ({ services }) => {
                     </div>
                     <div className="w-[40rem]">
                         <h2 className="font-[700] text-[5rem] mb-[2rem]">What We Can Do <span className="font-[400]">For You:</span></h2>
-                        <p className="text-[1.5rem]">We are a diverse Team of engineers with 100's of years of  experience in software development. We leverage our experience and proven methodologies to bring extreme value to any dev shop.</p>
+                        <p className="">We are a diverse Team of engineers with 100's of years of  experience in software development. We leverage our experience and proven methodologies to bring extreme value to any dev shop.</p>
                     </div>
                 </div>
                 <div className="flex bg-[#161B22] p-[1.5rem]  gap-x-[2rem]">
@@ -187,7 +187,7 @@ const ServiceDesktop = ({ services }) => {
                             <h4 className="font-[600] text-[1.5rem]">Featured Services</h4>
                         </div> */}
                         <ul className="mt-[1.5rem] flex flex-col gap-[1.5rem] sm:gap-[.5rem]">
-                            {_services.map((service, index) => <li onClick={() => toggleActive(index)} className={`flex px-[2.8rem] py-[.8rem] hover:bg-accent-300  hover:cursor-pointer rounded-[.5rem] gap-[1rem] ${service.active ? "bg-accent-300" : ''}`} key={index}><Image src={service.image} className="w-[2.5rem] h-[2.5rem]" alt="icon" width={17} height={17} /> <p className="text-[1.3rem]">{service.Name}</p></li>)}
+                            {_services.map((service, index) => <li onClick={() => toggleActive(index)} className={`flex px-[2.8rem] py-[.8rem] hover:bg-accent-300  hover:cursor-pointer rounded-[.5rem] gap-[1rem] ${service.active ? "bg-accent-300" : ''}`} key={index}><Image src={service.image} className="w-[2.5rem] h-[2.5rem]" alt="icon" width={17} height={17} /> <p className="">{service.Name}</p></li>)}
                         </ul>
                     </div>
                     <div className="bg-[#0D1117] p-[1.5rem] rounded-[1rem]" >
@@ -206,7 +206,7 @@ const ServiceDesktop = ({ services }) => {
                                                 <h2 className="font-[700] text-[2.5rem] w-[20rem]">{item.Name}</h2>
                                             </div>
                                             {/* <Image src='/automated-testing.png' alt="icon" className="w-[25rem] h-[20rem]" width={396} height={367} /> */}
-                                            <p className="w-[27rem] text-[1.4rem]">{item.role}</p>
+                                            <p className="w-[27rem]">{item.role}</p>
                                         </React.Fragment>
                                     )
                                 }
@@ -221,7 +221,7 @@ const ServiceDesktop = ({ services }) => {
 
 
 const Card = ({ service }) => (
-    <div className="bg-black py-[1.8rem] sm:py-[2.5rem] px-[1.2rem] sm:px-[1.6rem] w-[100%] sm:w-[40rem] flex flex-col items-center sm:items-start">
+    <div className="bg-black py-[1.8rem] sm:py-[2.5rem] px-[1.2rem] sm:px-[1.6rem] w-[100%] sm:w-[38rem] flex flex-col items-center sm:items-start">
         <img src={service.image} className="w-[4rem] h-[6rem]" alt="icon" />
         <h4 className="font-[600] mb-1 text-[2rem] sm:mb-[2rem] text-center sm:text-start">{service.Name}</h4>
         <p className="text-[1.2rem] sm:text-[1.7rem] text-center sm:text-start">{service.role}</p>

@@ -86,7 +86,7 @@ const DomainsDesktop = ({ domains }) => (
                 {domains.map((domain, index) => <DomainDesktop domain={domain} key={index} id={index} />)}
             </div>
             <Conntal />
-            <p className="text-[3rem] font-[700] text-[#FFFFFF] mt-[9rem]">Ace8 is not just a technology services company; we are your strategic partner in navigating the ever-evolving landscape of technology. Elevate your business to new heights with Ace8 - Where innovation meets excellence!</p>
+            <p className="text-[3rem] leading-[4rem] font-[700] text-[#FFFFFF] mt-[9rem]">Ace8 is not just a technology services company; we are your strategic partner in navigating the ever-evolving landscape of technology. Elevate your business to new heights with Ace8 - Where innovation meets excellence!</p>
         </div>
     </section>
 )

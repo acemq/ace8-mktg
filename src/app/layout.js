@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import localFont from '@next/font/local'
 import "./globals.css";
 import Footer from './components/common/footer'
-
+import Navbar from './components/common/navbar'
 const inter = Inter({ subsets: ["latin"] });
 const monaSans = localFont({
   src: [
@@ -38,6 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={monaSans.className}>
+        <Navbar />
         {children}
         <Footer />
       </body>
