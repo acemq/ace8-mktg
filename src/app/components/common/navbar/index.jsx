@@ -36,7 +36,7 @@ const Index = () => {
         },
         {
             label:  'Blog',
-            link:  '/Blog'
+            link:  '/Blogs'
         },
         {
             label: 'Customer Stories',

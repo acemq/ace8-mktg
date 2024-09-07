@@ -97,3 +97,9 @@ p {
 .sub-header{
   @apply text-[2.8rem] font-[700] sm:text-[3.5rem]
 }
+
+.post_responsive_grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 2rem;
+}
