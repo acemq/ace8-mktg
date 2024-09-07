@@ -21,6 +21,10 @@ const Index = () => {
         };
     }, [open]);
 
+    useEffect(() => {
+        setOpen(false)
+    }, [pathName])
+
     const navItems = [
         {
             label: 'Home',
