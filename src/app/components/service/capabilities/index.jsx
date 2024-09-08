@@ -36,7 +36,6 @@ const Index = () => {
             containerStyle: 'flex-row-reverse sm:mt-[10rem] mt-[5rem] text-end sm:text-start',
             roleOrientation: 'flex-row-reverse',
             imageStyle: '',
-            roleOrientation: 'flex-row',
         },
         {
             header: 'Incident Management',
