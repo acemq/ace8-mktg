@@ -33,8 +33,10 @@ const Index = () => {
             ],
             link: '',
             mutipleImage: <OnboardingLeft />,
-            containerStyle: 'flex-row-reverse sm:mt-[10rem] mt-[5rem]',
-            imageStyle: ''
+            containerStyle: 'flex-row-reverse sm:mt-[10rem] mt-[5rem] text-end sm:text-start',
+            roleOrientation: 'flex-row-reverse',
+            imageStyle: '',
+            roleOrientation: 'flex-row',
         },
         {
             header: 'Incident Management',
@@ -49,6 +51,7 @@ const Index = () => {
                 'Proactive incident management to minimize downtime and loss of revenue'
             ],
             link: '',
+            roleOrientation: 'flex-row',
             containerStyle: 'sm:mt-[10rem] mt-[5rem]',
             imageStyle: 'sm:w-[55rem] sm:h-[53rem]'
         },
@@ -66,8 +69,9 @@ const Index = () => {
             ],
             text: 'At AceMQ, we provide expert guidance for scalable systems through asynchronous messaging. Our services cover the selection of appropriate message patterns and testing of throughput and latency to ensure optimal performance.',
             link: '',
-            containerStyle: 'sm:mt-[10rem] flex-row-reverse mt-[5rem]',
-            imageStyle: 'sm:w-[65rem] sm:h-auto'
+            containerStyle: 'sm:mt-[10rem] text-end sm:text-start flex-row-reverse mt-[5rem] ',
+            roleOrientation: 'flex-row-reverse',
+            imageStyle: 'sm:w-[65rem] sm:h-auto hidden sm:block'
         },
     ]
 
@@ -85,7 +89,8 @@ const Index = () => {
             ],
             link: '',
             containerStyle: 'sm:mt-[15rem]',
-            imageStyle: 'w-[70rem] h-auto',
+            roleOrientation: 'flex-row',
+            imageStyle: 'sm:w-[70rem] hidden sm:block h-auto',
             circle: '#fff'
         },
         {
@@ -101,8 +106,9 @@ const Index = () => {
                 'Assistance with setting up  CI/CD pipelines if needed'
             ],
             link: '',
-            containerStyle: 'sm:mt-[10rem] flex-row-reverse items-center',
-            imageStyle: 'w-[60rem] h-auto',
+            containerStyle: 'sm:mt-[10rem] text-end sm:text-start flex-row-reverse items-center',
+            roleOrientation: 'flex-row-reverse',
+            imageStyle: 'sm:w-[60rem] hidden sm:block h-auto',
             circle: '#fff'
         },
         {
@@ -120,7 +126,7 @@ const Index = () => {
             ],
             link: '',
             containerStyle: 'sm:mt-[10rem] items-center',
-            imageStyle: 'w-[60rem] h-auto',
+            imageStyle: 'sm:w-[60rem] hidden sm:block h-auto',
             circle: '#fff'
         },
     ]
@@ -150,9 +156,14 @@ export default Index;
 
 const OnboardingLeft = () => {
     return (
-        <div className="">
-            <img src="/service_onboarding.svg" className='w-[65rem] border h-auto' alt="services" />
-            <img src="/service_receipt.svg" className='w-[30rem] right-[-2rem] top-[-3rem] relative' alt="" />
+        <div className="hidden sm:block">
+            <img src="/onboarding_service.png" className='sm:w-[65rem] border h-auto' alt="services" />
+            <img src="/_service_receipt.svg" className='sm:w-[25rem] right-[-1.5rem] top-[-1rem] relative' alt="" />
+
+            <div className="sm:w-[42rem] sm:px-[2rem] relative right-[-28rem] top-[-12rem] border-l border-[#F888C6]">
+                <p className="text-[#F888C6] text-[1.7rem]">Are you tired of lengthy onboarding processes and inefficient software delivery? </p>
+                <p className="">Our Onboarding as a Service (OBaaS) solution offers a streamlined approach to  CI/CD services, accelerating your development and testing cycle</p>
+            </div>
         </div>
     )
 }
