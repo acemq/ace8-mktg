@@ -40,7 +40,7 @@ const Index = ({ item }) => {
                                     <div style={{ border: item.circle ?  `2px solid ${item.circle}`  : '2px solid #0D1117' }} className="w-[1.5rem] h-[1.5rem] rounded-full"></div>
                                 }
                                 {
-                                    (i + 1) !== rolesLength && (<div style={{ backgroundColor: item.lineColor }} className={`w-[1px] h-[90%]`}></div>)
+                                    (i + 1) !== rolesLength && (<div style={{ backgroundColor: item.lineColor }} className={`w-[2px] h-[90%]`}></div>)
                                 }
                             </div>
                             <p className="">{_item}</p>

@@ -3,9 +3,11 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import MaxContainer from '../maxContainer/index'
 import { usePathname } from "next/navigation";
+import Service from '../../service/serviceNav'
 const Index = () => {
     const pathName = usePathname()
     const [open, setOpen] = useState(false)
+    const [openService, setOpenService] = useState(false)
     const toggleNav = () => {
         setOpen(prevOpen => !prevOpen)
     }
@@ -23,12 +25,13 @@ const Index = () => {
 
     useEffect(() => {
         setOpen(false)
+        setOpenService(false)
     }, [pathName])
 
     const navItems = [
         {
             label: 'Home',
-            link:  '/'
+            link: '/'
         },
         {
             label: 'About us',
@@ -39,8 +42,8 @@ const Index = () => {
             link: '/Service'
         },
         {
-            label:  'Blog',
-            link:  '/Blogs'
+            label: 'Blog',
+            link: '/Blogs'
         },
         {
             label: 'Customer Stories',
@@ -55,12 +58,14 @@ const Index = () => {
                         <img src="/ace_logo.png" className="w-[7.6rem] lg:w-[10rem] lg:mr-[10rem]" alt="logo" />
                         <div className={`fixed lg:static z-20 w-[100vw] lg:w-auto h-[100vh] lg:h-auto bg-black inset-0 lg:inset-auto px-[2rem] sm:px-0 transition-all duration-500  ease-[cubic-bezier(0.65, 0, 0.35, 1)] ${open ? 'translate-x-0' : 'translate-x-[100%] lg:translate-x-0'}`}>
                             <ul className="mt-[7rem] lg:mt-0 lg:flex">
-                                {navItems.map((item, i) => (<Link key={i} href={item.link} className="py-[1rem] lg:px-[1rem] lg:ml-[2rem] block"><li className={`text-[1.5rem] ${pathName === item.link ? 'text-accent-100 border-b border-accent-100' : ''} lg:text-[1.3] lg:font-normal font-medium`}>{item.label}</li></Link>))}
+                                {navItems.map((item, i) => <NavItem item={item} setOpen={setOpen} openService={openService} setOpenService={setOpenService} id={i} key={i} />)}
                             </ul>
                         </div>
 
                     </div>
-
+                  {
+                    openService  && <Service setOpenService={setOpenService} />
+                  }
                     <div className="flex items-center gap-x-[3rem]">
                         <button className="font-bold rounded-[.5rem] text-[1rem] lg:text-[1.3rem] lg:border text-text-100 lg:text-white bg-white lg:bg-transparent px-[1.2rem] lg:px-[2.3rem] py-[.7rem]">
                             Contact us
@@ -79,3 +84,28 @@ const Index = () => {
 }
 
 export default Index;
+
+
+
+const NavItem = ({ item, id, setOpenService, setOpen }) => {
+    const pathName = usePathname()
+
+    const toggleOpenService = () => {
+        setOpenService(prevService => !prevService)
+    }
+    return (
+        <>
+            {
+                id == 2 ? (
+                    <button onClick={toggleOpenService} className="py-[1rem] lg:px-[1rem] lg:ml-[2rem] block">
+                        <li className={`text-[1.5rem] ${pathName === item.link ? 'text-accent-100 border-b border-accent-100' : ''} lg:text-[1.3] lg:font-normal font-medium`}>{item.label}</li>
+                    </button>
+                ) : (
+                    <Link href={item.link} className="py-[1rem] lg:px-[1rem] lg:ml-[2rem] block">
+                        <li className={`text-[1.5rem] ${pathName === item.link ? 'text-accent-100 border-b border-accent-100' : ''} lg:text-[1.3] lg:font-normal font-medium`}>{item.label}</li>
+                    </Link>
+                )
+            }
+        </>
+    )
+}
