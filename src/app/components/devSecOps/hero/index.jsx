@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Index = () => {
     return (
-        <section className="py-[5.5rem] sm:pt-[3rem] sm:pb-[10rem] px-[2rem] sm:px-[10rem] relative">
+        <section className="py-[5.5rem] sm:pt-[3rem]  sm:pb-[10rem] px-[2rem] sm:px-[10rem] relative">
             <Image src='/about_bg.png' className="absolute mix-blend-overlay inset-0 sm:hidden top-0 w-[100%] h-[100%] multiply" width={790} height={387} alt="wheel" />
             <Image src='/about_bg_sm.png' className="absolute mix-blend-overlay sm:block hidden inset-0 top-0 w-[100%] h-[100%]" width={1920} height={940} alt="wheel" />
             <img src="/devsecops_code.png" className="absolute bottom-[-79rem] ml-[3rem] hidden sm:block z-[10] w-[115rem]" alt="" />

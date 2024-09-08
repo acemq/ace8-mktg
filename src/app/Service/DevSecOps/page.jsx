@@ -4,12 +4,17 @@ import Body from '../../components/devSecOps/body'
 import Contact from '../../components/common/contact'
 const DevSecOps = () => {
     return (
-        <MaxContainer>
-            <Hero />
+
+        <>
+            <MaxContainer>
+                <Hero />
+            </MaxContainer>
             <Body />
-            <Contact />
-        </MaxContainer>
+            <MaxContainer>
+                <Contact />
+            </MaxContainer>
+        </>
     );
 }
- 
+
 export default DevSecOps;

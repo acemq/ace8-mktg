@@ -1,5 +1,5 @@
 import PlaceTextBesideImage from '../../common/placeTextBesideImage'
-
+import MaxContainer from '../../common/maxContainer'
 const Index = () => {
     const capabilities = [
         {
@@ -131,20 +131,24 @@ const Index = () => {
     ]
     return (
         <section className="">
-            <div className="bg-white text-black px-[3rem] sm:px-[10rem] sm:flex flex-col py-[3rem]">
-                <h2 className="sub-header text-center mb-[2.5rem]"><span className="text-[#37ACA8]">Our</span><span className="font-[400]"> Consulting</span> Capabilities: </h2>
-                <img src="/capabilities.svg" className='mb-[3rem] sm:hidden' alt="capabilities" />
-                <img src="/capabilities_sm.svg" className='my-[4rem] w-[130rem] sm:mb-[8rem] self-center' alt="capabilities" />
+            <div className="bg-white text-black px-[3rem] sm:px-[10rem] py-[3rem]">
+                <MaxContainer>
+                    <div className=" sm:flex flex-col">
+                        <h2 className="sub-header text-center mb-[2.5rem]"><span className="text-[#37ACA8]">Our</span><span className="font-[400]"> Consulting</span> Capabilities: </h2>
+                        <img src="/capabilities.svg" className='mb-[3rem] sm:hidden' alt="capabilities" />
+                        <img src="/capabilities_sm.svg" className='my-[4rem] w-[130rem] sm:mb-[8rem] self-center' alt="capabilities" />
 
-                {
-                    capabilities.map((capability, index) => (<PlaceTextBesideImage item={capability} key={index} />))
-                }
+                        {
+                            capabilities.map((capability, index) => (<PlaceTextBesideImage item={capability} key={index} />))
+                        }
 
-            </div>
-            <div className="px-[3rem] sm:px-[10rem] sm:flex flex-col py-[3rem]">
-                {
-                    capabilitiesII.map((capability, index) => (<PlaceTextBesideImage item={capability} key={index} />))
-                }
+                    </div>
+                    <div className="px-[3rem] sm:px-[10rem] sm:flex flex-col py-[3rem]">
+                        {
+                            capabilitiesII.map((capability, index) => (<PlaceTextBesideImage item={capability} key={index} />))
+                        }
+                    </div>
+                </MaxContainer>
             </div>
         </section>
     );
