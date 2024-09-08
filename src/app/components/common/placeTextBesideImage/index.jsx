@@ -33,9 +33,12 @@ const Index = ({ item }) => {
                     <div className="mt-[2.5rem] sm:hidden">
                         {item.roles.map((_item, i) => (<div className={`flex gap-[1.5rem] ${item.roleOrientation} mb-[.5rem]`} key={i}>
                             <div className="flex flex-col items-center w-[1.5rem]">
-                                <svg width="20" height="20" className="w-[1.5rem] h-[1.5rem] mb-[.5rem]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                {/* <svg width="20" height="20" className="w-[1.5rem] border h-[1.5rem] mb-[.5rem]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="10" cy="10" r="9" stroke={item.circle ? item.circle : '#0D1117'} strokeWidth="2" />
-                                </svg>
+                                </svg> */}
+                                {
+                                    <div style={{ border: item.circle ?  `2px solid ${item.circle}`  : '2px solid #0D1117' }} className="w-[1.5rem] h-[1.5rem] rounded-full"></div>
+                                }
                                 {
                                     (i + 1) !== rolesLength && (<div style={{ backgroundColor: item.lineColor }} className={`w-[1px] h-[90%]`}></div>)
                                 }
