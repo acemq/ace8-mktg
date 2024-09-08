@@ -32,14 +32,12 @@ const Index = ({ item }) => {
                     {item.mutipleImage ? item.mutipleImage : (<Image src={item.image} width={700} height={400} className={`w-[30rem] mt-[1rem] sm:mt-[0] ${item.imageStyle} h-auto`} alt="capability image" />)}
                     <div className="mt-[2.5rem] sm:hidden">
                         {item.roles.map((_item, i) => (<div className={`flex gap-[1.5rem] ${item.roleOrientation} mb-[.5rem]`} key={i}>
-                            <div className="flex flex-col items-center w-[2rem]">
-                                <svg width="20" height="20" className="w-[2rem] h-[2rem] mb-[.5rem]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div className="flex flex-col items-center w-[1.5rem]">
+                                <svg width="20" height="20" className="w-[1.5rem] h-[1.5rem] mb-[.5rem]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="10" cy="10" r="9" stroke={item.circle ? item.circle : '#0D1117'} strokeWidth="2" />
                                 </svg>
                                 {
-                                    (i + 1) !== rolesLength && (<svg width="3" height="29" className="" viewBox="0 0 3 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.5 1L1.5 28" stroke={item.lineColor} strokeWidth="1.5" strokeLinecap="round" />
-                                    </svg>)
+                                    (i + 1) !== rolesLength && (<div style={{ backgroundColor: item.lineColor }} className={`w-[1px] h-[90%]`}></div>)
                                 }
                             </div>
                             <p className="">{_item}</p>
@@ -53,3 +51,4 @@ const Index = ({ item }) => {
 }
 
 export default Index;
+
