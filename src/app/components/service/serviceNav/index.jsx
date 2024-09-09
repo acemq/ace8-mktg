@@ -46,7 +46,7 @@ const Index = ({ setOpenService }) => {
                     <Link href=''>
                         <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">Onboarding as a service</li>
                     </Link>
-                    <Link href=''>
+                    <Link href='/Service/data-integration'>
                         <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">Data Analytics Integration</li>
                     </Link>
                     <Link href=''>
