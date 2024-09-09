@@ -43,14 +43,14 @@ const Index = () => {
         },
     ]
     return (
-        <section className="sm:py-[8rem] bg-white">
+        <section className="sm:py-[8rem] py-[5rem] bg-white">
             <MaxContainer>
                 <div className="px-[3rem] sm:px-[10rem]">
                     <div className="relative sm:flex">
                         <img src="/mille_2.svg" className="w-[4rem] hidden absolute sm:block mt-[9rem]" alt="" />
                         <div className="sm:flex sm:ml-[7rem] sm:justify-between sm:w-[100%]">
                             <div className="text-black">
-                                <h2 className="text-center text-[2.5rem] sm:text-[6.5rem] mt-[5rem] mb-[1rem] sm:text-left font-[700]"><span className="font-[400]">Our</span> <span className="text-[#5747A5]">Services</span></h2>
+                                <h2 className="text-center text-[2.5rem] sm:text-[6.5rem] mb-[1rem] sm:text-left font-[700]"><span className="font-[400]">Our</span> <span className="text-[#5747A5]">Services</span></h2>
                                 <p className="hidden sm:block w-[54rem]">We offer a range of services to address all your messaging and queuing requirements.Our team of seasoned professionals excels in delivering top-notch solutions to enhance the reliability, scalability, and performance of your MQ systems” </p>
                             </div>
                             <div className="sm:block hidden">
