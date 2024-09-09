@@ -66,6 +66,8 @@ const Index = () => {
                     <div className="flex flex-col gap-y-[1.2rem] sm:hidden">
                         {cards.map((card, index) => (<Cards card={card} key={index} />))}
                     </div>
+
+                    <p className="text-black sm:w-[90rem] text-center mx-auto mt-[3rem]">Our consultants have encountered and successfully resolved a wide range of challenges related to message brokers. With years of experience in supporting message broker products and environments, our engineers are well-prepared to tackle any issue you may face.</p>
                 </div>
             </MaxContainer>
         </section>
