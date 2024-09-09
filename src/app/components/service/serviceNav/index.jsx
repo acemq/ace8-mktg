@@ -24,7 +24,7 @@ const Index = ({ setOpenService }) => {
 
                     <ul className="sm:w-[30rem]">
                         <li className="sm:mb-[2rem] mb-[.7rem]">
-                            <Link href='' className="sm:text-[1.5rem] text-[1.3rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all">Incident Management</Link>
+                            <Link href='/Service/incident-management' className="sm:text-[1.5rem] text-[1.3rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all">Incident Management</Link>
                             <p className="sm:text-[1.3rem] sm:leading-[1.7rem] hidden sm:block">Comprehensive Incident Management for Reliable Operations</p>
                         </li>
                         <li className="sm:mb-[2rem] mb-[.7rem]">

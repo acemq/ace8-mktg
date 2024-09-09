@@ -55,7 +55,7 @@ const Index = () => {
     return (
         <section className="sm:px-[10rem] sm:mt-[7rem] pb-[5rem] scroll-mt-[5rem]" id="contact">
             <ToastContainer />
-            <div className="pt-[2rem] px-[3rem] pb-[1rem] mt-[5rem] sm:mt-[12rem] bg-black sm:flex sm:justify-between rounded-[3rem]">
+            <div className="pt-[2rem] px-[3rem] pb-[1rem] sm:mt-[12rem] sm:bg-black sm:flex sm:justify-between rounded-[3rem]">
                 <div className="sm:flex-1 sm:relative sm:pt-[7rem]">
                     <h4 className="text-center text-[3rem] sm:text-left sm:absolute sm:top-[-3rem] sm:bg-[#8FD5CC] sm:text-[#030303] sm:px-[2rem] sm:py-[.8rem] sm:rounded-[1rem]">Contact <span className="font-[700] sm:text-[#030303] text-[#8FD5CC]">Us</span></h4>
                     <p className="text-center sm:text-left">Contact Us To Speak With One of Our Experts</p>

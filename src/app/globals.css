@@ -4,7 +4,7 @@
 
 
 html {
-  font-size: 0.6944444444vw;
+  font-size: min(15px, 0.6944444444vw);
 }
 
 @media screen and (max-width: 600px) {
@@ -14,11 +14,11 @@ html {
 }
 
 
-@media screen and (min-width: 2000px) {
+/* @media screen and (min-width: 2000px) {
   html {
     font-size: 13px;
   }
-}
+} */
 
 body {
   margin: 0;
@@ -97,7 +97,7 @@ p {
 }
 
 .sub-header{
-  @apply text-[2.8rem] font-[700] sm:text-[3.5rem]
+  @apply text-[2.8rem] font-[700] sm:text-[3.5rem]  leading-[3.3rem] sm:leading-[4rem]
 }
 
 .post_responsive_grid{
