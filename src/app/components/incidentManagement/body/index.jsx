@@ -1,5 +1,6 @@
 import MaxContainer from '../../../components/common/maxContainer'
 import Image from 'next/image';
+
 const Index = () => {
     return (
         <>
