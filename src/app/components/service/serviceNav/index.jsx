@@ -40,8 +40,8 @@ const Index = ({ setOpenService }) => {
                     <Link href=''>
                         <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">OpenSource Support</li>
                     </Link>
-                    <Link href=''>
-                        <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">GenFire</li>
+                    <Link href='/Service/gemfire'>
+                        <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">GemFire</li>
                     </Link>
                     <Link href=''>
                         <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">Onboarding as a service</li>
