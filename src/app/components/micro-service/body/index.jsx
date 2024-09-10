@@ -123,12 +123,12 @@ const SubIntro = () => {
         },
     ]
     return (
-        <section className="py-[5rem] pb-[10rem]">
+        <section className="pt-[10rem]">
             <MaxContainer>
                 <div className="px-[3rem] sm:px-[10rem] flex flex-col">
                     <div className="sm:flex sm:flex-col sm:items-center sm:self-center sm:w-[100rem]">
                         <h2 className="sub-header sm:w-[60rem] text-center"><span className="font-[400]">Refactor Your</span> <span className="text-[#9B86FE]">Microservices</span> Architecture to <span className="text-[#9B86FE]">AWS Lambda</span></h2>
-                        <div className="border p-[1rem] my-[2rem] border-dashed border-[#9B86FE]">
+                        <div className="border p-[1rem] my-[3rem] border-dashed border-[#9B86FE]">
                             <p className="text-center">If you're considering migrating your microservices architecture to AWS Lambda, our expert team is here to streamline the process for maximum efficiency. From meticulous planning and automated conversion to comprehensive redesign and implementation, we have you covered at every step.</p>
                         </div>
                     </div>
