@@ -28,7 +28,7 @@ const Index = ({ setOpenService }) => {
                             <p className="sm:text-[1.3rem] sm:leading-[1.7rem] hidden sm:block">Comprehensive Incident Management for Reliable Operations</p>
                         </li>
                         <li className="sm:mb-[2rem] mb-[.7rem]">
-                            <Link href='' className="sm:text-[1.5rem] text-[1.3rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all">Microservice</Link>
+                            <Link href='/Service/micro-service' className="sm:text-[1.5rem] text-[1.3rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all">Microservice</Link>
                             <p className="sm:text-[1.3rem] sm:leading-[1.7rem] hidden sm:block">Comprehensive Microservice Design and Development Services</p>
                         </li>
                     </ul>
