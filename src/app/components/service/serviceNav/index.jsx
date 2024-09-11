@@ -37,7 +37,7 @@ const Index = ({ setOpenService }) => {
             <div className="mt-[2rem] sm:mt-[0]">
                 <p className="font-[700] sm:mb-[2rem] text-accent-100">Other Service</p>
                 <ul className="mb-[3rem]">
-                    <Link href=''>
+                    <Link href='/Service/open-source'>
                         <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">OpenSource Support</li>
                     </Link>
                     <Link href='/Service/gemfire'>
@@ -54,7 +54,7 @@ const Index = ({ setOpenService }) => {
                     </Link>
                 </ul>
 
-                <Link href='/Service' ><button className="border-none btn text-accent-100 bg-black">All Services</button></Link>
+                <Link href='/Service'><button className="border-none btn text-accent-100 bg-black">All Services</button></Link>
             </div>
         </div>
     );
