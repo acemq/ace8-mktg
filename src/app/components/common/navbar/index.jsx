@@ -47,7 +47,7 @@ const Index = () => {
         },
         {
             label: 'Customer Stories',
-            link: '/stories'
+            link: '/Stories'
         }
     ]
     return (
@@ -67,9 +67,11 @@ const Index = () => {
                         openService && <Service setOpenService={setOpenService} />
                     }
                     <div className="flex items-center gap-x-[3rem]">
-                        <button className="font-bold rounded-[.5rem] text-[1rem] sm:text-[1.3rem] sm:border text-text-100 sm:text-white bg-white sm:bg-transparent px-[1.2rem] sm:px-[2.3rem] py-[.7rem]">
-                            Contact us
-                        </button>
+                        <Link href='/contact-us'>
+                            <button className="font-bold rounded-[.5rem] text-[1rem] sm:text-[1.3rem] sm:border text-text-100 sm:text-white bg-white sm:bg-transparent px-[1.2rem] sm:px-[2.3rem] py-[.7rem]">
+                                Contact us
+                            </button>
+                        </Link>
 
                         <div className={`overflow-hidden transition-all duration-500 ease-out flex flex-col items-center justify-between h-[1.7rem] relative z-20 sm:hidden ${open ? 'w-[3rem]' : 'w-[2.5rem]'}`} onClick={toggleNav}>
                             <div className={`h-[.18rem] bg-white w-[100%] origin-right transition-all duration-500 ease-out ${open ? '-rotate-45 w-[2.7rem]' : ''}`}></div>
