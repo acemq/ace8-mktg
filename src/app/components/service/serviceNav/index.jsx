@@ -18,7 +18,7 @@ const Index = ({ setOpenService }) => {
                         </li>
                         <li className="sm:mb-[2rem] mb-[.7rem]">
                             <Link href='/Service/message-broker' className="sm:text-[1.5rem] text-[1.3rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all">Message Broker</Link>
-                            <p className="sm:text-[1.3rem] sm:leading-[1.7rem] hidden sm:block">AceMQ Your Trusted Messaging & Queuing Service Partners</p>
+                            <p className="sm:text-[1.3rem] sm:leading-[1.7rem] hidden sm:block">AceMQ Your Trusted Messaging & Queuing Services Partner</p>
                         </li>
                     </ul>
 
@@ -28,8 +28,8 @@ const Index = ({ setOpenService }) => {
                             <p className="sm:text-[1.3rem] sm:leading-[1.7rem] hidden sm:block">Comprehensive Incident Management for Reliable Operations</p>
                         </li>
                         <li className="sm:mb-[2rem] mb-[.7rem]">
-                            <Link href='/Service/micro-service' className="sm:text-[1.5rem] text-[1.3rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all">Microservice</Link>
-                            <p className="sm:text-[1.3rem] sm:leading-[1.7rem] hidden sm:block">Comprehensive Microservice Design and Development Services</p>
+                            <Link href='/Service/gemfire' className="sm:text-[1.5rem] text-[1.3rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all">Gemfire</Link>
+                            <p className="sm:text-[1.3rem] sm:leading-[1.7rem] hidden sm:block">End-to-End GemFire Solutions from the Original GemFire Team</p>
                         </li>
                     </ul>
                 </div>
@@ -40,8 +40,8 @@ const Index = ({ setOpenService }) => {
                     <Link href='/Service/open-source'>
                         <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">OpenSource Support</li>
                     </Link>
-                    <Link href='/Service/gemfire'>
-                        <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">GemFire</li>
+                    <Link href='/Service/micro-service'>
+                        <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">Microservices</li>
                     </Link>
                     <Link href='/Service/OBAAS'>
                         <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">Onboarding as a service</li>

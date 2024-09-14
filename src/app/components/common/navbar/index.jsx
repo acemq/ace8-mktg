@@ -38,7 +38,7 @@ const Index = () => {
             link: '/About'
         },
         {
-            label: 'Service',
+            label: 'Services',
             link: '/Service'
         },
         {

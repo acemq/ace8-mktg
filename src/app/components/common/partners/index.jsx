@@ -12,16 +12,16 @@ const Index = () => {
     }
     const partners = [
         {
-            image: '/rabbit.png',
-            width: 'w-[18rem] h-[3rem]'
-        },
-        {
             image: '/broadcom.png',
             width: 'w-[22rem] h-[3rem]'
         },
         {
             image: '/aws.png',
-            width: 'w-[9rem] h-[6rem]'
+            width: 'w-[9rem] sm:w-[10rem] h-[6rem]'
+        },
+        {
+            image: '/rabbit.png',
+            width: 'w-[18rem] h-[3rem]'
         },
     ]
 

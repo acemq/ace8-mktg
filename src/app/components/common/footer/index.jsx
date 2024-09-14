@@ -89,23 +89,23 @@ const FooterMobile = () => {
 
 const FooterDesktop = () => {
     return (
-        <footer className="bg-[#0D111C] sm:flex hidden">
+        <footer className="bg-[#0D111C] relative sm:flex hidden">
             <MaxContainer>
                 <div className="relative">
                     <div className="flex px-[10rem] w-[100%] justify-between py-[10rem]">
                         <div className="">
                             <Image src='/ace_logo.png' className="w-[12rem] mb-[2rem]" width={150} height={120} />
                             <ul className="mb-[4rem] flex flex-col gap-y-[1.3rem]">
-                                <li className="flex gap-[1rem] items-center">
-                                    <img className="w-[3rem]" src="/footer_message.svg" alt="" />
+                                {/* <li className="flex gap-[1rem] items-center">
+                                    <img className="w-[3rem] aspect-square border" src="/footer_message.svg" alt="" />
                                     <Link href='mailto:info@ace-8.io' className="text-[1.5rem]">info@ace-8.io</Link>
-                                </li>
+                                </li> */}
                                 <li className="flex gap-[1rem] items-center">
-                                    <img className="w-[3rem]" src="/footer_telephone.png" alt="" />
+                                    <img className="w-[3rem] aspect-square" src="/tel.png" alt="" />
                                     <p className="text-[1.5rem]">305-981-6475</p>
                                 </li>
                                 <li className="flex gap-[1rem] items-center">
-                                    <img className="w-[3rem]" src="/location_footer.svg" alt="" />
+                                    <img className="w-[3rem] aspect-square" src="/location.png" alt="" />
                                     <p className="w-[30rem] text-[1.5rem]">66 W. Flagler St. 9th Floor Miami, FL 33130</p>
                                 </li>
                             </ul>
@@ -114,19 +114,19 @@ const FooterDesktop = () => {
                         <div className="h-fit">
                             <h3 className="text-[1.9rem] font-[600] mb-[1.5rem]">Navigate</h3>
                             <ul className="">
-                                <Link href='' className="">
+                                <Link href='/' className="">
                                     <li className="text-[1.5rem]  mb-[1.5rem]">Home</li>
                                 </Link>
-                                <Link href='' className="">
+                                <Link href='/About' className="">
                                     <li className="text-[1.5rem]  mb-[1.5rem]">About Us</li>
                                 </Link>
-                                <Link href='' className="">
+                                <Link href='/Service' className="">
                                     <li className="text-[1.5rem]  mb-[1.5rem]">Services</li>
                                 </Link>
-                                <Link href='' className="">
+                                <Link href='/Blog' className="">
                                     <li className="text-[1.5rem]  mb-[1.5rem]">Blog</li>
                                 </Link>
-                                <Link href='' className="">
+                                <Link href='/Stories' className="">
                                     <li className="text-[1.5rem]  mb-[1.5rem]">Customer Stories</li>
                                 </Link>
                             </ul>
@@ -141,14 +141,17 @@ const FooterDesktop = () => {
                         </div>
                         <div className="">
                             <p className="text-[1.9rem] font-[600] w-[100%] mb-[1.5rem]">Connect With Us</p>
-                            <img src="/in.svg" className="mb-[1.5rem] w-[4rem]" alt="" />
+                            <Link href={'https://www.linkedin.com/company/ace8tech'}>
+                                <img src="/in.svg" className="mb-[1.5rem] w-[4rem]" alt="" />
+                            </Link>
                         </div>
                     </div>
-                    <div className="absolute left-0 right-0 bottom-0 bg-black">
-                        <p className="text-center text-[1.5rem] py-[2rem]">© CopyRight AceITtechnologies.com</p>
-                    </div>
+
                 </div>
             </MaxContainer>
+            <div className="absolute left-0 right-0 bottom-0 bg-black">
+                <p className="text-center text-[1.5rem] font-[500] py-[2rem]">© Copyright Ace8.io 2024. All Rights Reserved</p>
+            </div>
         </footer>
     )
 }
