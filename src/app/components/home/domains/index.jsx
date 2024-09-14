@@ -137,7 +137,7 @@ const Conntal = () => (
     <div className="py-[2rem] px-[2rem] w-fit bg-conner-gradient rounded-[10rem] self-center mt-[6rem]">
         <div className="flex gap-[1rem]">
             <div className="bg-black rounded-full w-[7rem] h-[7rem] grid place-content-center">
-                <Image src='/profile.png' width={48} className="w-[3rem] h-[3rem]" height={48} />
+                <img src='/profile.png' width={48} className="w-[3rem] h-[3rem]" alt="profile icon" height={48} />
             </div>
             <div className="">
                 <p className="font-[700] text-[1.5rem] mb-[.8rem]">Top-Tier Talent (Conntal)</p>

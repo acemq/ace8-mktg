@@ -12,16 +12,16 @@ const Index = () => {
     }
     const partners = [
         {
-            image: '/aws.png',
-            width: 'w-[9rem] h-[6rem]'
-        },
-        {
-            image: '/vmware.png',
-            width: 'w-[18rem] h-[3rem]'
-        },
-        {
             image: '/rabbit.png',
             width: 'w-[18rem] h-[3rem]'
+        },
+        {
+            image: '/broadcom.png',
+            width: 'w-[22rem] h-[3rem]'
+        },
+        {
+            image: '/aws.png',
+            width: 'w-[9rem] h-[6rem]'
         },
     ]
 
@@ -35,7 +35,7 @@ const Index = () => {
                 </div>
                 <div className="mt-[3rem] sm:hidden">
                     <Carousel showDots={true} autoPlay={true} autoPlaySpeed={1000} infinite={true} removeArrowOnDeviceType={["tablet", "mobile", 'desktop']} responsive={responsive}>
-                    {partners.map((item, i) => <Image src={item.image} key={i} className={`${item.width}`} width={150} height={200} />)}
+                        {partners.map((item, i) => <Image src={item.image} key={i} className={`${item.width}`} width={150} height={200} />)}
                     </Carousel>
                 </div>
             </div>

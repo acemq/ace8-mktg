@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from "next/link";
 const Index = () => {
     const services = [
         {
@@ -62,37 +63,43 @@ const Index = () => {
             image: '/broker.svg',
             Name: 'Message Brokers ',
             active: false,
-            role: 'Your trusted partner for seamless integration of message brokers. With troubleshooting expertise, consulting and assessment services, and comprehensive support, we optimize performance and ensure smooth operations for your technology stack.'
+            role: 'Your trusted partner for seamless integration of message brokers. With troubleshooting expertise, consulting and assessment services, and comprehensive support, we optimize performance and ensure smooth operations for your technology stack.',
+            link: '/Service/message-broker'
         },
         {
             image: '/data__analytic_inte.svg',
             Name: 'Data Analytics Integration ',
             active: false,
-            role: 'Differentiating through our unique integration approach. Seamlessly integrate e-commerce data with Databricks/Snowflake. Design consulting, cost optimization, and fault tolerance ensure efficient, uninterrupted access to critical data.'
+            role: 'Differentiating through our unique integration approach. Seamlessly integrate e-commerce data with Databricks/Snowflake. Design consulting, cost optimization, and fault tolerance ensure efficient, uninterrupted access to critical data.',
+            link: '/Service/data-integration'
         },
         {
             image: '/automated_testing.svg',
             Name: 'Automated Testing ',
             active: false,
-            role: 'your e-commerce application. Our unique approach includes AI-enhanced test code, seamless  CI/CD integration, and crowd-sourced test case development to save time and resources. '
+            role: 'your e-commerce application. Our unique approach includes AI-enhanced test code, seamless  CI/CD integration, and crowd-sourced test case development to save time and resources. ',
+            link: '/Service/automated-testing'
         },
         {
             image: '/onboarding_service.svg',
             Name: 'Onboarding as a Service',
             active: false,
-            role: 'Accelerate software delivery with our streamlined  CI/CD solution, including automated onboarding and customizable off-boarding for efficient development cycles. Spin up entire environments in hours not days.'
+            role: 'Accelerate software delivery with our streamlined  CI/CD solution, including automated onboarding and customizable off-boarding for efficient development cycles. Spin up entire environments in hours not days.',
+            link: '/Service/OBAAS'
         },
         {
             image: '/incident_management.svg',
             Name: 'Incident Management',
             active: false,
-            role: 'Accelerate software delivery with our streamlined  CI/CD solution, including automated onboarding and customizable off-boarding for efficient development cycles. Spin up entire environments in hours not days.'
+            role: 'Accelerate software delivery with our streamlined  CI/CD solution, including automated onboarding and customizable off-boarding for efficient development cycles. Spin up entire environments in hours not days.',
+            link: '/Service/incident-management'
         },
         {
             image: '/refactoring.svg',
             Name: 'Microservices Design, Development & Refactoring',
             active: false,
-            role: 'AceMQ offers comprehensive microservices design, development, and refactoring services that strictly adhere to industry best practices, including loose coupling and the 12Factor approach.'
+            role: 'AceMQ offers comprehensive microservices design, development, and refactoring services that strictly adhere to industry best practices, including loose coupling and the 12Factor approach.',
+            link: '/Service/micro-service'
         },
     ]
 
@@ -134,7 +141,7 @@ const ServiceMobile = ({ services }) => {
             </div>
 
             <h2 className="text-[2.5rem] font-[700] w-[220px] text-center mt-[1rem]">What We Can <span className="text-accent-300">Do</span>  <span className="font-[500]">For You:</span></h2>
-            <p className="text-center text-[1.3rem] mb-[2rem]">We are a diverse Team of engineers with 100's of years of  experience in software development. We leverage our experience and proven methodologies to bring extreme value to any dev shop.</p>
+            <p className="text-center text-[1.3rem] mb-[2rem]"> Ace8 offers a suite of cutting-edge services, from Message Brokersto DevSecOps, empowering enterprises with services to thrive in today's digital economy. With streamlined data flow and robust development practices, Ace8 ensures unparalleled efficiency and resilience, driving extreme value for modern businesses.</p>
             <div className="bg-[#161B22] rounded-[.8rem] w-[100%] px-[1.8rem] py-[1rem]">
                 <div className="bg-[#11161E] py-[2.5rem]">
                     <div className="flex px-[2.8rem] gap-[1rem] font-[600] text-[2rem]">
@@ -177,7 +184,7 @@ const ServiceDesktop = ({ services }) => {
                     </div>
                     <div className="w-[40rem]">
                         <h2 className="font-[700] text-[5rem] mb-[2rem]">What We Can Do <span className="font-[400]">For You:</span></h2>
-                        <p className="">We are a diverse Team of engineers with 100's of years of  experience in software development. We leverage our experience and proven methodologies to bring extreme value to any dev shop.</p>
+                        <p className="">Ace8 offers a suite of cutting-edge services, from Message Brokersto DevSecOps, empowering enterprises with services to thrive in today's digital economy. With streamlined data flow and robust development practices, Ace8 ensures unparalleled efficiency and resilience, driving extreme value for modern businesses.</p>
                     </div>
                 </div>
                 <div className="flex bg-[#161B22] p-[1.5rem]  gap-x-[2rem]">
@@ -221,15 +228,17 @@ const ServiceDesktop = ({ services }) => {
 
 
 const Card = ({ service }) => (
-    <div className="bg-black py-[1.8rem] sm:py-[2.5rem] px-[1.2rem] sm:px-[1.6rem] w-[100%] sm:w-[38rem] flex flex-col items-center sm:items-start">
-        <img src={service.image} className="w-[4rem] h-[6rem]" alt="icon" />
-        <h4 className="font-[600] mb-1 text-[2rem] sm:mb-[2rem] text-center sm:text-start">{service.Name}</h4>
-        <p className="text-[1.2rem] sm:text-[1.7rem] text-center sm:text-start">{service.role}</p>
-    </div>
+    <Link href={service.link}>
+        <div className="bg-black py-[1.8rem] sm:py-[3rem] px-[1.2rem] sm:px-[1.6rem] w-[100%] sm:w-[38rem] flex flex-col items-center sm:items-start">
+            <img src={service.image} className="w-[4rem] h-[6rem]" alt="icon" />
+            <h4 className="font-[600] mb-1 text-[2rem] sm:mb-[2rem] text-center sm:text-start">{service.Name}</h4>
+            <p className="text-[1.2rem] sm:text-[1.7rem] text-center sm:text-start">{service.role}</p>
+            <img src="/arrow.svg" alt="" className="w-[3rem] ml-auto mt-[2rem]" />
+        </div>
+    </Link>
 )
 
 const Modal = ({ service, toggleModal, id }) => {
-
     useEffect(() => {
         if (service.active) {
             document.body.style.overflow = 'hidden';
