@@ -100,7 +100,7 @@ const NavItem = ({ item, id, setOpenService, setOpen }) => {
             {
                 id == 2 ? (
                     <button onClick={toggleOpenService} className="py-[1rem] sm:px-[1rem] sm:ml-[2rem] block">
-                        <li className={`text-[1.5rem] ${pathName === item.link ? 'text-accent-100 border-b border-accent-100' : ''} sm:text-[1.3] sm:font-normal font-medium`}>{item.label}</li>
+                        <li className={`text-[1.5rem] ${pathName === `${item.link}/` ? 'text-accent-100 border-b border-accent-100' : ''} sm:text-[1.3] sm:font-normal font-medium`}>{item.label}</li>
                     </button>
                 ) : (
                     <Link href={item.link} className="py-[1rem] sm:px-[1rem] sm:ml-[2rem] block">
