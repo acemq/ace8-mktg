@@ -100,7 +100,6 @@ const DomainMobile = ({ domain, id }) => (
 )
 
 const DomainDesktop = ({ domain, id }) => {
-
     const returnAbsoluteValue = (index) => {
         switch (index) {
             case 0:
