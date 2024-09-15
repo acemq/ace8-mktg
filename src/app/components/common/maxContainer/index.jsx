@@ -1,6 +1,6 @@
 const Index = ({ children }) => {
     return (
-        <div className="max-w-[2100px] w-[100%] mx-auto">{children}</div>
+        <div className="max-w-[1900px] w-[100%] mx-auto">{children}</div>
     );
 }
  

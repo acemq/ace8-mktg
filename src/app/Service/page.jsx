@@ -7,8 +7,8 @@ import Contact from '../components/common/contact'
 const Service = () => {
     return (
         <>
+            <Hero />
             <MaxContainer>
-                <Hero />
                 <Methodology />
             </MaxContainer>
             <Capabilities />

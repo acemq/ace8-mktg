@@ -17,7 +17,7 @@ const Intro = () => (
     <section className="bg-white sm:pb-[10rem] py-[3rem]">
         <MaxContainer>
             <div className="px-[3rem] sm:px-[10rem]">
-                <img src="/OBAAS_code_snippet2.png" alt="code snippet" className="relative top-[-12rem] sm:block hidden" />
+                <img src="/OBAAS_code_snippet2.png" alt="code snippet" className="relative sm:mx-auto sm:w-[100rem] top-[-12rem] sm:block hidden" />
                 <div className="text-black sm:justify-between sm:mt-[-6rem] text-center sm:flex">
                     <p className="sm:w-[50rem] sm:text-left">At Ace8, we acknowledge a critical industry challenge—delayed developer productivity due to lengthy onboarding processes, leading to significant financial losses. Developers often remain idle, costing businesses millions annually.</p>
                     <img src="/critical_industry.svg" alt="icons" className="sm:w-[60rem]" />
@@ -102,7 +102,7 @@ const SubIntro = () => (
                     <div className="sm:mt-[7rem]">
                         <h2 className="sub-header text-center mb-[2rem] sm:w-[80rem] sm:mx-auto">Why <span className="font-[400]">Choose </span><span className="text-[#9B86FE]">OBaaS</span> for <span className='text-[#9B86FE]'> Developer</span> Onboarding?</h2>
                     </div>
-                    <img src="/heroku.png" alt="heroku icon" className="mb-[2rem]" />
+                    <img src="/heroku.png" alt="heroku icon" className="mb-[2rem] sm:w-[100rem] sm:mx-auto" />
                     <img src="/properties.png" alt="properties" className="sm:hidden" />
                     <div className="hidden sm:block mt-[5rem]">
                         <div className="flex justify-between">
@@ -135,23 +135,23 @@ const SubIntro = () => (
                     </div>
                 </div>
             </div>
-
-
-            <div className="sm:h-[115rem] sm:mt-[8rem]">
-                <div className="sm:bg-white sm:pt-[5rem] sm:h-[85rem]">
-                    <Banner
-                        header={<h3 className="sub-header text-center sm:opacity-[.8] sm:mx-auto sm:w-[60%]"><span className="text-[#FF88C3]">Accelerate onboarding,</span><span className="font-[400]"> reduce</span> idle time, and <span className="font-[400]"> witness immediate</span> productivity gains. <span className="font-[400]]"> Choose</span> <span className="text-[#FF88C3]"> OBaaS</span> for a customized, fully managed, <span className="font-[400]"> and</span> swift onboarding experience.</h3>}
-                        text={'Choose Ace8\'s OBaaS for swift, customized onboarding that delivers immediate impact. Accelerate your developers\' journey to meaningful work, eliminate idle time, and enjoy the benefits of a fully managed service running on your infrastructure. Don\'t let delayed onboarding hinder your productivity and cost your business millions. Contact us today to explore how "Dev Containers" can fast-track your onboarding process and maximize your ROI.'}
-                        btn={'Transform Developer Onboarding with OBaaS'}
-                        backgroundColor={'bg-black'}
-                        containerStyles={'sm:px-[10rem]'}
-                    />
-                    <div className="relative bottom-[0]">
-                        <Form />
-                    </div>
-                </div>
-            </div>
         </MaxContainer>
+        <div className="sm:h-[115rem] sm:mt-[8rem]">
+            <div className="sm:bg-white sm:pt-[5rem] sm:h-[85rem]">
+                <MaxContainer>
+                <Banner
+                    header={<h3 className="sub-header text-center sm:opacity-[.8] sm:mx-auto sm:w-[60%]"><span className="text-[#FF88C3]">Accelerate onboarding,</span><span className="font-[400]"> reduce</span> idle time, and <span className="font-[400]"> witness immediate</span> productivity gains. <span className="font-[400]]"> Choose</span> <span className="text-[#FF88C3]"> OBaaS</span> for a customized, fully managed, <span className="font-[400]"> and</span> swift onboarding experience.</h3>}
+                    text={'Choose Ace8\'s OBaaS for swift, customized onboarding that delivers immediate impact. Accelerate your developers\' journey to meaningful work, eliminate idle time, and enjoy the benefits of a fully managed service running on your infrastructure. Don\'t let delayed onboarding hinder your productivity and cost your business millions. Contact us today to explore how "Dev Containers" can fast-track your onboarding process and maximize your ROI.'}
+                    btn={'Transform Developer Onboarding with OBaaS'}
+                    backgroundColor={'bg-black'}
+                    containerStyles={'sm:px-[10rem]'}
+                />
+                <div className="mb-[8rem]">
+                    <Form />
+                </div>
+                </MaxContainer>
+            </div>
+        </div>
     </section>
 )
 

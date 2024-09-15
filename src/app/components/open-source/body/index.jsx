@@ -25,10 +25,11 @@ const Index = () => {
                     text={'OpenAce, delivers reliable consulting and technical support services for businesses seeking assistance with Open Source technologies. Our experienced team of Open Source Architects provides 24/7 support and tailored solutions across various industries.'}
                     btn={false}
                     backgroundColor={'bg-transparent'}
-                    containerStyles={'mt-[2rem]'}
+                    containerStyles={'mt-[2rem] sm:hidden'}
                 />
+                <img src="/core_technologies.png" alt="core tech" className='w-full mb-[5rem] mt-[8rem] hidden sm:block' />
                 <div className="px-[3rem] sm:px-[10rem]">
-                    <img src="/core_technology.svg" alt="core technology" className="sm:mx-auto mt-[3rem] mb-[4rem]" />
+                    <img src="/core_technology.svg" alt="core technology" className="sm:mx-auto sm:hidden mt-[3rem] mb-[4rem]" />
                     <h3 className="text-[1.6rem]  sm:text-[6rem] sm:font-[700] w-[20rem] sm:w-[100rem] mx-auto text-center">Our <span className="font-[400]">Support</span> Process</h3>
                     <p className="font-[700] text-[2rem] sm:text-center sm:w-[50rem] sm:mx-auto mt-[1rem]"><span className="font-[400]">Maximize Your System's</span> Uptime with <span className="text-[#FF88C3]">OpenAce Technical Support</span></p>
 
