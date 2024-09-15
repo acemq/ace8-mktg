@@ -81,12 +81,12 @@ const DomainsDesktop = ({ domains }) => (
                 <p className="text-[1.5rem]">At Ace8, we empower businesses to thrive in the digital age through cutting-edge technology services spanning eight crucial domains. From Advanced Architectures to Microservices, Code & Development, we're dedicated to delivering unparalleled expertise and innovative solutions tailored to meet your specific needs.</p>
             </div>
 
-            <div className="h-[93rem] grid place-content-center relative">
+            <div className="h-[93rem] sm:mt-[8rem] grid place-content-center relative">
                 <Image src='/center_logo.png' className="w-[45rem]" width={550} height={178} />
                 {domains.map((domain, index) => <DomainDesktop domain={domain} key={index} id={index} />)}
             </div>
             <Conntal />
-            <p className="text-[3rem] leading-[4rem] font-[700] text-[#FFFFFF] mt-[9rem]">Ace8 is not just a technology services company; we are your strategic partner in navigating the ever-evolving landscape of technology. Elevate your business to new heights with Ace8 - Where innovation meets excellence!</p>
+            {/* <p className="text-[3rem] leading-[4rem] font-[700] text-[#FFFFFF] mt-[9rem]">Ace8 is not just a technology services company; we are your strategic partner in navigating the ever-evolving landscape of technology. Elevate your business to new heights with Ace8 - Where innovation meets excellence!</p> */}
         </div>
     </section>
 )
@@ -134,7 +134,7 @@ const DomainDesktop = ({ domain, id }) => {
 }
 
 const Conntal = () => (
-    <div className="py-[2rem] px-[2rem] w-fit bg-conner-gradient rounded-[10rem] self-center mt-[6rem]">
+    <div className="py-[2rem] px-[2rem] sm:mt-[10rem] w-fit bg-conner-gradient rounded-[10rem] self-center mt-[6rem]">
         <div className="flex gap-[1rem]">
             <div className="bg-black rounded-full w-[7rem] h-[7rem] grid place-content-center">
                 <img src='/profile.png' width={48} className="w-[3rem] h-[3rem]" alt="profile icon" height={48} />
