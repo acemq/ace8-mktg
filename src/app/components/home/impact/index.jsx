@@ -29,6 +29,7 @@ const Index = () => {
 
 export default Index;
 
+
 const Card = ({ card }) => (
     <div className="">
         <h4 className="text-center text-[1.5rem] mb-[1rem] sm:mb-[1.5rem] font-[700]">{card.header}</h4>
