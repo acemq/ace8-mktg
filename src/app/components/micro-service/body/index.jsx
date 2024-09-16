@@ -87,7 +87,7 @@ const SubIntro = () => {
                 'We begin by carefully planning the migration process, considering Lambda\'s limitations and understanding the reasons for moving from ECS',
                 'Our specialized tools, including Code Parser, Rule Based Translation, AWS Lambda Handler Generator, AWS Lambda Template Generator, and AWS API Gateway Generator, automate the conversion process.'
             ],
-            image: '/tinkter.png',
+            image: '/Tinkter.png',
             imageStyle: 'w-[75rem]',
             containerStyle: 'sm:justify-around flex-row-reverse mt-[10rem] text-white',
             lineColor: 'bg-[#9B86FE]',

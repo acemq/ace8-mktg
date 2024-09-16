@@ -123,7 +123,7 @@ const FooterDesktop = () => {
                                 <Link href='/Service' className="">
                                     <li className="text-[1.5rem]  mb-[1.5rem]">Services</li>
                                 </Link>
-                                <Link href='/Blog' className="">
+                                <Link href='/Blogs' className="">
                                     <li className="text-[1.5rem]  mb-[1.5rem]">Blog</li>
                                 </Link>
                                 <Link href='/Stories' className="">

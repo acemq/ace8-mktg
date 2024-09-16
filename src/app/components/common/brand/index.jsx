@@ -52,7 +52,7 @@ const Index = () => {
                 </div>
                 <div className="sm:hidden">
                     <Carousel showDots={true} autoPlay={true} autoPlaySpeed={1000} infinite={true} removeArrowOnDeviceType={["tablet", "mobile", 'desktop']} responsive={responsive}>
-                        {brands.map((item, i) => <Image src={item} key={i} className={`h-auto ${item.style}`} alt="brands icon" width={150} height={100} />)}
+                        {brands.map((item, i) => <Image src={item.path} key={i} className={`h-auto ${item.style}`} alt="brands icon" width={150} height={100} />)}
                     </Carousel>
                 </div>
             </div>

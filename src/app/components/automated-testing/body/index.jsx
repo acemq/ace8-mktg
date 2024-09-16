@@ -15,7 +15,7 @@ const Index = () => {
                     <div className="mt-[1.5rem] sm:flex items-center sm:w-[100rem] sm:mt-[5rem] justify-between mx-auto">
                         <div className="">
                             <h2 className="text-[2.4rem] sm:text-[3.5rem] text-center font-[700]"><span className="font-[400]">Our</span> <span className="text-[#00ACCF]">Offerings</span></h2>
-                            <p className="">Our offerings include:</p>
+                            <p className="hidden sm:block">Our offerings include:</p>
                         </div>
                         <img src="/ace_auto.png" alt="flow chat" className="mt-[.5rem] sm:w-[50rem]" />
                     </div>
@@ -24,7 +24,7 @@ const Index = () => {
                 </div>
 
                 <div className="sm:pl-[10rem] mt-[8rem] sm:block">
-                    <Image src='/critical_components_sm.svg' width={1000} className='w-full mr-0' height={750} alt='critical components' />
+                    <Image src='/critical_components_sm.svg' width={1000} className='w-full mr-0 hidden sm:block' height={750} alt='critical components' />
                 </div>
 
                 <div className="mt-[5rem] px-[3rem] sm:px-[10rem] sm:items-center sm:mt-[10rem] sm:flex sm:flex-row-reverse justify-between">

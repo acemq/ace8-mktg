@@ -233,7 +233,7 @@ const Card = ({ service }) => (
             <img src={service.image} className="w-[4rem] h-[6rem]" alt="icon" />
             <h4 className="font-[600] mb-1 text-[2rem] sm:mb-[2rem] text-center sm:text-start">{service.Name}</h4>
             <p className="text-[1.2rem] sm:text-[1.7rem] text-center sm:text-start">{service.role}</p>
-            <img src="/arrow.svg" alt="" className="w-[3rem] ml-auto mt-[2rem]" />
+            <img src="/Arrow.svg" alt="" className="w-[3rem] ml-auto mt-[2rem]" />
         </div>
     </Link>
 )
