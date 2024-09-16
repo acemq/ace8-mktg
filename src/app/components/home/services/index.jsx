@@ -228,7 +228,7 @@ const ServiceDesktop = ({ services }) => {
 
 
 const Card = ({ service }) => (
-    <Link href={service.link}>
+    <Link href={service.link} className="hover:scale-[1.07] transition-all">
         <div className="bg-black py-[1.8rem] sm:py-[3rem] px-[1.2rem] sm:px-[1.6rem] w-[100%] sm:w-[38rem] flex flex-col items-center sm:items-start">
             <img src={service.image} className="w-[4rem] h-[6rem]" alt="icon" />
             <h4 className="font-[600] mb-1 text-[2rem] sm:mb-[2rem] text-center sm:text-start">{service.Name}</h4>

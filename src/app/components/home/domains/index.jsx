@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 const Index = () => {
     const domains = [
         {
@@ -61,7 +63,7 @@ const Index = () => {
 export default Index;
 
 const DomiansMobile = ({ domains }) => (
-    <section className="sm:hidden">
+    <section className="sm:hidden" id="domains">
         <div className="px-[3rem] sm:px-[10rem]">
             <h2 className="text-[3rem] text-center font-[700]"><span className="text-accent-200">Our</span> 8 Domains</h2>
             <div className="flex flex-col mt-[3rem]">
@@ -73,7 +75,8 @@ const DomiansMobile = ({ domains }) => (
 
 
 const DomainsDesktop = ({ domains }) => (
-    <section className="hidden sm:flex px-[3rem] sm:px-[10rem] gap-x-[4rem]">
+    <section className="hidden scroll-mt-[6rem] sm:flex px-[3rem] sm:px-[10rem] gap-x-[4rem]"  id="
+    domains">
         <img src="/mile_4.png" alt="arrow" className="hidden sm:w-[3.7rem] sm:block" />
         <div className="flex flex-col">
             <div className="">
@@ -133,7 +136,7 @@ const DomainDesktop = ({ domain, id }) => {
 }
 
 const Conntal = () => (
-    <div className="py-[2rem] px-[2rem] sm:mt-[10rem] w-fit bg-conner-gradient rounded-[10rem] self-center mt-[6rem]">
+    <Link href='http://conntalent.com' className="py-[2rem] hover:opacity-[.7] transition-all px-[2rem] sm:mt-[10rem] w-fit bg-conner-gradient rounded-[10rem] self-center mt-[6rem]">
         <div className="flex gap-[1rem]">
             <div className="bg-black rounded-full w-[7rem] h-[7rem] grid place-content-center">
                 <img src='/profile.png' width={48} className="w-[3rem] h-[3rem]" alt="profile icon" height={48} />
@@ -143,5 +146,5 @@ const Conntal = () => (
                 <p className="w-[40rem] text-[1.5rem]">Conntal supports all of our divisions of Ace8 and provides our eternal teams and clients with best of breed talent.</p>
             </div>
         </div>
-    </div>
+    </Link>
 )
