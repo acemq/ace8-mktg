@@ -66,7 +66,7 @@ export default Index;
 
 
 const Card = ({ card }) => (
-    <div className="bg-[#11151A] px-[3rem] py-[2.5rem] h-[35rem] w-[38rem] rounded-[2rem] text-white">
+    <div className="bg-[#11151A] px-[3rem] py-[2.5rem] h-[35rem] sm:w-[38rem] rounded-[2rem] text-white">
         <img src={card.image} alt="card icon" className="w-[7rem] h-[7rem]" />
         {card.header}
         <p className="">{card.text}</p>
