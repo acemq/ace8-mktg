@@ -10,24 +10,28 @@ const Index = () => {
                     <p className="text-center sm:w-[50rem] self-center">Look no further than our integration service, which offers a unique approach that sets us apart from the competition.</p>
                 </div>
                 <div className="mt-[3rem] relative">
-                    <div className="sm:flex sm:justify-between">
-                        <h2 className="sub-header w-[25rem] sm:w-[60rem]">Seamless <span className="text-[#5747A5]">Integration</span> with <span className="font-[400]">Databricks or</span> Snowflake</h2>
-                        <p className="mt-[1rem] sm:w-[50rem]">Our integration service provides seamless integration with either Databricks or Snowflake, ensuring that your e-commerce data is seamlessly integrated with your data analytics platform.</p>
-                    </div>
-
                     <div className="sm:flex hidden justify-around mt-[6rem]">
-                        <div className="">
-                            <img src="/snowflake.png" className='w-[20rem]' alt="snowflake" />
-                            <p className="text-center font-[700] text-[3.2rem] mt-[2rem]">Snowflake</p>
+                        <div className="flex flex-col">
+                            <div className="sm:flex sm:justify-between">
+                                <h2 className="sub-header sm:text-center w-[25rem] sm:w-[60rem]">Seamless <span className="text-[#5747A5]">Integration</span> with <span className="font-[400]">Databricks or</span> Snowflake</h2>
+                            </div>
+                            <div className="self-center sm:mt-[7rem]">
+                                <img src="/snowflake.png" className='w-[20rem]' alt="snowflake" />
+                                <p className="text-center font-[700] text-[3.2rem] mt-[2rem]">Snowflake</p>
+                            </div>
                         </div>
-                        <div className="">
-                            <img src="/databricks.png" className='w-[20rem]' alt="snowflake" />
-                            <p className="text-center font-[700] text-[3.2rem] mt-[2rem]">Databricks</p>
+
+                        <div className="flex flex-col">
+                            <p className="mt-[1rem] sm:w-[50rem]">Our integration service provides seamless integration with either Databricks or Snowflake, ensuring that your e-commerce data is seamlessly integrated with your data analytics platform.</p>
+                            <div className="self-center sm:mt-[7rem]">
+                                <img src="/databricks.png" className='w-[20rem]' alt="snowflake" />
+                                <p className="text-center font-[700] text-[3.2rem] mt-[2rem]">Databricks</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="relative mt-[-14rem] top-[30rem] sm:block hidden">
-                        <Image src='/architecture_consulting.png' className='mx-auto' alt='architecture consulting' width={1000} height={1500} />
+                    <div className="relative mt-[-14rem] top-[20rem] sm:block hidden">
+                        <Image src='/architecture_consulting.png' className='mx-auto w-[100rem]' alt='architecture consulting' width={1000} height={1500} />
                     </div>
 
                     <div className="mt-[1rem] flex flex-col sm:hidden">

@@ -53,9 +53,9 @@ export default Index;
 
 const Card = ({ card, id }) => {
     return (
-        <div className="w-[350px]">
+        <div className="w-[35rem]">
             <div className="relative">
-                <Image src={card.image} className="rounded-[1rem] border" width={420} height={320} alt="card image" />
+                <Image src={card.image} className="rounded-[1rem] w-[100%]" width={420} height={320} alt="card image" />
                 <div className="border sm:bottom-[-3rem] sm:right-[-3rem] bottom-[-2rem] right-[-2rem] absolute border-dashed sm:w-[7rem] w-[5.5rem] sm:h-[7rem] rounded-full p-[.2rem] border-[#9B86FE]">
                     <img src={card.ceo} alt="" />
                 </div>

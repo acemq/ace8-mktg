@@ -5,14 +5,14 @@ const Index = () => {
             header: 'Microservices Migration',
             title: 'Customer Story',
             image: '/customer_story.png',
-            link: '',
+            link: '/Stories/3',
             role: 'Accelerated Migration of Custom Microservices to AWS Lambda'
         },
         {
             header: 'Critical Web Launch',
             title: 'Customer Story',
             image: '/customer_story2.png',
-            link: '',
+            link: '/Stories/2',
             role: 'Migrating from C++ to Java for a Time-Critical Web Launch'
         }
     ]
@@ -29,6 +29,7 @@ const Index = () => {
 
 export default Index;
 
+
 const Card = ({ card }) => (
     <div className="">
         <h4 className="text-center text-[1.5rem] mb-[1rem] sm:mb-[1.5rem] font-[700]">{card.header}</h4>
@@ -39,7 +40,7 @@ const Card = ({ card }) => (
 
             <div className="absolute z-[3] bottom-[.7rem] sm:bottom-[2.5rem] w-[20rem] sm:w-[29rem] flex flex-col items-center mx-[17%] sm:mx-[25%]">
                 <p className="text-center text-[1.2rem]">{card.role}</p>
-                <Link href='#' className="flex items-center font-[500] text-[1.2rem] mt-[2rem] gap-[1.5rem]">Read Story <img className="w-[2rem]" src="/arrow.svg" alt="arrow icon" /></Link>
+                <Link href={card.link} className="flex items-center font-[500] text-[1.2rem] mt-[2rem] gap-[1.5rem]">Read Story <img className="w-[2rem]" src="/Arrow.svg" alt="arrow icon" /></Link>
             </div>
         </div>
     </div>

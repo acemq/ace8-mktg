@@ -65,7 +65,7 @@ const Intro = () => {
                     <img src="/golang.svg" className='sm:hidden mt-[3rem]' alt="learn golang" />
                     <img src="/expert.svg" className='sm:hidden mt-[3rem]' alt="expert section" />
                 </div>
-                <div className="pr-[10rem] justify-between sm:flex hidden mt-[10rem]">
+                <div className="justify-around sm:flex hidden mt-[10rem]">
                     <Image width={1000} height={577} src={'/code_json.png'} className='w-[80rem]' alt='code' />
                     <img src="/activate.svg" className='mt-[3rem] sm:w-[45rem]' alt="activate section" />
                 </div>
@@ -87,9 +87,9 @@ const SubIntro = () => {
                 'We begin by carefully planning the migration process, considering Lambda\'s limitations and understanding the reasons for moving from ECS',
                 'Our specialized tools, including Code Parser, Rule Based Translation, AWS Lambda Handler Generator, AWS Lambda Template Generator, and AWS API Gateway Generator, automate the conversion process.'
             ],
-            image: '/tinkter.png',
+            image: '/Tinkter.png',
             imageStyle: 'w-[75rem]',
-            containerStyle: 'pr-[10rem] flex-row-reverse mt-[10rem] text-white',
+            containerStyle: 'sm:justify-around flex-row-reverse mt-[10rem] text-white',
             lineColor: 'bg-[#9B86FE]',
             fill: '#ffffff'
         },
@@ -123,7 +123,7 @@ const SubIntro = () => {
         },
     ]
     return (
-        <section className="pt-[10rem]">
+        <section className="pt-[10rem] sm:pb-[25rem]">
             <MaxContainer>
                 <div className="px-[3rem] sm:px-[10rem] flex flex-col">
                     <div className="sm:flex sm:flex-col sm:items-center sm:self-center sm:w-[100rem]">

@@ -38,7 +38,7 @@ const Index = () => {
             link: '/About'
         },
         {
-            label: 'Service',
+            label: 'Services',
             link: '/Service'
         },
         {
@@ -55,7 +55,9 @@ const Index = () => {
             <MaxContainer>
                 <div className="flex items-center px-[3rem] sm:px-[4rem] py-[1.5rem] sm:py-[2.5rem] justify-between">
                     <div className="sm:flex sm:items-center">
-                        <img src="/ace_logo.png" className="w-[7.6rem] sm:w-[10rem] sm:mr-[10rem]" alt="logo" />
+                        <Link href='/'>
+                            <img src="/ace_logo.png" className="w-[7.6rem] sm:w-[10rem] sm:mr-[10rem]" alt="logo" />
+                        </Link>
                         <div className={`fixed sm:static z-20 w-[100vw] sm:w-auto h-[100vh] sm:h-auto bg-black inset-0 sm:inset-auto px-[2rem] sm:px-0 transition-all duration-500  ease-[cubic-bezier(0.65, 0, 0.35, 1)] ${open ? 'translate-x-0' : 'translate-x-[100%] sm:translate-x-0'}`}>
                             <ul className="mt-[7rem] sm:mt-0 sm:flex">
                                 {navItems.map((item, i) => <NavItem item={item} setOpen={setOpen} openService={openService} setOpenService={setOpenService} id={i} key={i} />)}
@@ -100,7 +102,7 @@ const NavItem = ({ item, id, setOpenService, setOpen }) => {
             {
                 id == 2 ? (
                     <button onClick={toggleOpenService} className="py-[1rem] sm:px-[1rem] sm:ml-[2rem] block">
-                        <li className={`text-[1.5rem] ${pathName === item.link ? 'text-accent-100 border-b border-accent-100' : ''} sm:text-[1.3] sm:font-normal font-medium`}>{item.label}</li>
+                        <li className={`text-[1.5rem] ${pathName === `${item.link}/` ? 'text-accent-100 border-b border-accent-100' : ''} sm:text-[1.3] sm:font-normal font-medium`}>{item.label}</li>
                     </button>
                 ) : (
                     <Link href={item.link} className="py-[1rem] sm:px-[1rem] sm:ml-[2rem] block">

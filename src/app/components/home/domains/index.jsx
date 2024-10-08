@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 const Index = () => {
     const domains = [
         {
@@ -61,7 +63,7 @@ const Index = () => {
 export default Index;
 
 const DomiansMobile = ({ domains }) => (
-    <section className="sm:hidden">
+    <section className="sm:hidden" id="domains">
         <div className="px-[3rem] sm:px-[10rem]">
             <h2 className="text-[3rem] text-center font-[700]"><span className="text-accent-200">Our</span> 8 Domains</h2>
             <div className="flex flex-col mt-[3rem]">
@@ -73,7 +75,8 @@ const DomiansMobile = ({ domains }) => (
 
 
 const DomainsDesktop = ({ domains }) => (
-    <section className="hidden sm:flex px-[3rem] sm:px-[10rem] gap-x-[4rem]">
+    <section className="hidden scroll-mt-[6rem] sm:flex px-[3rem] sm:px-[10rem] gap-x-[4rem]"  id="
+    domains">
         <img src="/mile_4.png" alt="arrow" className="hidden sm:w-[3.7rem] sm:block" />
         <div className="flex flex-col">
             <div className="">
@@ -81,12 +84,12 @@ const DomainsDesktop = ({ domains }) => (
                 <p className="text-[1.5rem]">At Ace8, we empower businesses to thrive in the digital age through cutting-edge technology services spanning eight crucial domains. From Advanced Architectures to Microservices, Code & Development, we're dedicated to delivering unparalleled expertise and innovative solutions tailored to meet your specific needs.</p>
             </div>
 
-            <div className="h-[93rem] grid place-content-center relative">
+            <div className="h-[93rem] sm:mt-[8rem] grid place-content-center relative">
                 <Image src='/center_logo.png' className="w-[45rem]" width={550} height={178} />
                 {domains.map((domain, index) => <DomainDesktop domain={domain} key={index} id={index} />)}
             </div>
             <Conntal />
-            <p className="text-[3rem] leading-[4rem] font-[700] text-[#FFFFFF] mt-[9rem]">Ace8 is not just a technology services company; we are your strategic partner in navigating the ever-evolving landscape of technology. Elevate your business to new heights with Ace8 - Where innovation meets excellence!</p>
+            {/* <p className="text-[3rem] leading-[4rem] font-[700] text-[#FFFFFF] mt-[9rem]">Ace8 is not just a technology services company; we are your strategic partner in navigating the ever-evolving landscape of technology. Elevate your business to new heights with Ace8 - Where innovation meets excellence!</p> */}
         </div>
     </section>
 )
@@ -100,7 +103,6 @@ const DomainMobile = ({ domain, id }) => (
 )
 
 const DomainDesktop = ({ domain, id }) => {
-
     const returnAbsoluteValue = (index) => {
         switch (index) {
             case 0:
@@ -134,15 +136,15 @@ const DomainDesktop = ({ domain, id }) => {
 }
 
 const Conntal = () => (
-    <div className="py-[2rem] px-[2rem] w-fit bg-conner-gradient rounded-[10rem] self-center mt-[6rem]">
+    <Link href='http://conntalent.com' className="py-[2rem] hover:opacity-[.7] transition-all px-[2rem] sm:mt-[10rem] w-fit bg-conner-gradient rounded-[10rem] self-center mt-[6rem]">
         <div className="flex gap-[1rem]">
             <div className="bg-black rounded-full w-[7rem] h-[7rem] grid place-content-center">
-                <Image src='/profile.png' width={48} className="w-[3rem] h-[3rem]" height={48} />
+                <img src='/profile.png' width={48} className="w-[3rem] h-[3rem]" alt="profile icon" height={48} />
             </div>
             <div className="">
                 <p className="font-[700] text-[1.5rem] mb-[.8rem]">Top-Tier Talent (Conntal)</p>
                 <p className="w-[40rem] text-[1.5rem]">Conntal supports all of our divisions of Ace8 and provides our eternal teams and clients with best of breed talent.</p>
             </div>
         </div>
-    </div>
+    </Link>
 )
