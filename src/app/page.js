@@ -1,17 +1,37 @@
-import Navbar from './components/common/navbar';
-import Hero from './components/home/hero'
-import About from './components/home/about'
-import Brands from './components/home/brand'
-import Domians from './components/home/domains'
-import Services from './components/home/services'
-import Partners from './components/common/partners'
-import Management from './components/home/management'
-import Impact from './components/home/impact'
-import Mission from './components/home/mission'
-import Approach from './components/home/approach'
-import Contact from './components/home/contact'
-import Formular from './components/home/formula'
-import MaxContainer from './components/common/maxContainer/index'
+import Navbar from "./components/common/navbar";
+import Hero from "./components/home/hero";
+import About from "./components/home/about";
+import Brands from "./components/home/brand";
+import Domians from "./components/home/domains";
+import Services from "./components/home/services";
+import Partners from "./components/common/partners";
+import Management from "./components/home/management";
+import Impact from "./components/home/impact";
+import Mission from "./components/home/mission";
+import Approach from "./components/home/approach";
+import Contact from "./components/home/contact";
+import Formular from "./components/home/formula";
+import MaxContainer from "./components/common/maxContainer/index";
+
+export const metadata = {
+  title: "Ace8 | Digital Transformation, DevSecOps, Cloud-Native & Automation",
+  description:
+    "Empowering businesses with cutting-edge solutions in DevSecOps, cloud-native development, automation, and data management. Unlock innovation and resilience with Ace8.",
+  alternates: {
+    canonical: "https://www.ace8.io/",
+  },
+  openGraph: {
+    title:
+      "Ace8 | Digital Transformation, DevSecOps, Cloud-Native & Automation",
+    description:
+      "Empowering businesses with cutting-edge solutions in DevSecOps, cloud-native development, automation, and data management. Unlock innovation and resilience with Ace8.",
+    url: "https://www.ace8.io/",
+    siteName: "Ace8",
+    locale: "en_US",
+    type: "website",
+  },
+};
+
 export default function Home() {
   return (
     <>
