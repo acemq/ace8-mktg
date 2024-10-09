@@ -1,22 +1,21 @@
 import MaxContainer from "../components/common/maxContainer";
 import Hero from "../components/contact/hero";
 import Body from "../components/contact/body";
-import Brands from '../components/common/brand'
+import Brands from "../components/common/brand";
 
 export const metadata = {
-  title: "Contact AceMQ | Expert RabbitMQ Support & Consulting",
+  title: "Contact Us for Expert DevSecOps & Cloud Solutions | Ace8",
   description:
-    "Reach out to AceMQ Consulting for expert support and consulting in RabbitMQ and other messaging and queuing solutions. Contact us today to learn how we can optimize your systems.",
+    "Get in touch with Ace8 for expert consulting on DevSecOps, cloud solutions, messaging systems, and more. We're here to help you with your digital transformation needs.",
   alternates: {
-    canonical: "https://acemq.com/contact-us",
+    canonical: "https://www.ace8.io/contact-us",
   },
   openGraph: {
-    title: "Contact AceMQ | Expert RabbitMQ Support & Consulting",
+    title: "Contact Us for Expert DevSecOps & Cloud Solutions | Ace8",
     description:
-      "Reach out to AceMQ Consulting for expert support and consulting in RabbitMQ and other messaging and queuing solutions. Contact us today to learn how we can optimize your systems.",
-    url: "https://acemq.com/contact",
-    siteName: "AceMQ Consulting",
-    // Add image URL here if available
+      "Get in touch with Ace8 for expert consulting on DevSecOps, cloud solutions, messaging systems, and more. We're here to help you with your digital transformation needs.",
+    url: "https://www.ace8.io/contact-us",
+    siteName: "Ace8",
     locale: "en_US",
     type: "website",
   },
