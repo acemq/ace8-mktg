@@ -11,12 +11,12 @@ export async function generateMetadata({ params }) {
     title: data[id]?.header,
     description: data[id]?.text[0].paragraph,
     alternates: {
-      canonical: `https://www.ace8.io/stories/${id}/`,
+      canonical: `https://www.ace8.io/stories/${id}`,
     },
     openGraph: {
       title: data[id]?.header,
       description: data[id]?.text[0].paragraph,
-      url: `https://www.ace8.io/stories/${id}/`,
+      url: `https://www.ace8.io/stories/${id}`,
       siteName: "Ace8",
       // Add image URL here if available
       locale: "en_US",
