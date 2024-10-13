@@ -194,7 +194,7 @@ const ServiceDesktop = ({ services }) => {
                             <h4 className="font-[600] text-[1.5rem]">Featured Services</h4>
                         </div> */}
                         <ul className="mt-[1.5rem] flex flex-col justify-center gap-[1.5rem] sm:gap-[.5rem]">
-                            {_services.map((service, index) => <li onClick={() => toggleActive(index)} className={`flex px-[2.2rem] py-[.8rem] items-center hover:cursor-pointer rounded-[.5rem] gap-[1rem] ${service.active && index != 0 ? "bg_gradient font-[500]" : ''}`} key={index}><Image src={service.image} className={`${index == 0 ? 'w-[2.5rem] ml-[.5rem]' : 'w-[4rem] aspect-square'}`} alt="icon" width={17} height={17} /> <p className={`${index == 0 ? 'font-[600]' : ''}`}>{service.Name}</p></li>)}
+                            {_services.map((service, index) => <li onClick={() => toggleActive(index)} className={`flex px-[2.2rem] py-[.8rem] items-center hover:cursor-pointer hover:bg-purple_gradient rounded-[.5rem] gap-[1rem] ${service.active && index != 0 ? "bg_gradient font-[500]" : ''}`} key={index}><Image src={service.image} className={`${index == 0 ? 'w-[2.5rem] ml-[.5rem]' : 'w-[4rem] aspect-square'}`} alt="icon" width={17} height={17} /> <p className={`${index == 0 ? 'font-[600]' : ''}`}>{service.Name}</p></li>)}
                         </ul>
                     </div>
                     <div className="bg-[#0D1117] p-[1.5rem] rounded-[1rem]" >

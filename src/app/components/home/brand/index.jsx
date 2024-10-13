@@ -44,9 +44,9 @@ const Index = () => {
         }
     }
     return (
-        <section className="px-[3rem] sm:px-[10rem] mt-[5rem] sm:mt-[1.5rem] pb-[5.2rem] sm:pb-[0] flex gap-x-[4rem] w-[100%]">
-            <img src="/mile_2.png" className="hidden sm:w-[3.7rem] sm:block" alt="" />
-            <div className="w-[100%]">
+        <section className="px-[3rem] sm:px-[10rem] mt-[5rem] sm:mt-[1.5rem] relative pb-[5.2rem] sm:pb-[8.5rem] flex gap-x-[4rem] w-[100%]">
+            <img src="/mile_2.png" className="hidden sm:w-[3.7rem] absolute sm:block" alt="" />
+            <div className="w-[100%] sm:ml-[7rem]">
                 <h2 className="text-[2.9rem] sm:text-[3.2rem] text-center sm:text-left font-[700] mb-[3rem]">Trusted By <span className="text-accent-100">Brands Globally</span></h2>
                 <div className="hidden sm:flex items-center justify-between w-[100%]">
                     {_brands.map((item, i) => <Brand item={item} key={i} />)}

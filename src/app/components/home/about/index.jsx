@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 const Index = () => {
     return (
-        <section id="about" className="px-[3rem] scroll-mt-[8rem] sm:px-[10rem] flex gap-x-[4rem]">
-             <img src="/mile_3.png" className="hidden sm:w-[3.7rem] sm:mt-[3rem] sm:block" alt="line" />
-            <div className="flex flex-col justify-center sm:flex-row-reverse sm:justify-between">
+        <section id="about" className="px-[3rem] sm:pb-[4rem] scroll-mt-[8rem] relative sm:px-[10rem] flex gap-x-[4rem]">
+             <img src="/mile_3.png" className="hidden sm:w-[3.7rem] absolute top-[3rem] sm:block" alt="line" />
+            <div className="flex flex-col sm:ml-[7rem] justify-center sm:flex-row-reverse sm:justify-between">
                 <Image src='/focused_man.png' className="w-[100%] h-[30rem] sm:w-[45rem] sm:h-[48rem]" alt="focused_image" width='350' height='400' />
                 <div className="flex flex-col">
                     <p className="text-center sm:text-start text-[1.4rem] sm:text-[2rem] sm:mb-[1.5rem] mt-[3rem]">Who we are</p>
