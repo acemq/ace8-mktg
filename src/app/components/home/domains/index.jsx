@@ -77,7 +77,7 @@ const DomiansMobile = ({ domains }) => (
 const DomainsDesktop = ({ domains }) => (
     <section className="hidden scroll-mt-[6rem] sm:flex px-[3rem] sm:px-[10rem] gap-x-[4rem]"  id="
     domains">
-        <img src="/mile_4.png" alt="arrow" className="hidden sm:w-[3.7rem] sm:block" />
+        <img src="/mile_4.png" alt="arrow" className="hidden mt-[1.8rem] sm:w-[3.7rem] sm:block" />
         <div className="flex flex-col">
             <div className="">
                 <h2 className="text-[5rem] font-[700]"><span className="text-accent-200">Our</span> 8 Domains</h2>

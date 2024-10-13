@@ -23,6 +23,12 @@ module.exports = {
         'accent-100': '#8167FF',
         'accent-200': '#EA9EFF',
         'accent-300': '#33B3AE'
+      },
+      animation: {
+        'spin-slow': 'spin 1.5s linear infinite'
+      },
+      backdropBlur:  {
+        '200':  '200px'
       }
     },
   },
