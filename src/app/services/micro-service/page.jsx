@@ -9,13 +9,13 @@ export const metadata = {
   description:
     "AceMQ offers expert microservices design, development, and refactoring services. Specializing in Golang starter kits and AWS Lambda migration, we streamline your architecture for efficiency and scalability.",
   alternates: {
-    canonical: "https://www.ace8.io/services/microservices",
+    canonical: "https://www.ace8.io/services/micro-service",
   },
   openGraph: {
     title: "Comprehensive Microservices Design & AWS Lambda Migration | Ace8",
     description:
       "AceMQ offers expert microservices design, development, and refactoring services. Specializing in Golang starter kits and AWS Lambda migration, we streamline your architecture for efficiency and scalability.",
-    url: "https://www.ace8.io/services/microservices",
+    url: "https://www.ace8.io/services/micro-service",
     siteName: "Ace8",
     locale: "en_US",
     type: "website",
