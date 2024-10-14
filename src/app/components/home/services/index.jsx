@@ -3,7 +3,13 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from "next/link";
+import milestone, { fadeIn, slideIn } from "@/app/Animations/common";
 const Index = () => {
+    useEffect(() => {
+        milestone()
+        slideIn()
+        fadeIn()
+    }, [])
     const services = [
         {
             image: '/__featured_services.svg',
@@ -107,14 +113,14 @@ const Index = () => {
         <section>
             <ServiceMobile services={services_mobile} />
             <ServiceDesktop services={services} />
-            <div className=" px-[3rem] sm:px-[10rem] mt-[6rem] ">
+            <div className=" px-[3rem] sm:px-[10rem] mt-[6rem]">
                 <div className="responsive-grid flex flex-col-reverse">
                     {features.map((service, index) => <Card service={service} key={index} />)}
                 </div>
                 <div className="pl-[8rem] pr-[4rem] sm:items-center sm:pl-[4rem] py-[7rem] sm:py-[3rem] hidden bg-black sm:flex justify-between w-[100%] mt-[4rem]">
-                    <div className="w-[450px]">
+                    <div className="w-[450px]" data-animation-id="slideIn">
                         <img src="/_devsecops.svg" className="w-[6rem]" alt="icon" />
-                        <h3 className="font-[600] mb-1 text-[2rem] sm:mb-[1rem] sm:mt-[3rem] text-center sm:text-start">DevSecOps</h3>
+                        <h3 className="font-[600] mb-1 text-[2rem] sm:mb-[1rem] sm:mt-[3rem] sm:text-[2.5rem] text-center sm:text-start">DevSecOps</h3>
                         <p className="text-[1.2rem] sm:text-[1.7rem] text-center sm:text-start">Bridging the gap between development,  security, and operations. Achieve efficient and secure software delivery through collaboration, automation, and a security-first approach.</p>
                     </div>
                     <Image width={657} height={361} className="w-[55rem] h-[33rem]" src="/_infinity.png" alt="" />
@@ -173,11 +179,14 @@ const ServiceDesktop = ({ services }) => {
         setServices(prevServices => prevServices.map((item, i) => id == i ? { ...item, active: true } : { ...item, active: false }))
     }
     return (
-        <div className="px-[3rem] sm:px-[10rem] sm:flex gap-x-[4rem] hidden">
-            <div className="overflow-hidden sm:w-[4.555rem] z-[-1] mt-[1rem] absolute sm:block">
+        <div className="px-[3rem] sm:px-[10rem] relative sm:flex gap-x-[4rem] hidden">
+            {/* <div className="overflow-hidden sm:w-[4.555rem] z-[-1]  absolute sm:block">
                 <img src="/mile_5.png" className="w-[100%]" alt="icon" />
+            </div> */}
+            <div className="h-[0] overflow-hidden absolute mt-[1rem] z-[-1] hidden sm:block" data-animation-id='milestone'>
+                <img src="/mile_5.png" className="sm:w-[4.555rem]" alt="icon" />
             </div>
-            <div className="flex justify-between sm:ml-[7rem] w-[100%]">
+            <div className="flex justify-between sm:ml-[7rem] w-[100%]" data-animation-id='slideIn'>
                 <div className="flex flex-col">
                     <div className="border border-white px-[2.4rem] rounded-[2rem] mb-[2rem] py-[.8rem] self-start">
                         <p className="text-[1.2rem]">Featured Services</p>
@@ -228,7 +237,7 @@ const ServiceDesktop = ({ services }) => {
 
 
 const Card = ({ service }) => (
-    <Link href={service.link} className="hover:scale-[1.07] transition-all">
+    <Link href={service.link} className="hover:scale-[1.07] transition-all" data-animation-id="fadeIn">
         <div className="bg-black py-[1.8rem] sm:py-[3rem] rounded-[1rem] px-[1.2rem] sm:px-[1.6rem] w-[100%] sm:w-[38rem] flex flex-col items-center sm:items-start">
             <img src={service.image} className="w-[4rem] h-[6rem]" alt="icon" />
             <h4 className="font-[600] mb-1 text-[2rem] sm:mb-[2rem] text-center sm:text-start">{service.Name}</h4>

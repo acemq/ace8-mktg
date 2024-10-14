@@ -166,3 +166,17 @@ p {
 .bg_gradient {
   background: linear-gradient(180deg, #FF88C3 0%, #9B86FE 100%);
 }
+
+
+[data-animation-id = 'paragraph']{
+  opacity: 0;
+}
+
+[data-animation-id='slideIn']{
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+[data-animation-id='fadeIn']{
+  opacity: 0;
+}

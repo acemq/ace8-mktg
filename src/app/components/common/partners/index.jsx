@@ -27,7 +27,7 @@ const Index = () => {
 
     return (
         <section className="px-[3rem] pb-[5rem] sm:px-[10rem] mt-[8rem]  sm:mt-[10rem]">
-            <div className="sm:bg-black sm:flex sm:rounded-[1.5rem] sm:pr-[10rem] sm:justify-between">
+            <div className="sm:bg-black sm:flex sm:rounded-[1.5rem] sm:pr-[10rem] sm:justify-between" data-animation-id='slideIn'>
                 <h4 className="font-[700] text-[2.3rem] sm:text-[3.8rem] sm:w-[60rem] text-center sm:text-start sm:p-[6rem]">Strategically Aligned With <span className="text-[#9B86FE]">Industry Leaders</span></h4>
 
                 <div className="sm:flex hidden items-center gap-[3rem]">
