@@ -67,6 +67,24 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: "https://www.ace8.io/services/gemfire",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.ace8.io/services/devsecops",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.ace8.io/services/open-source",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://www.ace8.io/stories",
       lastModified: new Date(),
       changeFrequency: "monthly",
