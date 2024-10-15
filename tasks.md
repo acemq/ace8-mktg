@@ -1,0 +1,6 @@
+- updating meta tags
+- optimizing path urls
+  - changing /Service/_ to /services/_
+  - changing all urls paths to small caps
+- missing links in the footer
+- stories links

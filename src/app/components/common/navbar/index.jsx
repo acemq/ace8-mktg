@@ -15,16 +15,16 @@ const Index = () => {
         setOpen(prevOpen => !prevOpen);
     };
 
-    useEffect(() => {
-        if (open || openService) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
-        return () => {
-            document.body.style.overflow = '';
-        };
-    }, [open, openService]);
+  useEffect(() => {
+    if (open || openService) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open, openService]);
 
     useEffect(() => {
         setOpen(false);

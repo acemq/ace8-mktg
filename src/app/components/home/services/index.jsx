@@ -1,7 +1,7 @@
-'use client';
+"use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import milestone, { fadeIn, slideIn } from "@/app/Animations/common";
 const Index = () => {
@@ -62,7 +62,7 @@ const Index = () => {
         },
     ]
 
-    const services_mobile = [...services]
+  const services_mobile = [...services];
 
     const features = [
         {
@@ -134,46 +134,82 @@ const Index = () => {
 export default Index;
 
 const ServiceMobile = ({ services }) => {
-    const [_services, setServices] = useState(services)
+  const [_services, setServices] = useState(services);
 
-    const toggleModal = (id) => {
-        setServices(prevServices => prevServices.map((item, i) => id == i ? { ...item, active: !item.active } : { ...item, active: false }))
-    }
+  const toggleModal = (id) => {
+    setServices((prevServices) =>
+      prevServices.map((item, i) =>
+        id == i ? { ...item, active: !item.active } : { ...item, active: false }
+      )
+    );
+  };
 
-    return (
-        <div className="flex flex-col items-center mt-[5rem] px-[3rem] sm:px-[10rem] sm:hidden">
-            <div className="border border-accent-300 px-[2.4rem] rounded-[2rem] py-[.8rem]">
-                <p className="text-[1rem]">Services We Provide</p>
-            </div>
+  return (
+    <div className="flex flex-col items-center mt-[5rem] px-[3rem] sm:px-[10rem] sm:hidden">
+      <div className="border border-accent-300 px-[2.4rem] rounded-[2rem] py-[.8rem]">
+        <p className="text-[1rem]">Services We Provide</p>
+      </div>
 
-            <h2 className="text-[2.5rem] font-[700] w-[220px] text-center mt-[1rem]">What We Can <span className="text-accent-300">Do</span>  <span className="font-[500]">For You:</span></h2>
-            <p className="text-center text-[1.3rem] mb-[2rem]"> Ace8 offers a suite of cutting-edge services, from Message Brokersto DevSecOps, empowering enterprises with services to thrive in today's digital economy. With streamlined data flow and robust development practices, Ace8 ensures unparalleled efficiency and resilience, driving extreme value for modern businesses.</p>
-            <div className="bg-[#161B22] rounded-[.8rem] w-[100%] px-[1.8rem] py-[1rem]">
-                <div className="bg-[#11161E] py-[2.5rem]">
-                    <div className="flex px-[2.8rem] gap-[1rem] font-[600] text-[2rem]">
-                        <Image src="/settings.svg" width={17} height={17} alt="" />
-                        <h4>Our Services</h4>
-                    </div>
-                    <ul className="mt-[3rem] flex flex-col gap-[1.5rem]">
-                        {_services.map((service, index) => {
-                            return (
-                                <React.Fragment key={index}>
-                                    {!service.default && <li onClick={() => toggleModal(index)} className={`flex px-[2.8rem] py-[.8rem] justify-between w-[100%] items-center`}> <div className="flex gap-[1rem]"><Image src={service.image} width={17} height={17} /> <p className="text-[1.3rem]">{service.Name}</p></div><img src="/angle-right.svg" className="w-[2.5rem]" alt="right angle" /></li>}
-                                    <AnimatePresence>
-                                        {service.active && !service.default && <Modal service={service} toggleModal={toggleModal} id={index} />}
-                                    </AnimatePresence>
-                                </React.Fragment>
-                            )
-                        })}
-                    </ul>
-                </div>
-            </div>
+      <h2 className="text-[2.5rem] font-[700] w-[220px] text-center mt-[1rem]">
+        What We Can <span className="text-accent-300">Do</span>{" "}
+        <span className="font-[500]">For You:</span>
+      </h2>
+      <p className="text-center text-[1.3rem] mb-[2rem]">
+        {" "}
+        Ace8 offers a suite of cutting-edge services, from Message Brokersto
+        DevSecOps, empowering enterprises with services to thrive in today's
+        digital economy. With streamlined data flow and robust development
+        practices, Ace8 ensures unparalleled efficiency and resilience, driving
+        extreme value for modern businesses.
+      </p>
+      <div className="bg-[#161B22] rounded-[.8rem] w-[100%] px-[1.8rem] py-[1rem]">
+        <div className="bg-[#11161E] py-[2.5rem]">
+          <div className="flex px-[2.8rem] gap-[1rem] font-[600] text-[2rem]">
+            <Image src="/settings.svg" width={17} height={17} alt="" />
+            <h4>Our Services</h4>
+          </div>
+          <ul className="mt-[3rem] flex flex-col gap-[1.5rem]">
+            {_services.map((service, index) => {
+              return (
+                <React.Fragment key={index}>
+                  {!service.default && (
+                    <li
+                      onClick={() => toggleModal(index)}
+                      className={`flex px-[2.8rem] py-[.8rem] justify-between w-[100%] items-center`}
+                    >
+                      {" "}
+                      <div className="flex gap-[1rem]">
+                        <Image src={service.image} width={17} height={17} />{" "}
+                        <p className="text-[1.3rem]">{service.Name}</p>
+                      </div>
+                      <img
+                        src="/angle-right.svg"
+                        className="w-[2.5rem]"
+                        alt="right angle"
+                      />
+                    </li>
+                  )}
+                  <AnimatePresence>
+                    {service.active && !service.default && (
+                      <Modal
+                        service={service}
+                        toggleModal={toggleModal}
+                        id={index}
+                      />
+                    )}
+                  </AnimatePresence>
+                </React.Fragment>
+              );
+            })}
+          </ul>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 const ServiceDesktop = ({ services }) => {
-    const [_services, setServices] = useState(services)
+  const [_services, setServices] = useState(services);
 
     const toggleActive = (id) => {
         setServices(prevServices => prevServices.map((item, i) => id == i ? { ...item, active: true } : { ...item, active: false }))
@@ -248,61 +284,72 @@ const Card = ({ service }) => (
 )
 
 const Modal = ({ service, toggleModal, id }) => {
-    useEffect(() => {
-        if (service.active) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
-        return () => {
-            document.body.style.overflow = '';
-        };
-    }, [service.active]);
-    const useAnime = (variants) => {
-        return {
-            initial: 'initial',
-            animate: 'animate',
-            exit: 'exit',
-            variants
-        }
+  useEffect(() => {
+    if (service.active) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
     }
-    const modal = {
-        initial: {
-            scale: .7,
-            opacity: 0
-        },
-        animate: {
-            scale: 1,
-            duration: .7,
-            opacity: 1,
-        },
-        exit: {
-            duration: .7,
-            opacity: 0
-        }
-    }
-    const backdrop = {
-        initial: {
-            opacity: 0
-        },
-        animate: {
-            duration: .7,
-            opacity: 1,
-            transition: 'ease-in'
-        },
-        exit: {
-            duration: .7,
-            opacity: 0
-        }
-    }
-    return (
-        <motion.div {...useAnime(modal)} className="fixed w-[100vw] h-[100svh] inset-0 z-30">
-            <motion.div {...useAnime(backdrop)} className="bg-[#0009] w-[100vw] h-[100svh] fixed inset-0"></motion.div>
-            <div className="fixed flex flex-col z-40 top-1/2 left-1/2 rounded-[2rem] -translate-x-1/2 -translate-y-1/2 w-[30rem] bg-[#161B22] py-[3rem] px-[2rem]">
-                <h2 className="text-[1.8rem] mb-[1rem] font-[700]">{service.Name}</h2>
-                <p className="text-[1.2rem]">{service.role}</p>
-                <button className="self-end text-[1.2rem] mt-[2rem] py-[.6rem] px-[1rem] bg-red-500 rounded-[.3rem]" onClick={() => toggleModal(id)}>close</button>
-            </div>
-        </motion.div>
-    );
-}
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [service.active]);
+  const useAnime = (variants) => {
+    return {
+      initial: "initial",
+      animate: "animate",
+      exit: "exit",
+      variants,
+    };
+  };
+  const modal = {
+    initial: {
+      scale: 0.7,
+      opacity: 0,
+    },
+    animate: {
+      scale: 1,
+      duration: 0.7,
+      opacity: 1,
+    },
+    exit: {
+      duration: 0.7,
+      opacity: 0,
+    },
+  };
+  const backdrop = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      duration: 0.7,
+      opacity: 1,
+      transition: "ease-in",
+    },
+    exit: {
+      duration: 0.7,
+      opacity: 0,
+    },
+  };
+  return (
+    <motion.div
+      {...useAnime(modal)}
+      className="fixed w-[100vw] h-[100svh] inset-0 z-30"
+    >
+      <motion.div
+        {...useAnime(backdrop)}
+        className="bg-[#0009] w-[100vw] h-[100svh] fixed inset-0"
+      ></motion.div>
+      <div className="fixed flex flex-col z-40 top-1/2 left-1/2 rounded-[2rem] -translate-x-1/2 -translate-y-1/2 w-[30rem] bg-[#161B22] py-[3rem] px-[2rem]">
+        <h2 className="text-[1.8rem] mb-[1rem] font-[700]">{service.Name}</h2>
+        <p className="text-[1.2rem]">{service.role}</p>
+        <button
+          className="self-end text-[1.2rem] mt-[2rem] py-[.6rem] px-[1rem] bg-red-500 rounded-[.3rem]"
+          onClick={() => toggleModal(id)}
+        >
+          close
+        </button>
+      </div>
+    </motion.div>
+  );
+};
