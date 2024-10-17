@@ -49,10 +49,10 @@ const Index = () => {
 
     const navItems = [
         { label: 'Home', link: '/' },
-        { label: 'About us', link: '/About' },
-        { label: 'Services', link: '/Service' },
-        { label: 'Blog', link: '/Blogs' },
-        { label: 'Customer Stories', link: '/Stories' }
+        { label: 'About us', link: '/about' },
+        { label: 'Services', link: '/service' },
+        { label: 'Blog', link: '/blogs' },
+        { label: 'Customer Stories', link: '/stories' }
     ];
 
     return (

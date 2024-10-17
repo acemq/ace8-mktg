@@ -57,6 +57,7 @@ p {
   place-content: center;
   width: 100%;
   gap: 2rem;
+  row-gap: 4rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -168,15 +169,20 @@ p {
 }
 
 
-[data-animation-id = 'paragraph']{
+[data-animation-id='paragraph'] {
   opacity: 0;
 }
 
-[data-animation-id='slideIn']{
+[data-animation-id='slideIn'] {
   transform: translateX(50px);
   opacity: 0;
 }
 
-[data-animation-id='fadeIn']{
+[data-animation-id='fadeIn'] {
   opacity: 0;
+}
+
+
+.header_ii {
+  @apply text-[3rem] leading-[4rem] sm:text-[3.5rem] sm:leading-[5rem] font-[700]
 }

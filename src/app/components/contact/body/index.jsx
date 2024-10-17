@@ -7,10 +7,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'react-phone-input-2/lib/style.css'
 const Index = () => {
     return (
-        <section className="bg-white relative px-[3rem] sm:px-[0] pt-[3rem] sm:pt-[0] sm:flex sm:pb-[10rem] pb-[5rem] sm:pr-[10rem]  justify-between">
-            <div className="bg-[#080A0F] sm:px-[1rem] sm:py-[12rem] relative flex flex-col sm:rounded-tr-none rounded-tl-[40px] sm:rounded-tl-none rounded-br-[40px]  h-[20rem] sm:h-auto">
+        <section className="bg-white relative px-[3rem] sm:px-[0] pt-[3rem] sm:pt-[0] sm:flex sm:pb-[8rem] pb-[5rem] sm:pr-[10rem]  justify-between">
+            <div className="bg-[#080A0F] sm:px-[1rem] sm:py-[12rem] sm:pb-[6rem] relative flex flex-col sm:rounded-tr-none rounded-tl-[40px] sm:rounded-tl-none rounded-br-[40px]  h-[20rem] sm:h-auto">
                 <img className="sm:w-[70rem]" src="/map.png" alt="" />
                 <img src="/contact_info.png" className="sm:w-[50rem] hidden absolute self-center bottom-[-7rem]" alt="" />
+                <ContactInfo />
             </div>
             <Form />
         </section>
@@ -31,7 +32,7 @@ const Form = () => {
     const [role, setRole] = useState('')
     const [message, setMessage] = useState('')
     const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    
+
     useEffect(() => {
         setEmailError(EMAIL_REGEX.test(email))
     }, [email])
@@ -123,6 +124,25 @@ const Form = () => {
 
                 <button onClick={handleSubmit} className="mt-[3rem] self-center sm:self-start px-[3rem] py-[1rem] text-white bg-conner-gradient rounded-[1rem]">{loading ? 'loading..' : 'Submit'}</button>
             </form>
+        </div>
+    )
+}
+
+
+const ContactInfo = () => {
+    return (
+        <div className="bg-[#232323] sm:ml-[9rem] translate-y-[10rem] max-w-[45rem] rounded-[1rem] px-[4.5rem] py-[2.7rem] flex justify-between">
+            <div className="">
+                <h3 className="font-[700] text-[1.5rem]">Email Us</h3>
+                <div className="sm:mt-[2rem]">
+                    <p className="text-[1rem] sm:leading-[1.5rem]">Business</p>
+                    <p className="">info@aceitco.com</p>
+                </div>
+            </div>
+            <div className="sm:mt-[2rem]">
+                <p className="font-[700] text-[1.5rem]">Call Us</p>
+                <p className="">305-981-6475</p>
+            </div>
         </div>
     )
 }

@@ -5,7 +5,7 @@ const Index = () => {
             <p className="text-[2rem] sm:text-[2.8rem] sm:leading-[4rem] text-center sm:self-center font-[700] sm:w-[70rem]"><span className="font-[400]">With over 100 years of experience,</span> and <span className="text-[#46D7B4]">the desire to always stay on the cutting edge,</span><span className="font-[400]"> we are empowered</span> to transform your business. </p>
 
             <div className="sm:mt-[5rem] sm:flex hidden flex-col">
-                <h2 className="sub-header text-center sm:mb-[1rem]"><span className="text-[#8ACDC5]">Our</span> Belief</h2>
+                <h2 className="font-[700] sm:text-[3rem] text-[5rem] text-center sm:mb-[1rem]"><span className="text-[#8ACDC5]">Our</span> Beliefs</h2>
                 <img src="/belief_sm.webp" className="sm:w-[100rem] self-center" alt="belief" />
             </div>
 
