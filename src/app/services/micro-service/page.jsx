@@ -30,7 +30,7 @@ const MicroService = () => {
       <div className="sm:bg-white sm:py-[3rem]">
         <MaxContainer>
           <Banner />
-          <Contact />
+          <Contact route={"micro-service"} />
         </MaxContainer>
       </div>
     </>

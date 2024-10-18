@@ -31,7 +31,7 @@ const DataIntegration = () => {
       <Body />
       <MaxContainer>
         <Banner />
-        <Contact />
+        <Contact route={"data-integration"} />
       </MaxContainer>
     </>
   );

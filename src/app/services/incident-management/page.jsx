@@ -31,7 +31,7 @@ const IncidentManagement = () => {
       <Body />
       <MaxContainer>
         <Banner />
-        <Contact />
+        <Contact route={"incident-management"} />
       </MaxContainer>
     </>
   );

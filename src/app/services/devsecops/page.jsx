@@ -29,7 +29,7 @@ const DevSecOps = () => {
       </MaxContainer>
       <Body />
       <MaxContainer>
-        <Contact />
+        <Contact route={"devsecops"} />
       </MaxContainer>
     </>
   );
