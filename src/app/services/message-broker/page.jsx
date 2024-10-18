@@ -37,7 +37,7 @@ const MessageBroker = () => {
       <Values />
       <MaxContainer>
         <Banner />
-        <Contact />
+        <Contact route={"message-broker"} />
       </MaxContainer>
     </>
   );
