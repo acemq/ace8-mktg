@@ -53,7 +53,7 @@ const Index = () => {
         }
     }
     return (
-        <section className="sm:px-[10rem] sm:mt-[7rem] pb-[5rem] scroll-mt-[5rem]" id="contact">
+        <section className="sm:px-[10rem] sm:mt-[7rem] pb-[5rem] scroll-mt-[10rem]" id="contact">
             <ToastContainer />
             <div className="pt-[2rem] px-[3rem] pb-[1rem] sm:mt-[12rem] sm:p-[7rem] sm:bg-black sm:flex sm:justify-between rounded-[3rem]">
                 <div className="sm:flex-1 sm:relative sm:pt-[7rem]">
