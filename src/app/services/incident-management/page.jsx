@@ -30,8 +30,10 @@ const IncidentManagement = () => {
       <Hero />
       <Body />
       <MaxContainer>
-        <Banner />
-        <Contact />
+        <div className="bg-white">
+          <Banner />
+          <Contact />
+        </div>
       </MaxContainer>
     </>
   );
