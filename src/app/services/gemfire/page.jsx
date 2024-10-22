@@ -30,7 +30,7 @@ const GemFire = () => {
       <div className="sm:bg-white">
         <MaxContainer>
           <Banner />
-          <Contact />
+          <Contact route={"gemfire"} />
         </MaxContainer>
       </div>
     </>

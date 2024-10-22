@@ -30,10 +30,8 @@ const IncidentManagement = () => {
       <Hero />
       <Body />
       <MaxContainer>
-        <div className="bg-white">
-          <Banner />
-          <Contact />
-        </div>
+        <Banner />
+        <Contact route={"incident-management"} />
       </MaxContainer>
     </>
   );
