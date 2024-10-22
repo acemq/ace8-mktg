@@ -17,7 +17,10 @@ module.exports = {
         'management-bg': "url('/management_bg.png')",
         'service-card-gradient': 'linear-gradient(180deg, rgba(255, 136, 195, 0.1) 0%, rgba(155, 134, 254, 0.1) 100%)',
         'purple_gradient': ' linear-gradient(180deg, #FF88C3 0%, #9B86FE 100%)',
-        'gradient_ii': 'linear-gradient(180deg, rgba(255, 136, 195, 0.37) 0%, rgba(155, 134, 254, 0.37) 100%)'
+        'gradient_ii': 'linear-gradient(180deg, rgba(255, 136, 195, 0.37) 0%, rgba(155, 134, 254, 0.37) 100%)',
+        'patterns': "url('/_message_broker_bg_sm.png')",
+        'patterns_mobile': "url('/_message_broker_bg.png')",
+        'diamond-gradient': 'radial-gradient(261.46% 261.46% at 50% 50%, #0B0E21 7.89%, rgba(11, 14, 33, 0) 100%)'
       },
       colors: {
         'bg-100': '#0D1117',
