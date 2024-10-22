@@ -1,10 +1,11 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
+
 const Index = ({ item }) => {
     const rolesLength = item.roles.length
     return (
-        <div className="max-w-[120rem] sm:mx-auto w-[100%]">
+        <div className="max-w-[120rem] sm:mx-auto w-[100%]" data-animation-id='slideIn'>
             <div className={`sm:flex sm:justify-between mt-[5rem]  ${item.containerStyle}`}>
                 <div className="sm:max-w-[60rem]">
                     {/* <h2 className="text-[3rem] leading-[4rem] sm:text-[3.5rem] sm:leading-[4.5rem] font-[700]">{item.header}</h2> */}

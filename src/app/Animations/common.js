@@ -26,7 +26,7 @@ export const slideIn = () => {
     const slideIn = document.querySelectorAll("[data-animation-id='slideIn']")
 
     slideIn.forEach((item) => {
-        IO(item, { threshold: .7 }).then(() => {
+        IO(item, { threshold: .2 }).then(() => {
             gsap.to(item, {
                 css: {
                     opacity: 1,

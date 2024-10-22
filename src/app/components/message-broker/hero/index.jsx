@@ -3,7 +3,7 @@ import MaxContainer from '../../common/maxContainer'
 
 const Index = () => {
     return (
-        <section className="bg-white text-black pt-[12rem] pb-[5rem]">
+        <section className="bg-white text-black pt-[12rem] sm:pt-[18rem] pb-[5rem]">
             <MaxContainer>
                 <div className="flex px-[3rem] sm:px-[10rem] flex-col relative">
                     <img src="/happyface.svg" alt="" className="absolute w-[8rem] left-[25rem] hidden sm:block top-[-4rem] h-[8rem]" />

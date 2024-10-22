@@ -134,9 +134,9 @@ const Index = () => {
             <div className="bg-white text-black px-[3rem] sm:px-[10rem] py-[3rem] sm:py-[8rem]">
                 <MaxContainer>
                     <div className="sm:flex flex-col">
-                        <h2 className="sm:text-[5rem] font-[700] text-[3rem] text-center mb-[2.5rem]"><span className="text-[#37ACA8]">Our</span><span className="font-[400]"> Consulting</span> Capabilities: </h2>
-                        <img src="/capabilities.svg" className='mb-[3rem] sm:hidden' alt="capabilities" />
-                        <img src="/capabilities_sm.svg" className='my-[4rem] w-[130rem] sm:mb-[8rem] self-center' alt="capabilities" />
+                        <h2 data-animation-id='slideIn' className="sm:text-[5rem] font-[700] text-[3rem] text-center mb-[2.5rem]"><span className="text-[#37ACA8]">Our</span><span className="font-[400]"> Consulting</span> Capabilities: </h2>
+                        <img data-animation-id='slideIn' src="/capabilities.svg" className='mb-[3rem] sm:hidden' alt="capabilities" />
+                        <img data-animation-id='slideIn' src="/capabilities_sm.svg" className='my-[4rem] w-[130rem] sm:mb-[8rem] self-center' alt="capabilities" />
 
                         {
                             capabilities.map((capability, index) => (<PlaceTextBesideImage item={capability} key={index} />))

@@ -8,7 +8,7 @@ const Index = () => {
                     src="/service_banner2.png"
                     className="w-[100%] rounded-[2rem] mix-blend-soft-light difference h-[100%] absolute inset-0 z-[-1]  sm:block hidden" alt="background" />
                 <div className="sm:w-[80rem] sm:mt-[3rem] flex flex-col">
-                    <h2 className="sub-header self-center text-center mt-[1rem] sm:w-[60rem] sm:mt-[0]">Increase your Velocity and <span className="text-[#8FD5CC]">Resilience with Ace8</span></h2>
+                    <h2 className="sub-header self-center text-center mt-[1rem] max-w-[70rem] sm:mt-[0]">Increase your Velocity and <span className="text-[#8FD5CC]">Resilience with Ace8</span></h2>
                     <p className="mt-[2rem] text-center">We make you move faster, reliably, unlocking your full potential. From architectural and implementation assessments to full deliveries, we believe in continuous innovation. Our offerings span assessments and services covering Microservices, Message Brokers, DevSecOps, and more. Explore our optimized products like Onboarding as as Service and Golang Starter Kits to help kickstart your Digital Transformation Today. Ready to innovate relentlessly? Choose Ace8 for transformative tech solutions.</p>
 
                     <Link href='#contact' className="self-center mt-[1rem]">
