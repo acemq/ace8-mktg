@@ -1,12 +1,17 @@
+'use client'
+import { slideIn } from '@/app/Animations/common';
 import MaxContainer from '../../common/maxContainer'
 import Image from 'next/image';
-
+import { useEffect } from 'react';
 
 const Index = () => {
+    useEffect(() => {
+        slideIn()
+    }, [])
     return (
         <section className="bg-white">
             <MaxContainer>
-                <div className="relative w-[100%] sm:pt-[15rem] pt-[6rem] sm:grid place  sm:pb-[20rem] pb-[7rem]">
+                <div className="relative w-[100%] sm:pt-[15rem] sm:mt-[7rem] pt-[6rem] sm:grid place  sm:pb-[20rem] pb-[7rem]">
                     <Image src='/micro_service.gif' width={1500} className='w-[100%] hidden sm:block z-[0] h-[100%] absolute inset-0' height={1000} alt='background' />
                     <Image src='/html_css.png' width={250} className='sm:hidden w-[11rem] h-[30rem] z-[0] left-0 top-0 absolute' height={700} alt='background' />
 

@@ -20,7 +20,10 @@ module.exports = {
         'gradient_ii': 'linear-gradient(180deg, rgba(255, 136, 195, 0.37) 0%, rgba(155, 134, 254, 0.37) 100%)',
         'patterns': "url('/_message_broker_bg_sm.png')",
         'patterns_mobile': "url('/_message_broker_bg.png')",
-        'diamond-gradient': 'radial-gradient(261.46% 261.46% at 50% 50%, #0B0E21 7.89%, rgba(11, 14, 33, 0) 100%)'
+        'diamond-gradient': 'radial-gradient(261.46% 261.46% at 50% 50%, #0B0E21 7.89%, rgba(11, 14, 33, 0) 100%)',
+        'conner-gradient-ii': "linear-gradient(180deg, #FF88C3 0%, #9B86FE 100%)",
+        'purple_border': "url('/microservice_border_dashed.png')",
+        'banner_hand': "url('/_banner_flare.png'), url('/_hand.png'), url('/_border.png')",
       },
       colors: {
         'bg-100': '#0D1117',

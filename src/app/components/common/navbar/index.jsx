@@ -8,6 +8,7 @@ import Service from '../../service/serviceNav';
 const Index = () => {
     const pathName = usePathname();
     const IsMessageBroker = pathName ==  '/services/message-broker'
+    const IsMicroService = pathName == '/services/micro-service'
     console.log(IsMessageBroker)
     const [open, setOpen] = useState(false);
     const [openService, setOpenService] = useState(false);
@@ -58,7 +59,7 @@ const Index = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${isScrolled || IsMessageBroker ? 'bg-black' : 'bg-transparent'}`}> {/* Dynamic class */}
+        <nav className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${isScrolled || IsMessageBroker ||IsMicroService ? 'bg-black' : 'bg-transparent'}`}> {/* Dynamic class */}
             <MaxContainer>
                 <div className="flex items-center px-[3rem] sm:px-[4rem] py-[1.5rem] sm:py-[2.5rem] justify-between">
                     <div className="sm:flex sm:items-center">
