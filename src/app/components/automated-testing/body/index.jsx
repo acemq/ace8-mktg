@@ -1,6 +1,7 @@
 import MaxContainer from "../../common/maxContainer";
 import Contact from "../../common/contact";
 import Image from "next/image";
+import Link from "next/link";
 
 const Index = () => {
   return (
@@ -13,36 +14,47 @@ const Index = () => {
             height={800}
             className="mx-auto w-[100rem] hidden sm:block"
             alt="code snippet"
+            data-animation-id='slideIn'
           />
-          <h2 className="sub-header text-center sm:mt-[7rem] w-[23rem] sm:w-[90rem] mx-auto">
+          <h2 data-animation-id='slideIn' className="sub-header text-center sm:mt-[7rem] w-[23rem] sm:w-[90rem] mx-auto">
             Are You <span className="font-[400]">Tired of</span>{" "}
-            <span className="text-[#EB9FFF]">Manual Testing</span>
+            <span className="text-[#EB9FFF] sm:text-[#FF88C3]">Manual Testing</span>
           </h2>
-          <p className="text-center mt-[1.5rem] sm:w-[90rem] sm:mx-auto">
-             Are you tired of manually testing your e-commerce application,
+          <p data-animation-id='slideIn' className="text-center mt-[1.5rem] sm:w-[90rem] sm:mx-auto">
+            Are you tired of manually testing your e-commerce application,
             wasting valuable time and resources on tedious and repetitive tasks?
             Our automated testing service offers a unique approach that sets us
             apart from the competition.
           </p>
 
-          <div className="mt-[1.5rem] sm:flex items-center sm:w-[100rem] sm:mt-[5rem] justify-between mx-auto">
+          <div data-animation-id='slideIn' className="mt-[1.5rem] sm:flex items-center sm:w-[100rem] sm:mt-[5rem] justify-between mx-auto">
             <div className="">
-              <h2 className="text-[2.4rem] sm:text-[3.5rem] text-center font-[700]">
-                <span className="font-[400]">Our</span>{" "}
-                <span className="text-[#00ACCF]">Offerings</span>
+              <h2 className="text-[2.4rem] sm:text-[5rem] text-center font-[700]">
+                <span className="font-[400] sm:text-[#FF88C3]">Our</span>{" "}
+                <span className="text-[#00ACCF] sm:text-white">Offerings</span>
               </h2>
-              <p className="hidden sm:block">Our offerings include:</p>
+              {/* <p className="hidden sm:block">Our offerings include:</p> */}
             </div>
             <img
               src="/ace_auto.png"
               alt="flow chat"
-              className="mt-[.5rem] sm:w-[50rem]"
+              data-animation-id='slideIn'
+              className="mt-[.5rem] sm:hidden sm:w-[50rem]"
+            />
+            <Image
+              width={680}
+              height={460}
+              src={'/aceauto.png'}
+              alt="offering"
+              className="w-[50rem] hidden sm:block"
+              data-animation-id='slideIn'
             />
           </div>
 
           <img
             src="/critical_components.svg"
             alt="critical componets"
+            data-animation-id='slideIn'
             className="mt-[5rem] sm:hidden"
           />
         </div>
@@ -54,14 +66,15 @@ const Index = () => {
             className="w-full mr-0 hidden sm:block"
             height={750}
             alt="critical components"
+            data-animation-id='slideIn'
           />
         </div>
 
-        <div className="mt-[5rem] px-[3rem] sm:px-[10rem] sm:items-center sm:mt-[10rem] sm:flex sm:flex-row-reverse justify-between">
+        <div data-animation-id='slideIn' className="mt-[5rem] px-[3rem] sm:px-[10rem] sm:items-center sm:mt-[10rem] sm:flex sm:flex-row-reverse justify-between">
           <div className="sm:w-[58rem]">
             <h2 className="sub-header sm:w-[40rem] sm:text-start text-center">
               <span className="font-[400]">Seamless</span>{" "}
-              <span className="text-[#F8D449]">Integration</span> and Support
+              <span className="text-[#F8D449] sm:text-[#FF88C3]">Integration</span> and Support
             </h2>
             <p className="text-center sm:text-start my-[3rem]">
               Finally, we seamlessly integrate the execution of these automated
@@ -76,17 +89,17 @@ const Index = () => {
 
         <Banner
           header={
-            <h2 className="sub-header text-center w-[28rem] sm:w-[90rem] mx-auto">
+            <h2 className="text-[3rem] sm:text-[4.5rem] font-[700] text-center w-[28rem] sm:w-[100rem] mx-auto">
               <span className="font-[400]">Experience the</span> Benefits{" "}
               <span className="font-[400]">of</span>{" "}
-              <span className="text-[#8AD1EA]">Automated Testing</span>
+              <span className="text-[#8AD1EA] sm:text-[#8FD5CC]">Automated Testing</span>
             </h2>
           }
           text={
             "Don't settle for manual testing that slows down your development process and increases the risk of errors. Trust our unique approach to automated testing and experience the benefits of a thoroughly tested e-commerce application. Contact us today to learn more about how we can support your automated testing needs."
           }
           btn={"Contact Us For Automated Testing"}
-          backgroundColor={"bg-black"}
+          backgroundColor={"sm:bg-secure_banner"}
           containerStyles={"sm:px-[10rem] sm:mt-[10rem]"}
         />
         <Contact route={"automated-testing"} />
@@ -99,15 +112,22 @@ export default Index;
 
 const Banner = ({ header, text, btn, containerStyles, backgroundColor }) => {
   return (
-    <div className={`${containerStyles}`}>
+    <div className={`${containerStyles} relative`} >
+      
       <div
-        className={`px-[3rem] mt-[5rem] py-[2rem] sm:py-[5rem] ${backgroundColor}`}
+        style={{ backgroundSize: '100% 100%, 100% 100%' }}
+        className={`px-[3rem] mt-[5rem] py-[2rem] sm:pt-[7rem] sm:pb-[10rem] relative ${backgroundColor}`}
+        data-animation-id='slideIn'
       >
+        {/* <img src="/_border.png" alt="border" className="absolute inset-0 left-[2rem] top-[-2rem] z-[0]" /> */}
         {header}
-        <p className="text-center mt-[3rem] sm:w-[90rem] sm:mx-auto">{text}</p>
+        <p className="text-center mt-[3rem] sm:mt-[1rem] sm:w-[95rem] sm:mx-auto">{text}</p>
         {btn && (
-          <button className="btn mt-[2.5rem] border mx-auto block">
-            {btn}
+
+          <button className="border-[1.5px] sm:px-[3rem] sm:py-[1.2rem] sm:rounded-[1rem] font-[800] sm:text-[1.2rem] mt-[2.5rem] mx-auto block">
+            <Link href='#contact'>
+              {btn}
+            </Link>
           </button>
         )}
       </div>
