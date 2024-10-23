@@ -5,12 +5,12 @@ const Index = () => {
         <section className="bg-white text-black px-[3rem] sm:px-[10rem] py-[10rem]">
             <MaxContainer>
                 <div className="flex flex-col">
-                    <h2 className="sub-header text-center mb-[2rem] sm:w-[60rem] sm:self-center"><span className="font-[400]">Struggling With</span> <span className="text-[#E485FD]">E-Commerce</span> System Integration?</h2>
-                    <p className="px-[1.2rem] py-[.5rem] sm:self-center text-center mb-[2rem] text-[1.2rem] bg-[#E485FD] text-white font-[700] rounded-[1rem]">Are you struggling to integrate your e-commerce system with your data analytics platform?</p>
-                    <p className="text-center sm:w-[50rem] self-center">Look no further than our integration service, which offers a unique approach that sets us apart from the competition.</p>
+                    <h2 data-animation-Id='slideIn' className="sub-header text-center mb-[2rem] sm:w-[75rem] sm:self-center"><span className="font-[400]">Struggling With</span> <span className="text-[#E485FD] sm:text-[#FF88C3]">E-Commerce</span> System Integration?</h2>
+                    <p data-animation-Id='slideIn' className="px-[1.2rem] sm:px-[1.7rem] sm:text-black py-[.5rem] sm:self-center text-center mb-[2rem] text-[1.2rem] sm:bg-conner-gradient-iii bg-opacity-[.6] text-white font-[700] rounded-[1rem]">Are you struggling to integrate your e-commerce system with your data analytics platform?</p>
+                    <p data-animation-Id='slideIn' className="text-center sm:w-[50rem] self-center">Look no further than our integration service, which offers a unique approach that sets us apart from the competition.</p>
                 </div>
                 <div className="mt-[3rem] relative">
-                    <div className="sm:flex hidden justify-around mt-[6rem]">
+                    <div data-animation-Id='slideIn' className="sm:flex hidden justify-around mt-[6rem]">
                         <div className="flex flex-col">
                             <div className="sm:flex sm:justify-between">
                                 <h2 className="sub-header sm:text-center w-[25rem] sm:w-[60rem]">Seamless <span className="text-[#5747A5]">Integration</span> with <span className="font-[400]">Databricks or</span> Snowflake</h2>
@@ -30,8 +30,8 @@ const Index = () => {
                         </div>
                     </div>
 
-                    <div className="relative mt-[-14rem] top-[20rem] sm:block hidden">
-                        <Image src='/architecture_consulting.png' className='mx-auto w-[100rem]' alt='architecture consulting' width={1000} height={1500} />
+                    <div data-animation-Id='slideIn' className="relative mt-[-14rem] top-[20rem] sm:block hidden">
+                        <Image src='/_archi.png' className='mx-auto w-[100rem]' alt='architecture consulting' width={1000} height={1500} />
                     </div>
 
                     <div className="mt-[1rem] flex flex-col sm:hidden">
