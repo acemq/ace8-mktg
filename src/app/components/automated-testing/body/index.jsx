@@ -113,23 +113,24 @@ export default Index;
 const Banner = ({ header, text, btn, containerStyles, backgroundColor }) => {
   return (
     <div className={`${containerStyles} relative`} >
-      
-      <div
-        style={{ backgroundSize: '100% 100%, 100% 100%' }}
-        className={`px-[3rem] mt-[5rem] py-[2rem] sm:pt-[7rem] sm:pb-[10rem] relative ${backgroundColor}`}
-        data-animation-id='slideIn'
-      >
-        {/* <img src="/_border.png" alt="border" className="absolute inset-0 left-[2rem] top-[-2rem] z-[0]" /> */}
-        {header}
-        <p className="text-center mt-[3rem] sm:mt-[1rem] sm:w-[95rem] sm:mx-auto">{text}</p>
-        {btn && (
 
-          <button className="border-[1.5px] sm:px-[3rem] sm:py-[1.2rem] sm:rounded-[1rem] font-[800] sm:text-[1.2rem] mt-[2.5rem] mx-auto block">
-            <Link href='#contact'>
-              {btn}
-            </Link>
-          </button>
-        )}
+      <div data-animation-id='slideIn' className="relative">
+        <img src="/_border.png" alt="border" className="absolute inset-0 left-[2rem] top-[-2rem] z-[0]" />
+        <div
+          style={{ backgroundSize: '100% 100%, 100% 100%' }}
+          className={`px-[3rem] z-[1] mt-[5rem] py-[2rem] sm:pt-[7rem] sm:pb-[10rem] relative ${backgroundColor}`}
+        >
+          {header}
+          <p className="text-center mt-[3rem] sm:mt-[1rem] sm:w-[95rem] sm:mx-auto">{text}</p>
+          {btn && (
+
+            <button className="border-[1.2px] sm:px-[3rem] sm:py-[1.2rem] sm:rounded-[1rem] font-[800] sm:text-[1.2rem] mt-[2.5rem] mx-auto block">
+              <Link href='#contact'>
+                {btn}
+              </Link>
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

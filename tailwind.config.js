@@ -26,7 +26,8 @@ module.exports = {
         'purple_border': "url('/microservice_border_dashed.png')",
         'banner_hand': "url('/_banner_flare.png'), url('/_hand.png'), url('/_border.png')",
         'semi_circle': "url('/semi_circle.png')",
-        'secure_banner': "url('/_banner_flare.png'), url('/_secure.png')"
+        'secure_banner': "url('/_banner_flare.png'), url('/_secure.png')",
+        'banner-flare': "url('/_banner_flare.png')"
       },
       colors: {
         'bg-100': '#0D1117',
