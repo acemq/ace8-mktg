@@ -1,7 +1,13 @@
+'use client'
 import Image from "next/image";
 import MaxContainer from "../../../components/common/maxContainer";
+import { useEffect } from "react";
+import { slideIn } from "@/app/Animations/common";
 
 const Index = () => {
+  useEffect(() => {
+    slideIn()
+  }, [])
   return (
     <section className="">
       <MaxContainer>
@@ -21,12 +27,12 @@ const Index = () => {
             alt="wheel"
           />
           <div className="flex flex-col items-center relative">
-            <h1 className="header text-center sm:w-[100rem]">
+            <h1 data-animation-id='slideIn' className="header text-center sm:w-[100rem]">
               Unlock <span className="font-[400]">Developer </span>{" "}
               <span className="text-[#9B86FE]">Productivity</span>{" "}
               <span className="">with </span> Onboarding as as Service (OBaaS)
             </h1>
-            <p className="text-center sm:w-[90rem] mt-[3rem] sn:mt-[0]">
+            <p data-animation-id='slideIn' className="text-center sm:w-[90rem] mt-[3rem] sn:mt-[0]">
               Fast-Track Onboarding for Immediate Impact
             </p>
           </div>

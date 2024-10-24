@@ -1,5 +1,6 @@
 import MaxContainer from "../../common/maxContainer";
 import Form from "../../common/contact";
+import Link from "next/link";
 
 const Index = () => {
   return (
@@ -19,9 +20,10 @@ const Intro = () => (
         <img
           src="/OBAAS_code_snippet2.png"
           alt="code snippet"
-          className="relative sm:mx-auto sm:w-[100rem] top-[-12rem] sm:block hidden"
+          data-animation-id='slideIn'
+          className="relative sm:mx-auto sm:w-[120rem] top-[-12rem] sm:block hidden"
         />
-        <div className="text-black sm:justify-between sm:mt-[-6rem] text-center sm:flex">
+        <div data-animation-id='slideIn' className="text-black sm:justify-between sm:mt-[-6rem] text-center sm:flex">
           <p className="sm:w-[50rem] sm:text-left">
             At Ace8, we acknowledge a critical industry challenge—delayed
             developer productivity due to lengthy onboarding processes, leading
@@ -43,8 +45,8 @@ const SubIntro = () => (
   <section className="">
     <MaxContainer>
       <div className="py-[5rem] sm:pt-[10rem]">
-        <div className="sm:flex px-[3rem] sm:pr-[0] justify-between sm:pl-[10rem]">
-          <div className="sm:w-[57rem]">
+        <div  data-animation-id='slideIn' className="sm:flex px-[3rem] sm:pr-[0] justify-between sm:pl-[10rem]">
+          <div className="sm:w-[57rem]" >
             <h2 className="text-[3rem] font-[700] mb-[1rem]">
               <span className="font-[400]">Our</span> Solution:
             </h2>
@@ -64,7 +66,7 @@ const SubIntro = () => (
               <div className="w-[14rem]  hidden sm:block sm:w-[25rem]">
                 <h4 className="text-[1.5rem] sm:text-[2.3rem] mb-[1rem] font-[700]">
                   <span className="font-[400]">Customized</span>{" "}
-                  <span className="text-[#DC71AD]">Dev-Containers:</span>
+                  <span className="text-[#DC71AD] sm:text-white">Dev-Containers:</span>
                 </h4>
                 <p className="text-[1.2rem]">
                   Tailored to fit the unique roles of your developers, our
@@ -74,9 +76,9 @@ const SubIntro = () => (
               </div>
               <div className="w-[14rem] sm:w-[25rem] hidden sm:block text-start">
                 <h4 className="text-[1.5rem] sm:text-[2.3rem] mb-[1rem] font-[700]">
-                  <span className="font-[700] text-[#DC71AD]">Fast and</span>
+                  <span className="font-[700] text-[#DC71AD] sm:text-white">Fast and</span>
                   <span className="font-[400]"> Painless</span>{" "}
-                  <span className="text-[#DC71AD]">Onboarding</span>
+                  <span className="text-[#DC71AD] sm:text-white">Onboarding</span>
                 </h4>
                 <p className="text-[1.2rem]">
                   A streamlined process that equips developers with all
@@ -95,9 +97,9 @@ const SubIntro = () => (
 
         <div className="sm:flex px-[3rem] mb-[1rem] mt-[5rem] hidden gap-[6.5rem] sm:pl-[10rem]">
           <div className="w-[25rem]">
-            <h4 className="text-[1.5rem] mb-[1rem] font-[700]">
+            <h4 className="text-[1.5rem] sm:text-[2.3rem] mb-[1rem] font-[700]">
               <span className="font-[400]">SecOps-</span>
-              <span className="text-[#DC71AD]">Vetted Tooling</span>
+              <span className="text-[#DC71AD] sm:text-white">Vetted Tooling</span>
             </h4>
             <p className="text-[1.2rem]">
               Trust in a mix of tools vetted by your Security Operations
@@ -107,10 +109,10 @@ const SubIntro = () => (
           </div>
 
           <div className="w-[25rem] text-start">
-            <h4 className="text-[1.5rem] mb-[1rem] font-[700]">
-              <span className="text-[#DC71AD]">Integration with</span>{" "}
+            <h4 className="text-[1.5rem] sm:text-[2.3rem] mb-[1rem] font-[700]">
+              <span className="text-[#DC71AD] sm:text-white">Integration with</span>{" "}
               <span className="font-[400]">Enterprise</span>{" "}
-              <span className="text-[#DC71AD]">Systems</span>
+              <span className="text-[#DC71AD] sm:text-white">Systems</span>
             </h4>
             <p className="text-[1.2rem]">
               Seamlessly integrate with your existing enterprise systems,
@@ -119,8 +121,8 @@ const SubIntro = () => (
           </div>
 
           <div className="w-[25rem] text-start">
-            <h4 className="text-[1.5rem] mb-[1rem] font-[700] text-[#DC71AD]">
-              Fully <span className=""> Managed</span> Service
+            <h4 className="text-[1.5rem] sm:w-[20rem] sm:text-[2.3rem] mb-[1rem] font-[700] sm:text-white text-[#DC71AD]">
+              Fully <span className="font-[400]"> Managed</span> Service
             </h4>
             <p className="text-[1.2rem]">
               Enjoy the benefits of a fully managed service running on your
@@ -194,23 +196,24 @@ const SubIntro = () => (
 
         <div className="sm:px-[10rem] px-[3rem]">
           <div className="sm:mt-[7rem]">
-            <h2 className="sub-header text-center mb-[2rem] sm:w-[80rem] sm:mx-auto">
+            <h2  data-animation-id='slideIn' className="sub-header text-center mb-[2rem] sm:w-[82rem] sm:mx-auto">
               Why <span className="font-[400]">Choose </span>
               <span className="text-[#9B86FE]">OBaaS</span> for{" "}
-              <span className="text-[#9B86FE]"> Developer</span> Onboarding?
+              <span className="text-[#9B86FE] sm:font-[400] sm:text-white"> Developer</span> Onboarding?
             </h2>
           </div>
           <img
             src="/heroku.png"
+             data-animation-id='slideIn'
             alt="heroku icon"
             className="mb-[2rem] sm:w-[100rem] sm:mx-auto"
           />
-          <img src="/properties.png" alt="properties" className="sm:hidden" />
+          <img src="/properties.png" data-animation-id='slideIn' alt="properties" className="sm:hidden" />
           <div className="hidden sm:block mt-[5rem]">
-            <div className="flex justify-between">
+            <div className="flex justify-between"  data-animation-id='slideIn'>
               <div className="">
-                <div className="flex gap-[3rem] mb-[1rem]">
-                  <h1 className="font-[700] text-[4.5rem] text-[#7972BD] opacity-[.3]">
+                <div className="flex items-center gap-[3rem] mb-[1rem]">
+                  <h1 className="font-[700] text-[7rem] text-[#7972BD] opacity-[.3]">
                     1
                   </h1>
                   <p className="w-[50rem]">
@@ -219,8 +222,8 @@ const SubIntro = () => (
                     the time saved waiting for provisioning.
                   </p>
                 </div>
-                <div className="flex gap-[3rem] mb-[1rem]">
-                  <h1 className="font-[700] text-[4.5rem] text-[#7972BD] opacity-[.3]">
+                <div className="flex items-center gap-[3rem] mb-[1rem]">
+                  <h1 className="font-[700] text-[7rem] text-[#7972BD] opacity-[.3]">
                     2
                   </h1>
                   <p className="w-[50rem]">
@@ -232,8 +235,8 @@ const SubIntro = () => (
                     can dive into meaningful work promptly.
                   </p>
                 </div>
-                <div className="flex gap-[3rem] mb-[1rem]">
-                  <h1 className="font-[700] text-[4.5rem] text-[#7972BD] opacity-[.3]">
+                <div className="flex gap-[3rem] items-center mb-[1rem]">
+                  <h1 className="font-[700] text-[7rem] text-[#7972BD] opacity-[.3]">
                     3
                   </h1>
                   <p className="w-[50rem]">
@@ -246,8 +249,8 @@ const SubIntro = () => (
                 </div>
               </div>
               <div className="">
-                <div className="flex gap-[3rem] mb-[1rem]">
-                  <h1 className="font-[700] text-[4.5rem] text-[#7972BD] opacity-[.3]">
+                <div className="flex items-center gap-[3rem] mb-[1rem]">
+                  <h1 className="font-[700] text-[7rem] text-[#7972BD] opacity-[.3]">
                     4
                   </h1>
                   <p className="w-[50rem]">
@@ -258,8 +261,8 @@ const SubIntro = () => (
                     creating a cohesive development environment.
                   </p>
                 </div>
-                <div className="flex gap-[3rem] mb-[1rem]">
-                  <h1 className="font-[700] text-[4.5rem] text-[#7972BD] opacity-[.3]">
+                <div className="flex items-center gap-[3rem] mb-[1rem]">
+                  <h1 className="font-[700] text-[7rem] text-[#7972BD] opacity-[.3]">
                     5
                   </h1>
                   <p className="w-[50rem]">
@@ -273,19 +276,21 @@ const SubIntro = () => (
                 </div>
               </div>
             </div>
-            <button className="btn border block mx-auto mt-[3rem]">
-               Propel Your Developers to Productivity with OBaaS
-            </button>
+            <Link  data-animation-id='slideIn' href={'#contact'}>
+              <button className="border-[1.3px] text-[1.2rem] px-[4rem] py-[1.2rem] font-[800] rounded-[1rem] block mx-auto mt-[3rem]">
+                Propel Your Developers to Productivity with OBaaS
+              </button>
+            </Link>
           </div>
         </div>
       </div>
     </MaxContainer>
-    <div className="sm:h-[115rem] sm:mt-[8rem]">
-      <div className="sm:bg-white sm:pt-[5rem] sm:h-[85rem]">
+    <div className="sm:h-[140rem] sm:mt-[8rem]">
+      <div className="sm:bg-white sm:pt-[5rem] sm:h-[95rem]">
         <MaxContainer>
           <Banner
             header={
-              <h3 className="sub-header text-center sm:opacity-[.8] sm:mx-auto sm:w-[60%]">
+              <h3 className="text-[3rem] sm:text-[4rem] font-[700] text-center sm:opacity-[.8] sm:mx-auto sm:w-[75%]">
                 <span className="text-[#FF88C3]">Accelerate onboarding,</span>
                 <span className="font-[400]"> reduce</span> idle time, and{" "}
                 <span className="font-[400]"> witness immediate</span>{" "}
@@ -314,16 +319,21 @@ const SubIntro = () => (
 const Banner = ({ header, text, btn, containerStyles, backgroundColor }) => {
   return (
     <div className={`${containerStyles}`}>
-      <div
-        className={`px-[3rem] mt-[5rem] py-[2rem] sm:py-[5rem] ${backgroundColor}`}
-      >
-        {header}
-        <p className="text-center mt-[3rem] sm:w-[90rem] sm:mx-auto">{text}</p>
-        {btn && (
-          <button className="btn mt-[2.5rem] border mx-auto block">
-            {btn}
-          </button>
-        )}
+      <div className="relative"  data-animation-id='slideIn'>
+        <img src="/_border.png" alt="border" className="w-[100%] h-[100%] absolute inset-0 top-[-1.5rem] z-[0] left-[1.5rem]" />
+        <div
+          className={`px-[3rem] relative z-[1] mt-[5rem] py-[2rem] sm:py-[5rem] rounded-[2rem] ${backgroundColor}`}
+        >
+          {header}
+          <p className="text-center mt-[3rem] sm:w-[90rem] sm:mx-auto">{text}</p>
+          {btn && (
+            <Link href='#contact'>
+              <button className="border-[1.3px] text-[1.2rem] px-[4rem] py-[1.2rem] font-[800] rounded-[1rem] mt-[2.5rem] mx-auto block">
+                {btn}
+              </button>
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

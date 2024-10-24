@@ -1,13 +1,14 @@
 import MaxContainer from "../../common/maxContainer";
 import Image from "next/image";
 import Contact from "../../common/contact";
+import Link from "next/link";
 
 const Index = () => {
   return (
     <section className="">
       <MaxContainer>
-        <div className="px-[3rem] py-[3rem] sm:px-[10rem] sm:flex sm:flex-row-reverse sm:items-center sm:justify-around">
-          <div className="px-[.5rem] sm:px-[2.5rem] sm:w-[50rem] sm:flex-row-reverse py-[1.5rem] sm:py-[3rem]  bg-service-card-gradient rounded-[.8rem]">
+        <div data-animation-id='slideIn' className="px-[3rem] py-[3rem] sm:px-[10rem] sm:flex sm:flex-row-reverse sm:items-center sm:justify-around">
+          <div  className="px-[.5rem] sm:px-[2.5rem] sm:w-[50rem] sm:flex-row-reverse py-[1.5rem] sm:py-[3rem]  bg-service-card-gradient rounded-[.8rem]">
             <img
               src="/open_source_ace_logo.svg"
               className="w-[20rem] mx-auto sm:ml-[2.5rem] mb-[2rem]"
@@ -47,7 +48,7 @@ const Index = () => {
         />
         <Banner
           header={
-            <h3 className="sub-header w-[24rem]  sm:w-[100rem] mx-auto text-center">
+            <h3 data-animation-id='slideIn' className="sub-header w-[24rem]  sm:w-[100rem] mx-auto text-center">
               Open <span className="font-[400]">Source</span>{" "}
               <span className="text-[#FF88C3]">Support</span>
             </h3>
@@ -70,16 +71,16 @@ const Index = () => {
             alt="core technology"
             className="sm:mx-auto sm:hidden mt-[3rem] mb-[4rem]"
           />
-          <h3 className="text-[1.6rem]  sm:text-[6rem] sm:font-[700] w-[20rem] sm:w-[100rem] mx-auto text-center">
+          <h3 data-animation-id='slideIn' className="text-[1.6rem]  sm:text-[6rem] sm:font-[700] w-[20rem] sm:w-[100rem] mx-auto text-center">
             Our <span className="font-[400]">Support</span> Process
           </h3>
-          <p className="font-[700] text-[2rem] sm:text-center sm:w-[50rem] sm:mx-auto mt-[1rem]">
+          <p data-animation-id='slideIn' className="font-[700] text-[2rem] sm:text-[3rem] sm:leading-[4.5rem] sm:text-center sm:w-[65rem] sm:mx-auto mt-[1rem]">
             <span className="font-[400]">Maximize Your System's</span> Uptime
             with{" "}
             <span className="text-[#FF88C3]">OpenAce Technical Support</span>
           </p>
 
-          <p className="sm:block hidden mx-auto text-center w-[100rem] mt-[1.5rem]">
+          <p data-animation-id='slideIn' className="sm:block hidden mx-auto text-center w-[100rem] mt-[1.5rem]">
             OpenAce Technical Support Services provide enterprises with access
             to experienced Open Source Architects and Developers, offering 24/7
             support for a wide range of Open Source technologies. From
@@ -91,31 +92,34 @@ const Index = () => {
 
           <img
             src="/process_sm.svg"
+            data-animation-id='slideIn'
             alt="supports"
             className="mt-[6rem] sm:block hidden"
           />
           <img
             src="/supports.png"
+            data-animation-id='slideIn'
             alt="supports"
             className="mt-[2rem] sm:hidden"
           />
 
           <div className="mt-[3rem] sm:mt-[10rem]">
             <div className="mx-auto w-[35rem] sm:w-[70rem]">
-              <h3 className="sub-header text-center">
+              <h3 data-animation-id='slideIn' className="sub-header text-center">
                 <span className="text-[#9B86FE]">Technical</span> Support{" "}
                 <span className="font-[400]">Benefits</span>
               </h3>
-              <p className="w-[28rem] sm:w-[40rem] text-center mb-[2rem] mx-auto">
+              <p data-animation-id='slideIn' className="w-[28rem] sm:w-[50rem] sm:mt-[1rem] text-center mb-[2rem] mx-auto">
                 Make Your Open Source Technologies Enterprise-Ready
               </p>
             </div>
             <img
               src="/support_benefit.svg"
+              data-animation-id='slideIn'
               className="sm:hidden"
               alt="benefits"
             />
-            <div className="relative hidden sm:grid place-content-center">
+            <div data-animation-id='slideIn' className="relative hidden sm:grid place-content-center">
               <div className="absolute inset-0 grid place-content-center">
                 <img
                   src="/support_logo.svg"
@@ -132,10 +136,10 @@ const Index = () => {
           </div>
 
           <div className="sm:mt-[10rem]">
-            <h3 className="sub-header sm:mb-[2rem] text-center">
+            <h3 data-animation-id='slideIn' className="sub-header sm:mb-[2rem] text-center">
               <span className="font-[400]">Case</span> Studies
             </h3>
-            <div className="">
+            <div data-animation-id='slideIn' className="">
               <Banner
                 header={
                   <h3 className="sub-header text-center">
@@ -151,7 +155,7 @@ const Index = () => {
                 btn={"learn more"}
                 containerStyles={"bg-black sm:hidden"}
               />
-              <div className="border sm:block pb-[3.5rem] border-[#9B86FE80] hidden w-[90rem] mx-auto">
+              <div className="border sm:block pb-[3.5rem] rounded-[1.5rem] border-[#9B86FE80] hidden w-[90rem] mx-auto">
                 <div className="relative">
                   <img
                     src="/key_logo.svg"
@@ -161,7 +165,7 @@ const Index = () => {
                   <img src="/key.png" alt="key" />
                 </div>
                 <div className="">
-                  <h2 className="text-[2.5rem] font-[500] w-[90%] text-center mx-auto mt-[3rem]">
+                  <h2 className="text-[2.5rem] font-[700] w-[90%] text-center mx-auto mt-[3rem]">
                     Explore transformative case studies showcasing the impact of
                     our Open Source architects.
                   </h2>
@@ -170,9 +174,11 @@ const Index = () => {
                     Source technology for optimal workflows, collaboration,
                     efficiency, and cost reduction.
                   </p>
-                  <button className="btn border mx-auto block mt-[2rem]">
-                    Learn More
-                  </button>
+                  <Link href={'#contact'}>
+                    <button className="btn border mx-auto block mt-[2rem]">
+                      Learn More
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -180,7 +186,7 @@ const Index = () => {
         </div>
         <Banner
           header={
-            <h2 className="sub-header text-center">
+            <h2  className="sub-header text-center sm:w-[90rem] sm:mx-auto">
               <span className="font-[400]">Unlock</span> the Power of{" "}
               <span className="text-[#8FD5CC]">Open Source</span> for Your{" "}
               <span className="font-[400]">Business Today</span>
@@ -191,7 +197,8 @@ const Index = () => {
           }
           btn={"Talk To An Expert"}
           backgroundColor={"bg-black"}
-          containerStyles={"sm:px-[10rem]"}
+          containerStyles={"sm:px-[10rem] sm:mt-[10rem]"}
+          pageBanner={true}
         />
         <Contact route={"open-source"} />
       </MaxContainer>
@@ -201,19 +208,24 @@ const Index = () => {
 
 export default Index;
 
-const Banner = ({ header, text, btn, containerStyles, backgroundColor }) => {
+const Banner = ({ header, text, btn, containerStyles, backgroundColor, pageBanner = false }) => {
   return (
     <div className={`${containerStyles}`}>
-      <div
-        className={`px-[3rem] mt-[5rem] py-[2rem] sm:py-[5rem] ${backgroundColor}`}
-      >
-        {header}
-        <p className="text-center mt-[3rem] sm:w-[90rem] sm:mx-auto">{text}</p>
-        {btn && (
-          <button className="btn mt-[2.5rem] border mx-auto block">
-            {btn}
-          </button>
-        )}
+      <div data-animation-id='slideIn' className="relative">
+        {pageBanner && <img src="/_border.png" alt="border" className="inset-0 w-[100%] h-[100%] absolute z-[0] top-[-1.5rem] left-[1.5rem]" />}
+        <div
+          className={`px-[3rem] relative z-[1] mt-[5rem] py-[2rem] sm:py-[5rem] ${backgroundColor}`}
+        >
+          {header}
+          <p data-animation-id='slideIn' className="text-center mt-[3rem] sm:w-[90rem] sm:mx-auto">{text}</p>
+          {btn && (
+            <Link data-animation-id='slideIn' href='#contact'>
+              <button className="btn mt-[2.5rem] border mx-auto block">
+                {btn}
+              </button>
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );
