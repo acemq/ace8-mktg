@@ -98,11 +98,11 @@ const ContactMobile = () => {
                     <label htmlFor="" className="font-[600] text-[1.5rem] mb-[1rem]">What can we help you with?</label>
                     <textarea name="" className="h-[17rem] resize-none" placeholder="Describe your problem in at least 250 characters..." id=""></textarea>
                 </div>
-                <div className="flex mt-[1rem]">
+                {/* <div className="flex mt-[1rem]">
                     <input type="checkbox" className="mr-[.5rem]" />
                     <p className="text-[1.2rem]">By ticking this box, I am consenting to be sent monthly articles and promotions through WaveNet newsletter.</p>
-                </div>
-                <button className="py-[.8rem] px-[1.5rem] rounded-[.4rem] text-[1rem] font-[700] border-accent-200 border mt-[3rem]">Send</button>
+                </div> */}
+                <button className="py-[.8rem] px-[2rem] rounded-[.4rem] text-[1rem] font-[700] bg-[#5747A5] mt-[3rem]">Submit</button>
             </form>
         </section>
     )

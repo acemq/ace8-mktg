@@ -37,7 +37,7 @@ const Index = () => {
         {
             image: '/extreme_automation.svg',
             name: 'Extreme Automation',
-            title: 'AceAutomate',
+            title: '(AceAutomate)',
             role: 'Efficiency is key. Ace8 excels in Extreme Automation, optimizing your workflows and processes, allowing your business to operate at maximum productivity.'
         },
         {

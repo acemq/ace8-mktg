@@ -56,7 +56,7 @@ export default Index;
 
 const Card = ({ card }) => (
     <div className='sm:w-[45%] sm:ml-[7rem]'>
-        <h2 className="text-center font-[700] sm:mb-[2rem] sm:text-[2.2rem]">{card.header}</h2>
+        <h2 className="text-center font-[700] sm:mb-[2rem] mb-[1rem] hidden sm:block sm:text-[2.2rem] text-[1.5rem]">{card.header}</h2>
         <div className="relative w-[100%] flex flex-col h-[24rem] sm:h-[40rem]">
             <p className="text-center relative font-[700] text-[1.7rem] sm:text-[1.9rem] top-[1.5rem] z-[3]">
                 Customer Story
@@ -77,14 +77,14 @@ const Card = ({ card }) => (
             />
 
             <div className="absolute z-[3] bottom-[.7rem] sm:bottom-[2.5rem] w-[30rem] sm:w-[35rem] flex flex-col items-center self-center">
-                <p className="text-center  sm:leading-[2rem]">
+                <p className="text-center sm:leading-[2rem]">
                     {card.role}
                 </p>
                 <Link
                     href={card.link}
                     className="flex items-center font-[500] mt-[2rem] gap-[1.5rem]"
                 >
-                    <p>Read Story</p>{" "}
+                    <p>Read Story</p>
                     <img className="w-[2rem]" src="/arrow.svg" alt="arrow icon" />
                 </Link>
             </div>

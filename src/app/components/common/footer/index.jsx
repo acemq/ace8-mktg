@@ -37,31 +37,35 @@ const FooterMobile = () => {
               <li className="flex gap-[1rem] items-center">
                 <img className="w-[1.9rem]" src="/footer_message.svg" alt="" />
                 <Link href="mailto:info@ace-8.io" className="text-[1.3rem]">
-                  info@ace-8.io
+                  info@ace8.io
                 </Link>
               </li>
               <li className="flex gap-[1rem] items-center">
                 <img
                   className="w-[1.9rem]"
-                  src="/footer_telephone.png"
-                  alt=""
+                  src="/tel_mobile.png"
+                  alt="phone"
                 />
                 <p className="text-[1.3rem]">305-981-6475</p>
               </li>
               <li className="flex gap-[1rem] items-center">
-                <img className="w-[1.9rem]" src="/location_footer.svg" alt="" />
+                <img className="w-[1.9rem]" src="/location_mobile.png" alt="location" />
                 <p className="w-[15rem] text-[1.3rem]">
                   66 W. Flagler St. 9th Floor Miami, FL 33130
                 </p>
               </li>
             </ul>
-
-            <p className="text-[1.5rem] font-[700] mb-[2.8rem]">
-              Connect With Us
-            </p>
+            <div className="mb-[2.8rem]">
+              <p className="text-[1.5rem] font-[700] ">
+                Connect With Us
+              </p>
+              <Link href="https://www.linkedin.com/company/ace8tech">
+                <img src="/_in_mobile.png" alt="linkedin" className="w-[2.2rem] aspect-square" />
+              </Link>
+            </div>
           </div>
 
-          <div className="h-fit">
+          <div className="h-fit translate-y-[-4rem]">
             <h3 className="text-[1.4rem] font-[700] mb-[1.2rem]">Navigate</h3>
             <ul className="">
               <Link href="/" className="">
@@ -95,12 +99,12 @@ const FooterMobile = () => {
             </button>
           </div>
 
-          <button className="border border-accent-100 px-[1.5rem] py-[.7rem] font-[700] text-[1.2rem]">
+          <button className="border border-accent-100 rounded-[.5rem] px-[1.5rem] py-[.7rem] font-[700] text-[1.2rem]">
             Submit
           </button>
         </div>
         <div className="py-[.5rem] bg-black absolute bottom-0 left-0 right-0">
-          <p className="text-center text-[1.2rem]">© CopyRight Ace8.io</p>
+          <p className="text-center text-[1.2rem]">© CopyRight Ace8.</p>
         </div>
       </MaxContainer>
     </footer>
@@ -137,7 +141,7 @@ const FooterDesktop = () => {
                   <img
                     className="w-[3rem] aspect-square"
                     src="/location.png"
-                    alt=""
+                    alt="location icon"
                   />
                   <p className="w-[30rem] text-[1.5rem]">
                     66 W. Flagler St. 9th Floor Miami, FL 33130

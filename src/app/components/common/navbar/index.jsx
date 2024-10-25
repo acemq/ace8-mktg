@@ -7,7 +7,7 @@ import Service from '../../service/serviceNav';
 
 const Index = () => {
     const pathName = usePathname();
-    const IsMessageBroker = pathName ==  '/services/message-broker'
+    const IsMessageBroker = pathName == '/services/message-broker'
     const IsMicroService = pathName == '/services/micro-service'
     console.log(IsMessageBroker)
     const [open, setOpen] = useState(false);
@@ -18,16 +18,16 @@ const Index = () => {
         setOpen(prevOpen => !prevOpen);
     };
 
-  useEffect(() => {
-    if (open || openService) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open, openService]);
+    useEffect(() => {
+        if (open || openService) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [open, openService]);
 
     useEffect(() => {
         setOpen(false);
@@ -59,17 +59,24 @@ const Index = () => {
     ];
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${isScrolled || IsMessageBroker ||IsMicroService ? 'bg-black' : 'bg-transparent'}`}> {/* Dynamic class */}
+        <nav className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${isScrolled || IsMessageBroker || IsMicroService ? 'bg-black' : 'bg-transparent'}`}> {/* Dynamic class */}
             <MaxContainer>
                 <div className="flex items-center px-[3rem] sm:px-[4rem] py-[1.5rem] sm:py-[2.5rem] justify-between">
                     <div className="sm:flex sm:items-center">
                         <Link href='/'>
                             <img src="/ace_logo.png" className="w-[7.6rem] sm:w-[10rem] sm:mr-[10rem]" alt="logo" />
                         </Link>
-                        <div className={`fixed sm:static z-20 w-[100vw] sm:w-auto h-[100vh] sm:h-auto  bg-transparent bg-black inset-0 sm:inset-auto px-[2rem] sm:px-0 transition-all duration-500 ease-[cubic-bezier(0.65, 0, 0.35, 1)] ${open ? 'translate-x-0' : 'translate-x-[100%] sm:translate-x-0'}`}>
+                        <div className={`fixed sm:static z-20 w-[100vw] sm:w-auto h-[100vh] sm:h-auto  sm:bg-transparent bg-black inset-0 sm:inset-auto px-[2rem] sm:px-0 transition-all duration-500 ease-[cubic-bezier(0.65, 0, 0.35, 1)] ${open ? 'translate-x-0' : 'translate-x-[100%] sm:translate-x-0'}`}>
                             <ul className="mt-[7rem] sm:mt-0 sm:flex">
                                 {navItems.map((item, i) => (
-                                    <NavItem item={item} setOpen={setOpen} openService={openService} setOpenService={setOpenService} id={i} key={i} />
+                                    <NavItem
+                                        item={item}
+                                        setOpen={setOpen}
+                                        openService={openService}
+                                        setOpenService={setOpenService}
+                                        id={i}
+                                        key={i}
+                                    />
                                 ))}
                             </ul>
                         </div>
@@ -95,7 +102,7 @@ const Index = () => {
 
 export default Index;
 
-const NavItem = ({ item, id, setOpenService, setOpen }) => {
+const NavItem = ({ item, id, setOpenService, setOpen, openService }) => {
     const pathName = usePathname();
 
     const toggleOpenService = () => {
@@ -106,11 +113,11 @@ const NavItem = ({ item, id, setOpenService, setOpen }) => {
         <>
             {id == 2 ? (
                 <button onClick={toggleOpenService} className="py-[1rem] sm:px-[1rem] sm:ml-[2rem] block">
-                    <li className={`text-[1.5rem] capitalize ${pathName === `${item.link}/` ? 'text-accent-100 border-b border-accent-100' : ''} sm:text-[1.3rem] sm:font-normal font-medium`}>{item.label}</li>
+                    <li className={`text-[1.5rem] w-fit capitalize ${pathName === `${item.link}/` ? 'text-accent-100 border-b border-accent-100' : ''} sm:text-[1.3rem] sm:font-normal ${openService ? 'text-accent-100' : ''} font-medium`}>{item.label}</li>
                 </button>
             ) : (
                 <Link href={item.link} className="py-[1rem] sm:px-[1rem] sm:ml-[2rem] block">
-                    <li className={`text-[1.5rem] capitalize ${pathName === item.link ? 'text-accent-100 border-b border-accent-100' : ''} sm:text-[1.3] sm:font-normal font-medium`}>{item.label}</li>
+                    <li className={`text-[1.5rem] w-fit capitalize ${pathName === item.link ? 'text-accent-100 border-b border-accent-100' : ''} sm:text-[1.3] sm:font-normal font-medium`}>{item.label}</li>
                 </Link>
             )}
         </>
