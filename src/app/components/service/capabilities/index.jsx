@@ -7,7 +7,7 @@ const Index = () => {
             subheader: 'Bridging the Gap between Development, Security, & Operations',
             image: '/service_codesnippet.png',
             title: 'Combine Strengths, Deliver Securely, and Thrive',
-            lineColor: '#FF88C3',
+            lineColor: 'bg-[#9AEBFF] sm:bg-[]',
             roles: [
                 'Efficient and secure software delivery through a cohesive DevSecOps team',
                 'Continuous value delivery with automated infrastructure and testing processes',
@@ -16,15 +16,17 @@ const Index = () => {
             ],
             link: '/services/devsecops',
             containerStyle: '',
-            imageStyle: 'w-[60rem] h-auto'
+            imageStyle: 'w-[60rem] h-auto',
+            bordercolor: 'text-[#9AEBFF] border-[#9AEBFF]',
+            mobileImage: '/_dev.png',
         },
         {
-            header: <h2 className="header_ii sm:w-[39rem]">Onboarding <span className="font-[400]">as</span> a <span className="text-[#F888C6]">Service</span></h2>,
+            header: <h2 className="header_ii sm:w-[39rem]">Onboarding <span className="font-[400]">as</span> a <span className="sm:text-[#F888C6] text-[#1C83EE]">Service</span></h2>,
             subheader: 'Streamline Your  CI/CD Process',
             image: '/service_codesnippet.png',
             title: 'Deliver Software Faster and Efficiently',
             text: 'Are you tired of lengthy onboarding processes and inefficient software delivery? Our Onboarding as a Service (OBaaS) solution offers a streamlined approach to  CI/CD services, accelerating your development and testing cycle',
-            lineColor: '#FF88C3',
+            lineColor: 'sm:bg-[#FF88C3] bg-[#1C83EE]',
             roles: [
                 'Efficient and secure software delivery through a cohesive DevSecOps team',
                 'Continuous value delivery with automated infrastructure and testing processes',
@@ -36,13 +38,14 @@ const Index = () => {
             containerStyle: 'flex-row-reverse sm:mt-[10rem] mt-[5rem] text-end sm:text-start',
             roleOrientation: 'flex-row-reverse',
             imageStyle: '',
+            bordercolor: 'border-[#1C83EE] text-[#1C83EE]'
         },
         {
             header: <h2 className="header_ii"><span className="text-[#5747A5]">Incident</span> Management</h2>,
             subheader: 'Bridging the Gap between Development, Security, & Operations',
             image: '/incident_management.png',
             title: 'Combine Strengths, Deliver Securely, and Thrive',
-            lineColor: '#4D4DAE',
+            lineColor: 'sm:bg-[#4D4DAE] bg-[#1C83EE]',
             roles: [
                 'Unique approach combining intense documentation efforts and chaos engineering experiments',
                 'Thoroughly prepared to handle any incident that arises',
@@ -51,15 +54,18 @@ const Index = () => {
             ],
             link: '/services/incident-management',
             roleOrientation: 'flex-row',
-            containerStyle: 'sm:mt-[10rem] mt-[5rem]',
-            imageStyle: 'sm:w-[55rem] sm:h-[53rem]'
+            containerStyle: 'mt-[5rem]',
+            imageStyle: 'sm:w-[55rem] sm:h-[53rem]',
+            bordercolor: 'border-[#4D4DAE] text-[#4D4DAE]',
+            left:   'flex flex-col flex-col-reverse',
+            mobileImage: '/_time.png'
         },
         {
-            header: <h2 className="header_ii"><span className="text-[#5747A5]">Message</span> Brokers</h2>,
+            header: <h2 className="header_ii"><span className="sm:text-[#5747A5] text-[#B98959]">Message</span> Brokers</h2>,
             subheader: 'Scalable Systems with AceMQ',
             image: '/service_broker.png',
             title: 'Achieve Scalability with Asynchronous Messaging',
-            lineColor: '#FF88C3',
+            lineColor: 'sm:bg-[#FF88C3]  bg-[#B98959]',
             roles: [
                 'Appropriate Message Patterns : Our experts guide you in selecting the right message patterns for scalability.',
                 'Testing Throughput and Latency : AceMQ conducts thorough testing to assess system performance.',
@@ -70,7 +76,8 @@ const Index = () => {
             link: '/services/message-broker',
             containerStyle: 'sm:mt-[10rem] text-end sm:text-start flex-row-reverse mt-[5rem] ',
             roleOrientation: 'flex-row-reverse',
-            imageStyle: 'sm:w-[65rem] sm:h-auto hidden sm:block'
+            imageStyle: 'sm:w-[65rem] sm:h-auto hidden sm:block',
+            bordercolor: 'text-[#B98959] border-[#B98959]'
         },
     ]
 
@@ -80,7 +87,7 @@ const Index = () => {
             subheader: 'Transform Your Microservices',
             image: '/design.png',
             text: 'AceMQ offers comprehensive microservices design, development, and refactoring services that strictly adhere to industry best practices, including loose coupling and the 12Factor approach.',
-            lineColor: '#FF88C3',
+            lineColor: 'sm:bg-[#FF88C3] bg-[#F9A7FC]',
             roles: [
                 'Ecommerce Starter kits : Our Team of experts provides solutions tailored to your specific needs, specializing in eCommerce services for customers, carts, orders, returns, payments, and accounting',
                 'Golang starter kits : for quick development, expert guidance through microservices architecture, and assistance with refactoring to AWS Lambda.',
@@ -90,15 +97,18 @@ const Index = () => {
             containerStyle: 'sm:mt-[15rem]',
             roleOrientation: 'flex-row',
             imageStyle: 'sm:w-[70rem] hidden sm:block h-auto',
-            circle: '#fff'
+            circle: '#fff',
+            bordercolor: 'border-[#F9A7FC] text-[#F9A7FC]',
+            mobileImage: '/_microservice.png',
+            left:   'flex flex-col flex-col-reverse',
         },
         {
-            header: <h2 className="header_ii"><span className="text-[#9B86FE]">Automated</span> Testing</h2>,
+            header: <h2 className="header_ii"><span className="sm:text-[#9B86FE] text-[#13C0C8]">Automated</span> Testing</h2>,
             subheader: 'Streamline Your Testing Process with Automated Testing',                               
             title: 'Save Time and Resources with Our Unique Approach',
             image: '/service_automated_testing.png',
             text: 'Are you tired of manual testing for your e-commerce application? Our automated testing service offers a unique approach that saves time, resources, and sets us apart from the competition.',
-            lineColor: '#FF88C3',
+            lineColor: 'sm:bg-[#FF88C3] bg-[#13C0C8]',
             roles: [
                 'AI-enhanced test code for efficient and effective testing',
                 'Integration of test case execution into your  CI/CD pipeline',
@@ -108,14 +118,17 @@ const Index = () => {
             containerStyle: 'sm:mt-[10rem] text-end sm:text-start flex-row-reverse items-center',
             roleOrientation: 'flex-row-reverse',
             imageStyle: 'sm:w-[60rem] hidden sm:block h-auto',
-            circle: '#fff'
+            circle: '#fff',
+            bordercolor: 'border-[#F9A7FC] text-[#F9A7FC]',
+            mobileImage: '/_automated.png',
+            left:   'flex flex-col flex-col-reverse',
         },
         {
-            header: <h2 className="header_ii sm:w-[28rem]">Data <span className="text-[#F888C6]">Analytics</span> Integration</h2>,
+            header: <h2 className="header_ii sm:w-[28rem]">Data <span className="sm:text-[#F888C6] text-[#F8D449]">Analytics</span> Integration</h2>,
             subheader: 'Seamless Integration for E-commerce and Data Analytics',
             title: 'Unlock the Power of Your Data',
             image: '/service_py.png',
-            lineColor: '#FF88C3',
+            lineColor: 'sm:bg-[#FF88C3] bg-[#F8D449]',
             roles: [
                 'Unique approach to integration, setting us apart from the competition',
                 'Seamless integration of e-commerce data with Data bricks or Snowflake',
@@ -126,7 +139,8 @@ const Index = () => {
             link: '/services/data-integration',
             containerStyle: 'sm:mt-[10rem] items-center',
             imageStyle: 'sm:w-[60rem] hidden sm:block h-auto',
-            circle: '#fff'
+            circle: '#fff',
+            bordercolor: 'border-[#F8D449] text-[#F8D449]'
         },
     ]
     return (
@@ -135,8 +149,8 @@ const Index = () => {
                 <MaxContainer>
                     <div className="sm:flex flex-col">
                         <h2 data-animation-id='slideIn' className="sm:text-[5rem] font-[700] text-[3rem] text-center mb-[2.5rem]"><span className="text-[#37ACA8]">Our</span><span className="font-[400]"> Consulting</span> Capabilities: </h2>
-                        <img data-animation-id='slideIn' src="/capabilities.svg" className='mb-[3rem] sm:hidden' alt="capabilities" />
-                        <img data-animation-id='slideIn' src="/capabilities_sm.svg" className='my-[4rem] w-[130rem] sm:mb-[8rem] self-center' alt="capabilities" />
+                        <img data-animation-id='slideIn' src="/capabilities.svg" className='mb-[3rem]  sm:hidden' alt="capabilities" />
+                        <img data-animation-id='slideIn' src="/capabilities_sm.svg" className='my-[4rem] hidden sm:block w-[130rem] sm:mb-[8rem] self-center' alt="capabilities" />
 
                         {
                             capabilities.map((capability, index) => (<PlaceTextBesideImage item={capability} key={index} />))

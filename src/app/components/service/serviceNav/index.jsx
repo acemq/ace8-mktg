@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 const Index = ({ setOpenService }) => {
   return (
-    <div className="fixed top-[20rem] sm:px-[10rem] px-[3rem] sm:w-auto w-[32rem] sm:h-auto py-[2rem] sm:py-[5rem] bg-[#161b22] z-[33] sm:flex gap-[3rem]">
+    <div className="fixed top-[20rem] sm:top-[10rem] sm:px-[10rem] px-[3rem] sm:w-auto w-[32rem] sm:h-auto py-[2rem] sm:py-[5rem] bg-[#161b22] z-[33] sm:flex gap-[3rem]">
       <button onClick={() => setOpenService(false)} className="ml-auto block">
         <img src="/close.png" className="mb-[2rem] sm:hidden" alt="close" />
       </button>

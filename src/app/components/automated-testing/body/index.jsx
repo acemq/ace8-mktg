@@ -27,7 +27,7 @@ const Index = () => {
             apart from the competition.
           </p>
 
-          <div data-animation-id='slideIn' className="mt-[1.5rem] sm:flex items-center sm:w-[100rem] sm:mt-[5rem] justify-between mx-auto">
+          <div data-animation-id='slideIn' className="mt-[3rem] sm:flex items-center sm:w-[100rem] sm:mt-[5rem] justify-between mx-auto">
             <div className="">
               <h2 className="text-[2.4rem] sm:text-[5rem] text-center font-[700]">
                 <span className="font-[400] sm:text-[#FF88C3]">Our</span>{" "}

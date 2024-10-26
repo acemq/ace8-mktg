@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <section className="">
       <MaxContainer>
-        <div className="py-[5.5rem] sm:pt-[15rem] sm:pb-[17rem] px-[1.5rem] sm:px-[10rem] relative">
+        <div className="py-[5.5rem] sm:pt-[15rem] pt-[10rem] sm:pb-[17rem] px-[1.5rem] sm:px-[10rem] relative">
           <Image
             src="/OBASS_sm.png"
             className="absolute mix-blend-overlay inset-0 sm:hidden top-0 w-[100%] h-[100%]"

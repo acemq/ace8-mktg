@@ -92,7 +92,7 @@ const Form = () => {
   return (
     <div className="text-black sm:w-[55rem] pt-[8rem] flex flex-col">
       <ToastContainer />
-      <h2 className="sub-header w-[20rem] self-center text-center sm:w-auto">
+      <h2 className="sub-header w-[25rem] self-center text-center sm:w-auto">
         <span className="text-[#9B86FE]">Tell Us</span> About Yourself
       </h2>
       <form action="" className="sm:mt-[7rem] mt-[3rem]">
@@ -190,17 +190,17 @@ const Form = () => {
 
 const ContactInfo = () => {
     return (
-        <div className="bg-[#232323] sm:ml-[9rem] translate-y-[10rem] max-w-[45rem] rounded-[1rem] px-[4.5rem] py-[2.7rem] flex justify-between">
+        <div className="bg-[#232323] sm:ml-[9rem]  sm:translate-y-[10rem] sm:max-w-[45rem] max-w-[27rem] w-[27rem] sm:w-[45rem] mx-auto   rounded-[1rem] sm:px-[4.5rem] px-[2.5rem] sm:py-[2.7rem] py-[2rem] flex justify-between">
             <div className="">
                 <h3 className="font-[700] text-[1.5rem]">Email Us</h3>
                 <div className="sm:mt-[2rem]">
-                    <p className="text-[1rem] sm:leading-[1.5rem]">Business</p>
-                    <p className="">info@aceitco.com</p>
+                    <p className="text-[1rem] hidden sm:inline-block sm:leading-[1.5rem]">Business</p>
+                    <p className="text-[1.2rem] sm:text-[1.7rem]">info@aceitco.com</p>
                 </div>
             </div>
             <div className="sm:mt-[2rem]">
                 <p className="font-[700] text-[1.5rem]">Call Us</p>
-                <p className="">305-981-6475</p>
+                <p className="text-[1.2rem] sm:text-[1.7rem]">305-981-6475</p>
             </div>
         </div>
     )

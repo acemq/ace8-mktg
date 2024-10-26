@@ -26,12 +26,12 @@ const Index = () => {
                         </div>
                     </div>
 
-                    <Image width={300} className="self-center mt-[1.5rem] sm:hidden" height={350} alt="story" src='/about_story_1.png' />
+                    <Image width={300} className="self-center mt-[1.5rem] w-full sm:hidden" height={350} alt="story" src='/about_story_1.png' />
 
                     <div className="mt-[3rem]" data-animation-id='slideIn'>
                         <h2 className="sub-header sm:mb-[1rem] text-center">The Ace 8 <span className="text-[#624C83]">Domains</span></h2>
                         <p className="text-center hidden sm:block">At Ace8, we empower businesses to thrive in the digital age through cutting-edge technology services spanning eight crucial domains. From Advanced Architectures to Microservices, Code & Development, we're dedicated to delivering unparalleled expertise and innovative solutions tailored to meet your specific needs.</p>
-                        <img src="/about_8_domains.svg" className="mt-[3rem] sm:hidden" alt="domains" />
+                        <img src="/about_8_domains.svg" className="mt-[3rem] w-[100%] sm:hidden" alt="domains" />
                         <img src="/ace_8_domains_sm.svg" className="mt-[3rem] hidden sm:block" alt="domains" />
                     </div>
 

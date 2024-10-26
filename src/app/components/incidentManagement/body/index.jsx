@@ -69,16 +69,16 @@ const Leveraging = () => {
 
 const Response = () => {
     return (
-        <div  data-animation-id='slideIn' className="mt-[5rem] mb-[3rem] sm:mb-[5rem]">
+        <div  data-animation-id='slideIn' className="mt-[5rem] mb-[5rem] sm:mb-[5rem]">
             <div className="sm:flex sm:flex-row-reverse justify-between items-center">
                 <div className="sm:w-[50rem]">
-                    <h2 className="sub-header mb-[1rem] sm:w-[35rem]"><span className="sm:text-[#8FD5CC] text-[#FA9531]">Rapid Response</span> <span className="">and 24/7 Support</span></h2>
+                    <h2 className="sub-header mb-[1rem] sm:w-[35rem]"><span className="sm:text-[#8FD5CC] text-[#FA9531]">Rapid Response</span> <span className="font-[400] sm:font-[700]">and 24/7 Support</span></h2>
                     <p className="mb-[2rem] max-w-[40rem]">In addition, our full 24/7 support with a less than 10-minute Service Level Agreement (SLA) for Sev 1 incidents means that you can trust us to handle even the most critical incidents with urgency and efficiency.</p>
                 </div>
                 <Image
                     src='/customer_portal.png'
                     width={1000}
-                    className='mt-[2rem] sm:hidden sm:w-[70rem] w-[30rem]'
+                    className='mt-[2rem] sm:hidden sm:w-[70rem] w-[100%]'
                     height={195}
                     alt='netflix dispatch' />
                 <Image

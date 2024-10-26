@@ -13,7 +13,7 @@ const Index = () => {
                 <div className="">
                     <div  className="sm:bg-patterns bg-patterns_mobile bg-contain bg-no-repeat grid place-content-center sm:px-[5rem] sm:h-[65rem] h-[35rem] ">
                         <div data-animation-id='slideIn' className="flex px-[3rem] w-[35rem] sm:w-full flex-col relative">
-                            <h1 className="header sm:w-[90rem] sm:self-center text-center mb-[1rem]"> <span className="text-[#5747A5]">AceMQ</span><span className="font-[400]"> Your Trusted</span> Messaging & Queuing <span className="text-[#5747A5]">Services</span> Partner</h1>
+                            <h1 className="sm:header text-[3rem] font-[800] sm:w-[90rem] sm:self-center text-center mb-[1rem]"> <span className="text-[#5747A5]">AceMQ</span><span className="font-[400]"> Your Trusted</span> Messaging & Queuing <span className="text-[#5747A5]">Services</span> Partner</h1>
                             <p className="text-center text-[1rem] sm:text-[1.7rem] sm:w-[50rem] w-[20rem] self-center mb-[5rem]"> Expertise, Support, and Value for Your Messaging & Queuing Implementation</p>
                         </div>
                     </div>

@@ -1,3 +1,6 @@
+'use client'
+import Carousel from "react-multi-carousel";
+import 'react-multi-carousel/lib/styles.css';
 import Image from "next/image";
 import Link from "next/link";
 const Index = () => {
@@ -39,11 +42,34 @@ const Index = () => {
     },
   ];
 
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: cards.length
+    },
+    mobile: {
+      breakpoint: { max: 600, min: 0 },
+      items: 1
+    }
+  }
   return (
-    <section className="responsive-grid px-[3rem] sm:px-[10rem] sm:py-[10rem] py-[5rem] bg-white text-black">
-      {cards.map((card, index) => (
-        <Card card={card} key={index} id={index} />
-      ))}
+
+    <section className="px-[3rem] sm:px-[10rem] sm:py-[10rem] py-[5rem] bg-white text-black">
+      <div className="hidden sm:block">
+        <div className="responsive-grid">
+          {cards.map((card, index) => (
+            <Card card={card} key={index} id={index} />
+          ))}
+        </div>
+      </div>
+
+      <div className="sm:hidden">
+        <Carousel showDots={true} autoPlay={true} autoPlaySpeed={1000} infinite={true} removeArrowOnDeviceType={["tablet", "mobile", 'desktop']} responsive={responsive}>
+          {cards.map((card, index) => (
+            <Card card={card} key={index} id={index} />
+          ))}
+        </Carousel>
+      </div>
     </section>
   );
 };
@@ -52,8 +78,8 @@ export default Index;
 
 const Card = ({ card, id }) => {
   return (
-    <div className="w-[35rem]">
-      <div className="relative">
+    <div className="sm:w-[35rem] w-[100%]">
+      <div className="sm:relative">
         <Image
           src={card.image}
           className="rounded-[1rem] w-[100%]"
@@ -62,7 +88,7 @@ const Card = ({ card, id }) => {
           alt="card image"
         />
         <div className="border sm:bottom-[-3rem] sm:right-[-3rem] bottom-[-2rem] right-[-2rem] absolute border-dashed sm:w-[7rem] w-[5.5rem] sm:h-[7rem] rounded-full p-[.2rem] border-[#9B86FE]">
-          <img src={card.ceo} alt="" />
+          <img src={card.ceo} className="hidden sm:block" alt="" />
         </div>
       </div>
 

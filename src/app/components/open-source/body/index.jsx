@@ -71,10 +71,10 @@ const Index = () => {
             alt="core technology"
             className="sm:mx-auto sm:hidden mt-[3rem] mb-[4rem]"
           />
-          <h3 data-animation-id='slideIn' className="text-[1.6rem]  sm:text-[6rem] sm:font-[700] w-[20rem] sm:w-[100rem] mx-auto text-center">
+          <h3 data-animation-id='slideIn' className="text-[3rem] sm:text-[6rem] font-[700] w-[20rem] sm:w-[100rem] mx-auto text-center">
             Our <span className="font-[400]">Support</span> Process
           </h3>
-          <p data-animation-id='slideIn' className="font-[700] text-[2rem] sm:text-[3rem] sm:leading-[4.5rem] sm:text-center sm:w-[65rem] sm:mx-auto mt-[1rem]">
+          <p data-animation-id='slideIn' className="font-[700] text-[2.5rem] leading-[3.5rem] sm:text-[3rem] sm:leading-[4.5rem] sm:text-center sm:w-[65rem] sm:mx-auto mt-[1rem]">
             <span className="font-[400]">Maximize Your System's</span> Uptime
             with{" "}
             <span className="text-[#FF88C3]">OpenAce Technical Support</span>
@@ -109,7 +109,7 @@ const Index = () => {
                 <span className="text-[#9B86FE]">Technical</span> Support{" "}
                 <span className="font-[400]">Benefits</span>
               </h3>
-              <p data-animation-id='slideIn' className="w-[28rem] sm:w-[50rem] sm:mt-[1rem] text-center mb-[2rem] mx-auto">
+              <p data-animation-id='slideIn' className="w-[28rem] hidden sm:block sm:w-[50rem] sm:mt-[1rem] text-center mb-[2rem] mx-auto">
                 Make Your Open Source Technologies Enterprise-Ready
               </p>
             </div>
@@ -135,14 +135,14 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="sm:mt-[10rem]">
+          <div className="sm:mt-[10rem] mt-[4rem]">
             <h3 data-animation-id='slideIn' className="sub-header sm:mb-[2rem] text-center">
               <span className="font-[400]">Case</span> Studies
             </h3>
             <div data-animation-id='slideIn' className="">
               <Banner
                 header={
-                  <h3 className="sub-header text-center">
+                  <h3 className="sm:text-[5rem] text-[2.8rem] font-[800] text-center">
                     <span className="font-[400]">Explore</span> transformative
                     case studies showcasing the{" "}
                     <span className="font-[400]">impact of</span> our Open
@@ -153,8 +153,9 @@ const Index = () => {
                   "Delve into success stories of businesses leveraging Open Source technology for optimal workflows, collaboration, efficiency, and cost reduction."
                 }
                 btn={"learn more"}
-                containerStyles={"bg-black sm:hidden"}
+                containerStyles={"sm:bg-black mt-[1rem] bg-banner-key bg-contain bg-no-repeat sm:hidden"}
               />
+              
               <div className="border sm:block pb-[3.5rem] rounded-[1.5rem] border-[#9B86FE80] hidden w-[90rem] mx-auto">
                 <div className="relative">
                   <img
@@ -165,7 +166,7 @@ const Index = () => {
                   <img src="/key.png" alt="key" />
                 </div>
                 <div className="">
-                  <h2 className="text-[2.5rem] font-[700] w-[90%] text-center mx-auto mt-[3rem]">
+                  <h2 className="text-[2.5rem] font-[700] sm:w-[90%] text-center mx-auto mt-[3rem]">
                     Explore transformative case studies showcasing the impact of
                     our Open Source architects.
                   </h2>
@@ -196,8 +197,8 @@ const Index = () => {
             "OpenAce provides businesses with access to experienced Open Source Architects who can help them unlock the power of Open Source technologies. Contact us today to learn how we can assist you in leveraging Open Source to achieve your business objectives."
           }
           btn={"Talk To An Expert"}
-          backgroundColor={"bg-black"}
-          containerStyles={"sm:px-[10rem] sm:mt-[10rem]"}
+          backgroundColor={"sm:bg-black bg-multi-color bg-contain"}
+          containerStyles={"sm:px-[10rem] mt-[5rem] sm:mt-[10rem]"}
           pageBanner={true}
         />
         <Contact route={"open-source"} />
@@ -210,11 +211,12 @@ export default Index;
 
 const Banner = ({ header, text, btn, containerStyles, backgroundColor, pageBanner = false }) => {
   return (
-    <div className={`${containerStyles}`}>
+    <div style={{ backgroundSize: '100% 100%' }} className={`${containerStyles}`}>
       <div data-animation-id='slideIn' className="relative">
-        {pageBanner && <img src="/_border.png" alt="border" className="inset-0 w-[100%] h-[100%] absolute z-[0] top-[-1.5rem] left-[1.5rem]" />}
+        {pageBanner && <img src="/_border.png" alt="border" className="inset-0 w-[100%] hidden sm:block h-[100%] absolute z-[0] top-[-1.5rem] left-[1.5rem]" />}
         <div
-          className={`px-[3rem] relative z-[1] mt-[5rem] py-[2rem] sm:py-[5rem] ${backgroundColor}`}
+          style={{ backgroundColor: 'w-[100%] h-[100%]' }}
+          className={`px-[2rem] relative z-[1] sm:mt-[5rem] py-[2rem] sm:py-[5rem] ${backgroundColor}`}
         >
           {header}
           <p data-animation-id='slideIn' className="text-center mt-[3rem] sm:w-[90rem] sm:mx-auto">{text}</p>

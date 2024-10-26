@@ -72,7 +72,7 @@ const Index = () => {
                                 {technologies.map(tech => <Technology key={tech.text} tech={tech} />)}
                             </div>
                             <Image
-                                src='/brands_sm.png'
+                                src='/_technologies_8.png'
                                 alt="tech icons"
                                 className="w-[100%] sm:hidden"
                                 width={358}

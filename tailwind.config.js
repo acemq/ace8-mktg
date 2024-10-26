@@ -27,7 +27,11 @@ module.exports = {
         'banner_hand': "url('/_banner_flare.png'), url('/_hand.png'), url('/_border.png')",
         'semi_circle': "url('/semi_circle.png')",
         'secure_banner': "url('/_banner_flare.png'), url('/_secure.png')",
-        'banner-flare': "url('/_banner_flare.png')"
+        'banner-flare': "url('/_banner_flare.png')",
+        'blue_border': "url('/_green_border.png')",
+        'integration_bg': "url('/_integration_service.png')",
+        'banner-key': "url('/banner_key.png')",
+        'multi-color': "url('/multi_color.png')"
       },
       colors: {
         'bg-100': '#0D1117',

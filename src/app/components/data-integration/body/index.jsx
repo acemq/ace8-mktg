@@ -2,20 +2,20 @@ import MaxContainer from '../../common/maxContainer';
 import Image from 'next/image';
 const Index = () => {
     return (
-        <section className="bg-white text-black px-[3rem] sm:px-[10rem] py-[10rem]">
+        <section className="bg-white text-black px-[3rem] sm:px-[10rem] py-[5rem] sm:py-[10rem]">
             <MaxContainer>
-                <div className="flex flex-col">
-                    <h2 data-animation-Id='slideIn' className="sub-header text-center mb-[2rem] sm:w-[75rem] sm:self-center"><span className="font-[400]">Struggling With</span> <span className="text-[#E485FD] sm:text-[#FF88C3]">E-Commerce</span> System Integration?</h2>
-                    <p data-animation-Id='slideIn' className="px-[1.2rem] sm:px-[1.7rem] sm:text-black py-[.5rem] sm:self-center text-center mb-[2rem] text-[1.2rem] sm:bg-conner-gradient-iii bg-opacity-[.6] text-white font-[700] rounded-[1rem]">Are you struggling to integrate your e-commerce system with your data analytics platform?</p>
+                <div className="flex flex-col sm:mb-[0]">
+                    <h2 data-animation-Id='slideIn' className="sub-header  w-[100%] mx-auto font-[800] text-center mb-[.5rem] sm:mb-[2rem] sm:w-[75rem] sm:self-center"><span className="font-[400]">Struggling With</span> <br className='sm:hidden'></br> <span className="text-[#E485FD] sm:text-[#FF88C3]">E-Commerce</span> System Integration?</h2>
+                    <p data-animation-Id='slideIn' className="px-[1.2rem] sm:px-[1.7rem] sm:text-black py-[.5rem] sm:self-center text-center mb-[2rem] text-[1.2rem] sm:bg-conner-gradient-iii bg-[#E485FD] sm:bg-opacity-[.6] text-white font-[700] rounded-[1rem]">Are you struggling to integrate your e-commerce system with your data analytics platform?</p>
                     <p data-animation-Id='slideIn' className="text-center sm:w-[50rem] self-center">Look no further than our integration service, which offers a unique approach that sets us apart from the competition.</p>
                 </div>
                 <div className="mt-[3rem] relative">
-                    <div data-animation-Id='slideIn' className="sm:flex hidden justify-around mt-[6rem]">
+                    <div data-animation-Id='slideIn' className="sm:flex justify-around sm:mt-[6rem]">
                         <div className="flex flex-col">
                             <div className="sm:flex sm:justify-between">
-                                <h2 className="sub-header sm:text-center w-[25rem] sm:w-[60rem]">Seamless <span className="text-[#5747A5]">Integration</span> with <span className="font-[400]">Databricks or</span> Snowflake</h2>
+                                <h2 className="sub-header text-[3rem] font-[800] sm:text-center w-[25rem] sm:w-[60rem]">Seamless <span className="text-[#5747A5]">Integration</span> with <span className="font-[400]">Databricks or</span> Snowflake</h2>
                             </div>
-                            <div className="self-center sm:mt-[7rem]">
+                            <div className="self-center hidden sm:block sm:mt-[7rem]">
                                 <img src="/snowflake.png" className='w-[20rem]' alt="snowflake" />
                                 <p className="text-center font-[700] text-[3.2rem] mt-[2rem]">Snowflake</p>
                             </div>
@@ -23,7 +23,7 @@ const Index = () => {
 
                         <div className="flex flex-col">
                             <p className="mt-[1rem] sm:w-[50rem]">Our integration service provides seamless integration with either Databricks or Snowflake, ensuring that your e-commerce data is seamlessly integrated with your data analytics platform.</p>
-                            <div className="self-center sm:mt-[7rem]">
+                            <div className="self-center hidden sm:block sm:mt-[7rem]">
                                 <img src="/databricks.png" className='w-[20rem]' alt="snowflake" />
                                 <p className="text-center font-[700] text-[3.2rem] mt-[2rem]">Databricks</p>
                             </div>

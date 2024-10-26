@@ -123,12 +123,12 @@ const SubIntro = () => {
         },
     ]
     return (
-        <section className="pt-[10rem] sm:pb-[25rem]">
+        <section className="pt-[5rem] sm:pb-[25rem]">
             <MaxContainer>
                 <div className="px-[3rem] sm:px-[10rem] flex flex-col">
                     <div className="sm:flex sm:flex-col sm:items-center sm:self-center sm:w-[100rem]">
-                        <h2 data-animation-id='slideIn' className="sub-header sm:w-[90rem] text-center"><span className="font-[400]">Refactor Your</span> <span className="text-[#9B86FE] sm:text-[#FF88C3]">Microservices</span><span className="text-[#FF88C3]"> Architecture to </span> <span className="text-[#9B86FE] sm:text-white">AWS Lambda</span></h2>
-                        <div data-animation-id='slideIn' style={{ backgroundSize: '100% 100%' }} className="p-[1rem] py-[2rem] my-[3rem] bg-purple_border bg-no-repeat">
+                        <h2 data-animation-id='slideIn' className="sub-header sm:w-[90rem] text-center"><span className="font-[400]">Refactor Your</span> <span className="text-[#9B86FE] sm:text-[#FF88C3]">Microservices</span><span className="sm:text-[#FF88C3]"> Architecture to </span> <span className="text-[#9B86FE] sm:text-white">AWS Lambda</span></h2>
+                        <div data-animation-id='slideIn' style={{ backgroundSize: '100% 100%' }} className="p-[1rem] py-[2rem] my-[3rem] sm:bg-purple_border bg-blue_border bg-no-repeat">
                             <p className="text-center">If you're considering migrating your microservices architecture to AWS Lambda, our expert team is here to streamline the process for maximum efficiency. From meticulous planning and automated conversion to comprehensive redesign and implementation, we have you covered at every step.</p>
                         </div>
                     </div>

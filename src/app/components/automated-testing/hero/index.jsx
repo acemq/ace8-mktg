@@ -10,7 +10,7 @@ const Index = () => {
     return (
         <section className="">
             <MaxContainer>
-                <div className="px-[3rem] pt-[3.4rem] sm:pt-[17rem] pb-[6rem]">
+                <div className="px-[3rem] pt-[7rem] sm:pt-[17rem] pb-[6rem]">
                     <div className="flex flex-col items-center mx-auto" data-animation-id='slideIn'>
                         <Image src='/automated_testing.webp' className='w-[24rem] h-[21rem] sm:hidden' width={580} height={383} alt='hero' />
                         <Image src='/automated_testing_sm.webp' className='w-[100rem]  sm:block hidden' width={1000} height={703} alt='hero' />

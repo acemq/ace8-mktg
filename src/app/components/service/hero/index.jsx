@@ -8,7 +8,7 @@ const Index = () => {
         slideIn()
     })
     return (
-        <section className="py-[5.5rem] sm:pt-[20rem] sm:pb-[17rem] px-[1.5rem] sm:px-[10rem] relative">
+        <section className="py-[5.5rem] pt-[10rem] sm:pt-[20rem] sm:pb-[17rem] px-[1.5rem] sm:px-[10rem] relative">
             <Image src='/service_bg.png' className="absolute mix-blend-soft-light inset-0 sm:hidden top-0 w-[100%] h-[100%]" width={790} height={387} alt="wheel" />
             <Image src='/service_bg_sm.png' className="absolute mix-blend-soft-light sm:block hidden inset-0 top-0 w-[100%] h-[100%]" width={1920} height={940} alt="wheel" />
             <MaxContainer>

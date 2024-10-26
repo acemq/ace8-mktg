@@ -33,7 +33,7 @@ const Intro = () => (
           <img
             src="/critical_industry.svg"
             alt="icons"
-            className="sm:w-[60rem]"
+            className="sm:w-[60rem] mt-[2rem] sm:mt-[0]"
           />
         </div>
       </div>
@@ -44,13 +44,13 @@ const Intro = () => (
 const SubIntro = () => (
   <section className="">
     <MaxContainer>
-      <div className="py-[5rem] sm:pt-[10rem]">
+      <div className="py-[5rem] pb-[3rem] sm:pb-[0] sm:pt-[10rem]">
         <div  data-animation-id='slideIn' className="sm:flex px-[3rem] sm:pr-[0] justify-between sm:pl-[10rem]">
           <div className="sm:w-[57rem]" >
             <h2 className="text-[3rem] font-[700] mb-[1rem]">
               <span className="font-[400]">Our</span> Solution:
             </h2>
-            <h3 className="sub-header">
+            <h3 className="text-[2.5rem] font-[700] sm:text-[5rem]">
               <span className="text-[#FF88C3]">Dev Containers</span>{" "}
               <span className="font-[400]"> for Swift, Customized</span>{" "}
               Onboarding
@@ -183,9 +183,9 @@ const SubIntro = () => (
             </div>
           </div>
 
-          <div className="w-[14rem] px-[3rwm] mt-[2rem] mb-[5rem] text-center mx-auto sm:hidden">
+          <div className="w-[16rem] px-[3rwm] mt-[2rem] mb-[5rem] text-center mx-auto sm:hidden">
             <h4 className="text-[1.5rem] mb-[1rem] font-[700] text-[#DC71AD]">
-              Fully <span className=""> Managed</span> Service
+              Fully <span className="font-[400] text-white"> Managed</span> Service
             </h4>
             <p className="text-[1.2rem]">
               Enjoy the benefits of a fully managed service running on your
@@ -320,15 +320,15 @@ const Banner = ({ header, text, btn, containerStyles, backgroundColor }) => {
   return (
     <div className={`${containerStyles}`}>
       <div className="relative"  data-animation-id='slideIn'>
-        <img src="/_border.png" alt="border" className="w-[100%] h-[100%] absolute inset-0 top-[-1.5rem] z-[0] left-[1.5rem]" />
+        <img src="/_border.png" alt="border" className="w-[100%] hidden sm:block h-[100%] absolute inset-0 top-[-1.5rem] z-[0] left-[1.5rem]" />
         <div
-          className={`px-[3rem] relative z-[1] mt-[5rem] py-[2rem] sm:py-[5rem] rounded-[2rem] ${backgroundColor}`}
+          className={`px-[3rem] relative z-[1] sm:mt-[5rem] mt-[3rem] py-[2rem] sm:py-[5rem] rounded-[2rem] ${backgroundColor}`}
         >
           {header}
           <p className="text-center mt-[3rem] sm:w-[90rem] sm:mx-auto">{text}</p>
           {btn && (
             <Link href='#contact'>
-              <button className="border-[1.3px] text-[1.2rem] px-[4rem] py-[1.2rem] font-[800] rounded-[1rem] mt-[2.5rem] mx-auto block">
+              <button className="border-[1.3px] text-[1.2rem] sm:px-[4rem] px-[2rem] py-[1.2rem] font-[800] rounded-[1rem] mt-[2.5rem] mx-auto block">
                 {btn}
               </button>
             </Link>
