@@ -99,7 +99,7 @@ p {
 }
 
 .sub-header {
-  @apply text-[3rem] font-[800] sm:text-[5rem] leading-[5rem] sm:leading-[6rem]
+  @apply text-[3rem] font-[800] sm:text-[5rem] leading-[4rem] sm:leading-[6rem]
 }
 
 .post_responsive_grid {
