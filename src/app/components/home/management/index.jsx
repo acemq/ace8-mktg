@@ -12,7 +12,7 @@ const Index = () => {
                     <h3 className="font-[700] text-[2.8rem] sm:text-[5rem] sm:leading-[5.7rem] sm:mb-[.5rem] mb-[2rem]">How to <span className="font-[400]">Proactively</span> Mitigate <span className="text-[#9B86FE]">Incidents</span></h3>
                     <p className="text-[1.4rem] sm:w-[52rem] mb-[3rem] font-[400]">Learn how Ace8 leverages Netflix Dispatch and other Industry-leading technologies and practices to offer the ONLY proactive incident management.</p>
 
-                    <Link href="/Service/incident-management" className="btn hidden sm:inline-block self-center">Learn More</Link>
+                    <Link href="/services/incident-management" className="btn hidden sm:inline-block self-center">Learn More</Link>
                 </div>
                 <Image src='/_dashboard.png' className="w-[100%] sm:w-[60rem] hidden sm:block sm:relative sm:bottom-[-3.8rem] h-auto" width={370} height={300} />
                 <Image src='/_dashboard_mobile.png' className="w-[100%] sm:w-[60rem] sm:hidden sm:relative sm:bottom-[-3.8rem] h-auto" width={370} height={300} />

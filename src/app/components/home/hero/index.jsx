@@ -32,8 +32,11 @@ const Index = () => {
                 <div className="sm:ml-[7rem]" data-animation-id="slideIn">
                     <h1 className="text-[4rem] leading-[5rem] sm:text-[8rem] sm:w-[80rem] sm:leading-[12rem] font-[700]">We Empower <span className="text-[#9B86FE] text-[5rem] md:text-[14rem] font-[900]">Innovations</span></h1>
                     <p className="text-[1.2rem] sm:leading-[2.8rem] mt-[.5rem] sm:text-[1.8rem] sm:w-[59rem] md:mt-[.5rem]">We are a people-focused organization that solves business problems through technology.</p>
-                    <Link href='#about'>
-                        <button className="px-[2rem] py-[.6rem] mt-[3rem] text-[.9rem] md:text-[1.3rem] rounded-[.5rem] font-[800] border border-accent-100">Learn More</button>
+                    <Link 
+                        href='#about'
+                        className="inline-block px-[2rem] py-[.6rem] mt-[3rem] text-[.9rem] md:text-[1.3rem] rounded-[.5rem] font-[800] border border-accent-100"
+                    >
+                        Learn More
                     </Link>
                 </div>
             </div>

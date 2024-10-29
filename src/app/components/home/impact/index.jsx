@@ -41,7 +41,7 @@ const Index = () => {
                         Ace8 has helped the World's premiere companies reach exceptional
                         outcomes
                     </p>
-                    <div className="sm:flex-row flex flex-col  gap-[5rem] sm:gap-[0] w-[100%] sm:h-[42rem] justify-between">
+                    <div className="sm:flex-row flex flex-col gap-[5rem] sm:gap-[0] w-[100%] sm:h-fit justify-between">
                         {cards.map((card, index) => (
                             <Card card={card} key={index} />
                         ))}

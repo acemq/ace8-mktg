@@ -19,7 +19,7 @@ const Index = () => {
                     <p className="text-center sm:text-start text-[1.8rem] mb-[.5rem] sm:text-[2rem] sm:mb-[1.5rem] mt-[3rem]">Who we are</p>
                     <h2 className="text-center sm:text-start text-[2.2rem] leading-[2.5rem] font-[400] sm:text-[5rem] sm:leading-[5.7rem]"> <span className="font-[700]">We are a </span><span className="sm:hero_gradient_text text-[#EA9EFF] font-[800]">People-Focused Organization</span> <span className="font-[700]"> that</span> Solves Business Problem <span className="sm:hero_gradient_text_ii text-[#EA9EFF] font-[700]" > Through Technology.</span></h2>
                     <p className="sm:text-[1.5rem] sm:w-[60rem] sm:mt-[1rem] hidden sm:block">We offer an opportunity to envision your solution as a roadmap where we collaborate to create, reinvent and continuously deploy services, capabilities, and solutions to solve your business challenges.</p>
-                    <Link href='/About' className="border-accent-200 text-[1.2rem] hover:scale-[1.1] transition-all self-center sm:self-start py-[.8rem] px-[1.8rem] sm:py-[1rem] sm:px-[2.2rem] rounded-[.7rem] font-[700] border-[2px] mt-[2.4rem]">More About Us</Link>
+                    <Link href='/about' className="border-accent-200 text-[1.2rem] hover:scale-[1.1] transition-all self-center sm:self-start py-[.8rem] px-[1.8rem] sm:py-[1rem] sm:px-[2.2rem] rounded-[.7rem] font-[700] border-[2px] mt-[2.4rem]">More About Us</Link>
                 </div>
             </div>
         </section>
