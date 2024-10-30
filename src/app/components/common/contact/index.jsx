@@ -63,11 +63,11 @@ const Index = ({ route }) => {
       id="contact"
     >
       <ToastContainer />
-      <div data-animation-id='slideIn' className="pt-[2rem] px-[3rem] pb-[1rem] sm:mt-[12rem] sm:p-[7rem] sm:bg-black sm:flex sm:justify-between rounded-[3rem]">
-        <div className="sm:flex-1 sm:relative sm:pt-[7rem]">
-          <h4 className="text-center text-[3rem] sm:text-left sm:absolute sm:top-[-3rem] sm:bg-[#8FD5CC] sm:text-[#030303] sm:px-[2rem] sm:py-[.8rem] sm:rounded-[1rem]">
+      <div data-animation-id='slideIn' className="pt-[2rem] px-[3rem] pb-[1rem] sm:mt-[12rem] sm:px-[7rem] sm:py-[4rem] sm:bg-black sm:flex sm:justify-between rounded-[3rem]">
+        <div className="sm:flex-1 sm:relative sm:pt-[3rem]">
+          <h4 className="text-center text-[3rem] sm:text-[4.5rem] sm:text-left  sm:text-white">
             Contact{" "}
-            <span className="font-[700] sm:text-[#030303] text-[#8FD5CC]">
+            <span className="font-[700] text-[#9B86FE]">
               Us
             </span>
           </h4>
@@ -78,7 +78,7 @@ const Index = ({ route }) => {
             <Link href="">
               <li className="flex gap-x-[2rem]">
                 <img
-                  src="/message_blue.svg"
+                  src="/white_mail.svg"
                   className="w-[1.4rem]"
                   alt="mail"
                 />{" "}
@@ -87,12 +87,12 @@ const Index = ({ route }) => {
             </Link>
 
             <li className="flex gap-x-[2rem]">
-              <img src="/phone_blue.svg" className="w-[1.4rem]" alt="phone" />{" "}
+              <img src="/white_tel.svg" className="w-[1.4rem]" alt="phone" />{" "}
               <p className="">+1 305-204-2607</p>
             </li>
             <li className="flex gap-x-[2rem]">
               <img
-                src="/location_blue.svg"
+                src="/white_loc.svg"
                 className="w-[1.4rem]"
                 alt="location"
               />{" "}
@@ -100,59 +100,62 @@ const Index = ({ route }) => {
             </li>
           </ul>
         </div>
-        <div className="sm:flex-[.8]">
-          <form
-            action=""
-            className="bg-white px-[2.3rem] py-[1.5rem] sm:py-[4rem] flex flex-col rounded-[1rem] mt-[3rem] sm:mt-[0]"
-          >
-            <div className="sm:flex justify-between gap-[2rem]">
-              <div className="flex py-[.8rem] gap-x-[1rem] border-b border-b-black mb-[3rem] sm:flex-1">
-                <img src="/name.svg" alt="name" />
-                <input
-                  type="text"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="w-full text-black focus:outline-none text-[1.2rem]"
-                  placeholder="Name"
-                />
-              </div>
-              <div className="flex py-[.8rem] gap-x-[1rem] border-b border-b-black mb-[3rem] sm:flex-1">
-                <img src="/email.svg" alt="email" />
-                <input
-                  type="text"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full text-black focus:outline-none text-[1.2rem]"
-                  placeholder="Email Address"
-                />
-              </div>
-            </div>
-            <div className="flex items-start  py-[.8rem] gap-x-[1rem] border-b border-b-black mb-[3rem]">
-              <img
-                src="/_message.svg"
-                required
-                className="mt-[.4rem]"
-                alt="message"
-              />
-              <textarea
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                className="w-full text-black focus:outline-none text-[1.2rem] h-[8rem] sm:h-[14rem] resize-none"
-                placeholder="Message"
-              />
-            </div>
-
-            <button
-              disabled={name == "" || email == "" || message == ""}
-              className="text-black btn disabled:opacity-[.5] self-end bg-[#8FD5CC]"
-              onClick={handleSubmit}
+        <div className="sm:flex-[.8] sm:relative sm:top-[-10rem]">
+          <div className="relative rounded-[1rem] p-[1px] bg-gradient-to-b from-[#FF88C3] to-[#9B86FE]">
+            <form
+              action=""
+              className="bg-white px-[2.3rem] py-[1.5rem] sm:py-[4rem] flex flex-col rounded-[1rem] mt-[0] sm:mt-[0]"
             >
-              {loading ? "Loading..." : "Submit"}
-            </button>
-          </form>
+              <div className="sm:flex justify-between gap-[2rem]">
+                <div className="flex py-[.8rem] gap-x-[1rem] border-b border-b-black mb-[3rem] sm:flex-1">
+                  <img src="/profile_purple.png" className="w-[1.5rem]" alt="name" />
+                  <input
+                    type="text"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full text-black focus:outline-none text-[1.2rem]"
+                    placeholder="Name"
+                  />
+                </div>
+                <div className="flex py-[.8rem] gap-x-[1rem] border-b border-b-black mb-[3rem] sm:flex-1">
+                  <img src="/email.svg" className="w-[1.5rem]" alt="email" />
+                  <input
+                    type="text"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full text-black focus:outline-none text-[1.2rem]"
+                    placeholder="Email Address"
+                  />
+                </div>
+              </div>
+              <div className="flex items-start  py-[.8rem] gap-x-[1rem] border-b border-b-black mb-[3rem]">
+                <img
+                  src="/_message.svg"
+                  required
+                  className="mt-[.4rem]"
+                  alt="message"
+                />
+                <textarea
+                  type="text"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="w-full text-black focus:outline-none text-[1.2rem] h-[8rem] sm:h-[14rem] resize-none"
+                  placeholder="Message"
+                />
+              </div>
+
+              <button
+                disabled={name == "" || email == "" || message == ""}
+                className="text-white px-[2.5rem] py-[1rem] rounded-[.5rem] font-[600] text-[1.2rem] disabled:opacity-[.5] self-end"
+                style={{ background: 'linear-gradient(180deg, #FF88C3 0%, #9B86FE 100%)' }}
+                onClick={handleSubmit}
+              >
+                {loading ? "Loading..." : "Submit"}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

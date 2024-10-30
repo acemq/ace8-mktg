@@ -34,11 +34,11 @@ const Index = () => {
                 'Cultural transformation driving collaboration, efficiency, and shared responsibility'
             ],
             link: '/services/OBAAS',
-            mutipleImage: <OnboardingLeft />,
             containerStyle: 'flex-row-reverse sm:mt-[10rem] mt-[5rem] text-end sm:text-start',
+            image: '/big_OBS.png',
             roleOrientation: 'flex-row-reverse',
-            imageStyle: '',
-            bordercolor: 'border-[#1C83EE] text-[#1C83EE]'
+            imageStyle: 'w-[65rem] h-auto sm:mt-[10rem]',
+            bordercolor: 'border-[#1C83EE] text-[#1C83EE] sm:border-[#FF88C3] text-[#FF88C3]'
         },
         {
             header: <h2 className="header_ii"><span className="text-[#5747A5]">Incident</span> Management</h2>,
@@ -77,7 +77,7 @@ const Index = () => {
             containerStyle: 'sm:mt-[10rem] text-end sm:text-start flex-row-reverse mt-[5rem] ',
             roleOrientation: 'flex-row-reverse',
             imageStyle: 'sm:w-[65rem] sm:h-auto hidden sm:block',
-            bordercolor: 'text-[#B98959] border-[#B98959]'
+            bordercolor: 'text-[#B98959] border-[#B98959] sm:border-[#FF88C3] text-[#FF88C3]'
         },
     ]
 
@@ -140,7 +140,7 @@ const Index = () => {
             containerStyle: 'sm:mt-[10rem] items-center',
             imageStyle: 'sm:w-[60rem] hidden sm:block h-auto',
             circle: '#fff',
-            bordercolor: 'border-[#F8D449] text-[#F8D449]'
+            bordercolor: 'border-[#F8D449] text-[#F8D449] sm:border-[#FF88C3] text-[#FF88C3]'
         },
     ]
     return (

@@ -28,7 +28,7 @@ const Index = ({ item }) => {
                             <p className="w-[90%]">{_item}</p>
                         </div>))}
                         <Link href={`${item.link}`}>
-                           <button className={`btn border-[2px] mt-[3rem] ${item.bordercolor}`}>Read More</button>
+                            <button className={`btn border-[2px] mt-[3rem] ${item.bordercolor}`}>Read More</button>
                         </Link>
                     </div>
                 </div>
@@ -37,8 +37,12 @@ const Index = ({ item }) => {
                     {item.left && <Link className="sm:hidden" href={`${item.Link}`}>
                         <button className={`btn border-[2px] mt-[2.5rem] ${item.bordercolor}`}>Read More</button>
                     </Link>}
-                    {item.mutipleImage ? item.mutipleImage : item.mobileImage ? <img src={item.mobileImage} alt="image" className="w-[100%] sm:hidden mt-[1rem]" /> : (<Image src={item.image} width={700} height={400} className={`w-[30rem] mt-[1rem] sm:mt-[0] ${item.imageStyle} h-auto`} alt="capability image" />)}
-
+                    {item.mutipleImage ? item.mutipleImage : (
+                        <>
+                            <Image src={item.image} width={700} height={400} className={`w-[30rem] hidden sm:block mt-[1rem] sm:mt-[0] ${item.imageStyle} h-auto`} alt="capability image" />
+                            <img src={item.mobileImage} alt="image" className="w-[100%] sm:hidden mt-[1rem]" />
+                        </>
+                    )}
                     <div className="mt-[2.5rem] sm:hidden">
                         {item.roles.map((_item, i) => (<div className={`flex gap-[1.5rem] ${item.roleOrientation} mb-[.5rem]`} key={i}>
                             <div className="flex flex-col items-center w-[1.5rem]">
