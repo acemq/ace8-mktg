@@ -25,7 +25,7 @@ const Index = () => {
       active: false,
       role: 'Bridging the gap between development,  security, and operations. Achieve efficient and secure software delivery through collaboration, automation, and a security-first approach.',
       mobileImage: '/devsec.svg',
-       link: '/services/devsecops'
+      link: '/services/devsecops'
     },
     {
       image: '/__environment_as_a_service.svg',
@@ -57,7 +57,7 @@ const Index = () => {
       active: false,
       role: 'AceMQ offers comprehensive microservices design, development, and refactoring services that strictly adhere to industry best practices, including loose coupling and the 12Factor approach.',
       mobileImage: '/microservice_design_mobile.svg',
-      link:  '/services/micro-service'
+      link: '/services/micro-service'
     },
     {
       image: '/__data_analytics_integration.svg',
@@ -133,11 +133,14 @@ const Index = () => {
           {features.map((service, index) => <Card service={service} key={index} />)}
         </div>
         <div className="pl-[8rem] pr-[4rem] sm:items-center sm:pl-[4rem] py-[7rem] sm:py-[3rem] hidden bg-black sm:flex justify-between w-[100%] mt-[4rem]">
-          <div className="w-[450px]" data-animation-id="slideIn">
-            <img src="/_devsecops.svg" className="w-[6rem]" alt="icon" />
-            <h3 className="font-[600] mb-1 text-[2rem] sm:mb-[1rem] sm:mt-[3rem] sm:text-[2.5rem] text-center sm:text-start">DevSecOps</h3>
-            <p className="text-[1.2rem] sm:text-[1.7rem] text-center sm:text-start">Bridging the gap between development,  security, and operations. Achieve efficient and secure software delivery through collaboration, automation, and a security-first approach.</p>
-          </div>
+          <Link href='/services/devsecops' data-animation-id="slideIn" className="block w-[450px]">
+            <div className="w-[450px]">
+              <img src="/_devsecops.svg" className="w-[6rem]" alt="icon" />
+              <h3 className="font-[600] mb-1 text-[2rem] sm:mb-[1rem] sm:mt-[3rem] sm:text-[2.5rem] text-center sm:text-start">DevSecOps</h3>
+              <p className="text-[1.2rem] sm:text-[1.7rem] text-center sm:text-start">Bridging the gap between development,  security, and operations. Achieve efficient and secure software delivery through collaboration, automation, and a security-first approach.</p>
+              <img src="/Arrow.svg" alt="" className="w-[3rem] ml-auto mt-[2rem]" />
+            </div>
+          </Link>
           <Image width={657} height={361} className="w-[55rem] h-[33rem]" src="/_infinity.png" alt="" />
         </div>
       </div>

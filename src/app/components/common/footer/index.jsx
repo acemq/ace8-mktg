@@ -147,6 +147,16 @@ const FooterDesktop = () => {
                     66 W. Flagler St. 9th Floor Miami, FL 33130
                   </p>
                 </li>
+                <li className="flex gap-[1rem] items-center">
+                  <img
+                    className="w-[3rem] aspect-square"
+                    src="/_MAIL.png"
+                    alt="mail icon"
+                  />
+                  <p className="w-[30rem] text-[1.5rem]">
+                    info@ace8.io
+                  </p>
+                </li>
               </ul>
             </div>
 

@@ -24,9 +24,7 @@ export const metadata = {
 const DevSecOps = () => {
   return (
     <>
-      <MaxContainer>
-        <Hero />
-      </MaxContainer>
+      <Hero />
       <Body />
       <MaxContainer>
         <Contact route={"devsecops"} />

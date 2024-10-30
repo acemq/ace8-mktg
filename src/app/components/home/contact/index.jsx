@@ -22,7 +22,7 @@ const ContactDesktop = () => {
                         </div>
                         <h4 className="text-[3rem] font-[700]">Contact Us</h4>
                     </div>
-                    <Image src='/face_blank.png' className="w-[70rem] mix-blend-lighten h-[70rem]" width={815} height={815} />
+                    <Image src='/face_blank.png' className="mask w-[70rem] bg-blend-screen mix-blend-light h-[70rem]" width={815} height={815} />
                 </div>
 
                 <div className="flex flex-col">
