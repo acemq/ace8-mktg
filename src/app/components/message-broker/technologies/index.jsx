@@ -66,6 +66,7 @@ const Index = () => {
         <section className="sm:flex bg-white sm:px-[10rem] px-[3rem]">
             <MaxContainer>
                 <div className="relative" data-animation-id='slideIn'>
+                    <h1 className="text-[3rem] sm:text-[6rem] hidden sm:block text-black font-[800]">Technologies</h1>
                     <div className="flex">
                         <div className="sm:ml-[7rem] w-full sm:mt-[4rem]">
                             <div className="sm:flex h-[30rem] justify-between w-[100%] hidden">

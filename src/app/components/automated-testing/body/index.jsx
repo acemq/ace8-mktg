@@ -1,6 +1,7 @@
 import MaxContainer from "../../common/maxContainer";
 import Contact from "../../common/contact";
 import Image from "next/image";
+import PlaceTextBesideImage from "../../common/placeTextBesideImage";
 import Link from "next/link";
 
 const Index = () => {
@@ -49,6 +50,7 @@ const Index = () => {
               className="w-[50rem] hidden sm:block"
               data-animation-id='slideIn'
             />
+
           </div>
 
           <img
@@ -59,15 +61,46 @@ const Index = () => {
           />
         </div>
 
-        <div className="sm:pl-[10rem] mt-[8rem] sm:block">
+        {/* <div className="sm:pl-[10rem] mt-[8rem] sm:block">
           <Image
             src="/critical_components_sm.svg"
             width={1000}
-            className="w-full mr-0 hidden sm:block"
+            className="w-full mr-0 border hidden sm:block"
             height={750}
             alt="critical components"
             data-animation-id='slideIn'
           />
+        </div> */}
+
+        <div className="sm:flex sm:justify-between hidden mt-[8rem] w-[100%] pl-[10rem]">
+          <div className="w-[50rem]">
+            <h2 className="text-[3rem] sm:text-[5rem] w-[45rem] font-[400]">Thorough <span className="font-[700] text-[#8FD5CC]">Testing</span> with <span className="font-[700]">Three Critical</span> <span className="text-[#8FD5CC] font-[700]">Components</span></h2>
+            <p className="">Our approach includes three critical components that ensure your e-commerce application is thoroughly tested: </p>
+            <div className="flex flex-col gap-[.3rem] mt-[1.5rem] mb-[3rem]">
+              <div className="flex gap-[1rem]">
+                <div className="flex flex-col items-center gap-[.5rem]">
+                  <div style={{ border: `2px solid #ffffff` }} className={`rounded-full ${'w-[2rem] aspect-square'}`}></div>
+                  <div className={`w-[2px] bg-[#8FD5CC] min-h-[2rem] h-[100%]`}></div>
+                </div>
+                <p className="w-[90%]">Crowd-sourced development of test cases</p>
+              </div>
+              <div className="flex gap-[1rem]">
+                <div className="flex flex-col items-center gap-[.5rem]">
+                  <div style={{ border: `2px solid #ffffff` }} className={`rounded-full ${'w-[2rem] aspect-square'}`}></div>
+                  <div className={`w-[2px] bg-[#8FD5CC] min-h-[2rem] h-[100%]`}></div>
+                </div>
+                <p className="w-[90%]">AI-enhanced test code</p>
+              </div>
+              <div className="flex gap-[1rem]">
+                <div className="flex flex-col items-center gap-[.5rem]">
+                  <div style={{ border: `2px solid #ffffff` }} className={`rounded-full ${'w-[2rem] aspect-square'}`}></div>
+                </div>
+                <p className="w-[90%]">Execution of test cases integrated into your CI/CD pipeline.</p>
+              </div>
+            </div>
+            <p className="">Through crowd-sourced development of test cases, we bring together a community of testers to create comprehensive and diverse test cases for your application. Our AI-enhanced test code then ensures that these test cases are efficient and effective, saving you time and resources.</p>
+          </div>
+          <img src="/_critical_component.png" alt="critical component" className="w-[78rem] h-[50rem] hidden sm:block" />
         </div>
 
         <div data-animation-id='slideIn' className="mt-[5rem] px-[3rem] sm:px-[10rem] sm:items-center sm:mt-[10rem] sm:flex sm:flex-row-reverse justify-between">

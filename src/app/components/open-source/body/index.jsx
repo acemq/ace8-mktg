@@ -166,7 +166,7 @@ const Index = () => {
                   <img src="/key.png" alt="key" />
                 </div>
                 <div className="">
-                  <h2 className="text-[2.5rem] font-[700] sm:w-[90%] text-center mx-auto mt-[3rem]">
+                  <h2 className="text-[2.5rem] sm:text-[3rem] font-[700] sm:w-[90%] text-center mx-auto mt-[3rem]">
                     Explore transformative case studies showcasing the impact of
                     our Open Source architects.
                   </h2>
@@ -197,7 +197,7 @@ const Index = () => {
             "OpenAce provides businesses with access to experienced Open Source Architects who can help them unlock the power of Open Source technologies. Contact us today to learn how we can assist you in leveraging Open Source to achieve your business objectives."
           }
           btn={"Talk To An Expert"}
-          backgroundColor={"sm:bg-black bg-multi-color bg-contain"}
+          backgroundColor={"sm:bg-black bg-multi-color bg-no-repeat sm:bg-cover bg-contain"}
           containerStyles={"sm:px-[10rem] mt-[5rem] sm:mt-[10rem]"}
           pageBanner={true}
         />
@@ -215,7 +215,7 @@ const Banner = ({ header, text, btn, containerStyles, backgroundColor, pageBanne
       <div data-animation-id='slideIn' className="relative">
         {pageBanner && <img src="/_border.png" alt="border" className="inset-0 w-[100%] hidden sm:block h-[100%] absolute z-[0] top-[-1.5rem] left-[1.5rem]" />}
         <div
-          style={{ backgroundColor: 'w-[100%] h-[100%]' }}
+          style={{ backgroundSize: '100% 100%' }}
           className={`px-[2rem] relative z-[1] sm:mt-[5rem] py-[2rem] sm:py-[5rem] ${backgroundColor}`}
         >
           {header}

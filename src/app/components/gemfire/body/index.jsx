@@ -37,10 +37,13 @@ const Index = () => {
     return (
         <section className="bg-white relative">
             <MaxContainer>
-                <div className="px-[3rem] sm:px-[10rem]  border pt-[15rem] sm:pt-[30rem] pb-[5rem] flex flex-col text-black">
+                <div className="px-[3rem] sm:px-[10rem] pt-[15rem] sm:pt-[30rem] pb-[5rem] flex flex-col text-black">
                     <img src="/man_walk.svg" data-animation-id='slideIn' alt="explore" className="absolute  sm:w-[100rem] self-center top-[-3rem] sm:top-[-25rem]" />
                     <div data-animation-id='slideIn' className="flex  justify-around sm:items-center">
-                        <p className="sm:w-[65rem] text-[1.2rem] font-[500] sm:text-[1.8rem] sm:leading-[3rem]">GemFire serves as a distributed XA Engine, offering unparalleled capabilities in its domain.Navigating the high-tech problem space of GemFire requires specialized expertise, which can be nearly impossible to find. However, our team boasts two of GemFire's original developers, ensuring you access to unmatched knowledge and insights.</p>
+                        <p className="sm:w-[65rem] sm:hidden text-[1.2rem] font-[500] sm:text-[2rem] sm:leading-[3rem]">GemFire serves as a distributed XA Engine, offering unparalleled capabilities in its domain.Navigating the high-tech problem space of GemFire requires specialized expertise, which can be nearly impossible to find. However, our team boasts two of GemFire's original developers, ensuring you access to unmatched knowledge and insights.</p>
+                        <p className="hidden sm:block w-[80rem] text-[2rem] leading-[3rem]">
+                            GemFire serves as a distributed XA Engine, offering unparalleled capabilities in its domain. As the best solution in its space, GemFire stands out, offering an unmatched feature set for a wide variety of applications and providing a sophisticated alternative to Data products like Redis, distributed infrastructure like Zookeeper, and practical data management like Cassandra. Navigating the high-tech problem space of GemFire requires specialized expertise, which can be nearly impossible to find. However, our team boasts two of GemFire's original developers, ensuring you access to unmatched knowledge and insights.
+                        </p>
                         <img src="/VM_ware.svg" alt="vmware logo" className="w-[10rem] sm:w-[25rem]" />
                     </div>
 
@@ -53,7 +56,7 @@ const Index = () => {
                         <img src="/home.svg" alt="home" className="w-[14.2rem] sm:w-[60rem] sm:h-[40rem] h-[10rem]" />
                     </div>
                     <div data-animation-id='slideIn' className="responsive-grid mt-[5rem]">
-                        { cards.map((card, index) =>   <Card card={card} key={index} />)}
+                        {cards.map((card, index) => <Card card={card} key={index} />)}
                     </div>
                     {/* <Image src='/gemfire_reasons.png' width={370} height={663} className='mt-[3rem] sm:hidden' alt='gemfire reasons' /> */}
                 </div>

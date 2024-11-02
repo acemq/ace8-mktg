@@ -15,16 +15,16 @@ export default Index;
 
 const Intro = () => (
   <section className="bg-white sm:pb-[10rem] py-[3rem]">
-    <MaxContainer>
-      <div className="px-[3rem] sm:px-[10rem]">
         <img
           src="/OBAAS_code_snippet2.png"
           alt="code snippet"
           data-animation-id='slideIn'
           className="relative sm:mx-auto sm:w-[120rem] top-[-12rem] sm:block hidden"
         />
-        <div data-animation-id='slideIn' className="text-black sm:justify-between sm:mt-[-6rem] text-center sm:flex">
-          <p className="sm:w-[50rem] sm:text-left">
+    <MaxContainer>
+      <div className="px-[3rem] sm:px-[10rem]">
+        <div data-animation-id='slideIn' className="text-black sm:justify-between  text-center sm:flex">
+          <p className="sm:w-[45rem] sm:text-[2rem] sm:leading-[3rem] sm:text-left">
             At Ace8, we acknowledge a critical industry challenge—delayed
             developer productivity due to lengthy onboarding processes, leading
             to significant financial losses. Developers often remain idle,
@@ -33,7 +33,7 @@ const Intro = () => (
           <img
             src="/critical_industry.svg"
             alt="icons"
-            className="sm:w-[60rem] mt-[2rem] sm:mt-[0]"
+            className="sm:w-[65rem] mt-[2rem] sm:mt-[0]"
           />
         </div>
       </div>

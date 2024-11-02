@@ -181,7 +181,7 @@ const Form = () => {
                     <p className="text-[1.12rem] text-[#232323]">PDF, Word, Excel, PNG, JPEG, and TXT files with less than 25MB in size are supported.</p>
                 </div> */}
 
-        <button onClick={handleSubmit} className="mt-[3rem] self-center sm:self-start px-[3rem] py-[1rem] text-white bg-conner-gradient rounded-[1rem]">{loading ? 'loading..' : 'Submit'}</button>
+        <button onClick={handleSubmit} className="mt-[2rem] self-center sm:self-start px-[3rem] py-[1rem] text-white bg-conner-gradient rounded-[1rem]">{loading ? 'loading..' : 'Submit'}</button>
       </form>
     </div>
   )
@@ -193,11 +193,11 @@ const ContactInfo = () => {
     <div className="bg-[#232323] sm:ml-[9rem]  sm:translate-y-[10rem] sm:max-w-[45rem] max-w-[27rem] w-[27rem] sm:w-[45rem] mx-auto   rounded-[1rem] sm:px-[4.5rem] px-[2.5rem] sm:py-[2.7rem] py-[2rem] flex justify-between">
       <div className="">
         <h3 className="font-[700] text-[1.5rem]">Email Us</h3>
-        <p className="text-[1.2rem] sm:text-[1.7rem]">info@aceitco.com</p>
+        <p className="text-[1.2rem] sm:text-[1.7rem]">info@ace8.io</p>
       </div>
       <div className="">
         <h3 className="font-[700] text-[1.5rem]">Call Us</h3>
-        <p className="text-[1.2rem] sm:text-[1.7rem]">305-981-6475</p>
+        <p className="text-[1.2rem] sm:text-[1.7rem]">305-204-2607</p>
       </div>
     </div>
   )

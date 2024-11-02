@@ -13,25 +13,21 @@ const Index = () => {
                     <div data-animation-Id='slideIn' className="sm:flex justify-around sm:mt-[6rem]">
                         <div className="flex flex-col">
                             <div className="sm:flex sm:justify-between">
-                                <h2 className="sub-header text-[3rem] font-[800] sm:text-center w-[25rem] sm:w-[60rem]">Seamless <span className="text-[#5747A5]">Integration</span> with <span className="font-[400]">Databricks or</span> Snowflake</h2>
+                                <h2 className="sm:text-[4rem] text-[3rem] font-[800] sm:text-center w-[25rem] sm:w-[60rem]">Seamless <span className="text-[#5747A5]">Integration</span> with <span className="font-[400]">Databricks or</span> Snowflake</h2>
                             </div>
                             <div className="self-center hidden sm:block sm:mt-[7rem]">
-                                <img src="/snowflake.png" className='w-[20rem]' alt="snowflake" />
-                                <p className="text-center font-[700] text-[3.2rem] mt-[2rem]">Snowflake</p>
+                                <img src="/snowflake.png" className='w-[20rem] h-[20rem]' alt="snowflake" />
+                                <p className="text-center font-[700] text-[3.2rem] sm:text-[4rem] mt-[2rem]">Snowflake</p>
                             </div>
                         </div>
 
                         <div className="flex flex-col">
                             <p className="mt-[1rem] sm:w-[50rem]">Our integration service provides seamless integration with either Databricks or Snowflake, ensuring that your e-commerce data is seamlessly integrated with your data analytics platform.</p>
-                            <div className="self-center hidden sm:block sm:mt-[7rem]">
-                                <img src="/databricks.png" className='w-[20rem]' alt="snowflake" />
-                                <p className="text-center font-[700] text-[3.2rem] mt-[2rem]">Databricks</p>
+                            <div className="self-center hidden sm:block mt-auto">
+                                <img src="/databricks.png" className='w-[20rem] h-[20rem]' alt="snowflake" />
+                                <p className="text-center font-[700] text-[3.2rem] sm:text-[4rem] mt-[2rem]">Databricks</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div data-animation-Id='slideIn' className="relative mt-[-14rem] top-[20rem] sm:block hidden">
-                        <Image src='/_archi.png' className='mx-auto w-[100rem]' alt='architecture consulting' width={1000} height={1500} />
                     </div>
 
                     <div className="mt-[1rem] flex flex-col sm:hidden">
@@ -44,6 +40,9 @@ const Index = () => {
                     </div>
                 </div>
             </MaxContainer>
+            <div data-animation-Id='slideIn' className="relative mt-[-17rem] z-[3] top-[30rem]  sm:block hidden">
+                <Image src='/_archi.png' className='mx-auto w-[100rem]' alt='architecture consulting' width={1000} height={1500} />
+            </div>
         </section>
     );
 }

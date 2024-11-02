@@ -27,11 +27,11 @@ const MicroService = () => {
     <>
       <Hero />
       <Body />
-      <div className="sm:bg-white sm:py-[3rem]">
-        <MaxContainer>
-          <Banner />
+      <div className="sm:bg-white sm:py-[3rem">
+        <Banner />
+        <div className="sm:mt-[-18rem]">
           <Contact route={"micro-service"} />
-        </MaxContainer>
+        </div>
       </div>
     </>
   );

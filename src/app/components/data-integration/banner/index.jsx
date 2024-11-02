@@ -1,7 +1,7 @@
 import Link from "next/link";
 const Index = () => {
     return (
-        <section className="pt-[2rem] sm:mt-[17rem] sm:pt-[0] sm:pb-[0] sm:px-[10rem] text-white">
+        <section className="pt-[2rem] sm:mt-[30rem] sm:pt-[0] sm:pb-[0] sm:px-[10rem] text-white">
             <div data-animation-Id='slideIn' className="relative">
                 <img src="/_border.png" alt="border" className="absolute z-[0] w-[100%] h-[100%]  inset-0 top-[-1.5rem] left-[1.5rem]" />
                 <div className="sm:py-[3rem] relative z-[1] sm:rounded-[2rem] sm:pb-[5rem] bg-black px-[3rem] py-[3rem] sm:grid sm:place-content-center">

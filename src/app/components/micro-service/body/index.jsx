@@ -48,7 +48,7 @@ const Intro = () => {
     ]
 
     return (
-        <section className="bg-white text-black pt-[4rem] sm:pt-[0] border pb-[4rem]">
+        <section className="bg-white text-black pt-[4rem] sm:pt-[0] pb-[4rem]">
             <MaxContainer>
                 <div className="px-[3rem] sm:flex sm:flex-col">
                     <div data-animation-id='slideIn' className="sm:w-[85rem] sm:flex sm:flex-col sm:self-center items-center">
@@ -110,7 +110,7 @@ const SubIntro = () => {
         {
             number: '03',
             numberStyle: 'text-[#9B86FE]',
-            header: <h2 className="text-[4rem] font-[700]"><span className="font-[400]">Enhanced Functionality</span> <span className="font-[#9B86FE]">and Configuration</span></h2>,
+            header: <h2 className="text-[4rem] sm:w-[40rem] font-[700]"><span className="font-[400]">Enhanced Functionality</span> <span className="text-[#9B86FE]">and Configuration</span></h2>,
             texts: [
                 'We enhance your microservices architecture by creating constructor-based dependency injection facilities and adding NewRelic transaction tracing capabilities.',
                 'Additionally, we centralize configuration values using AWS Secret Manager to ensure robustness and security.'
@@ -123,7 +123,7 @@ const SubIntro = () => {
         },
     ]
     return (
-        <section className="pt-[5rem] sm:pb-[25rem]">
+        <section className="pt-[5rem] sm:pb-[30rem]">
             <MaxContainer>
                 <div className="px-[3rem] sm:px-[10rem] flex flex-col">
                     <div className="sm:flex sm:flex-col sm:items-center sm:self-center sm:w-[100rem]">
@@ -149,7 +149,7 @@ const SubIntro = () => {
 
 const Activity = ({ activity }) => (
     <div data-animation-id='slideIn' className={`hidden ${activity.containerStyle} justify-between sm:flex items-start text-black`}>
-        <div className="max-w-[50rem]">
+        <div className="max-w-[51rem]">
             <h2 className={`text-[7.5rem] sm:leading-[7rem] opacity-[.2] font-[700] ${activity.numberStyle}`}>{activity.number}</h2>
             {activity.header}
             <div className="flex flex-col gap-[.5rem]">
@@ -159,7 +159,7 @@ const Activity = ({ activity }) => (
                             <div style={{ border: `2px solid ${activity.fill}` }} className={`rounded-full ${'w-[2rem] aspect-square'}`}></div>
                             {index + 1 !== activity.texts.length && <div className={`w-[2px] h-[70%] ${activity.lineColor}`}></div>}
                         </div>
-                        <p className="w-[90%] sm:text-[1.4rem]">{item}</p>
+                        <p className="w-[100%] sm:text-[1.4rem]">{item}</p>
                     </div>))
                 }
             </div>

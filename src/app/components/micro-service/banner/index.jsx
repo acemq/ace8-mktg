@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 const Index = () => {
     return (
-        <section className="mt-[6rem] sm:mt-[-20rem] sm:mb-[10rem] pt-[3rem] bg-black sm:bg-transparent sm:pt-[0] pb-[4rem] sm:pb-[0]  sm:px-[10rem] relative">
-            <div className="" data-animation-id='slideIn'>
+        <section className="mt-[6rem]  pt-[3rem] bg-black sm:bg-transparent sm:pt-[0] pb-[4rem] sm:pb-[0] sm:px-[10rem]">
+            <div data-animation-id='slideIn' className="relative sm:top-[-20rem]">
                 <Image
                     src={'/_border.png'}
                     width={1620}
