@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 const Index = ({ setOpenService }) => {
   return (
-    <div className="fixed top-[20rem] sm:top-[10rem] sm:px-[10rem] px-[3rem] sm:w-auto w-[32rem] sm:h-auto py-[2rem] sm:py-[5rem] bg-[#161b22] z-[33] sm:flex gap-[3rem]">
-      <button onClick={() => setOpenService(false)} className="ml-auto block">
-        <img src="/close.png" className="mb-[2rem] sm:hidden" alt="close" />
+    <div className="fixed top-[20rem] sm:top-[10rem] rounded-[.8rem] sm:rounded-[0] sm:px-[10rem] px-[3rem] sm:w-auto w-[32rem] sm:h-auto py-[2rem] sm:py-[5rem] bg-[#161b22] z-[33] sm:flex gap-[3rem]">
+      <button onClick={() => setOpenService(false)} className="ml-auto sm:mb-[2rem] block">
+        <img src="/close.png" className="sm:hidden" alt="close" />
       </button>
       <div className="pr-[3rem] sm:border-r">
-        <p className="font-[700] sm:mb-[2rem] mb-[1rem] text-accent-100">
+        <p className="font-[700] sm:mb-[2rem] mb-[.2rem] text-accent-100">
           Featured Services
         </p>
         <div className="sm:flex gap-[3rem]">
@@ -17,7 +17,7 @@ const Index = ({ setOpenService }) => {
             <li className="sm:mb-[2rem] mb-[.7rem]">
               <Link
                 href="/services/devsecops"
-                className="sm:text-[1.5rem] text-[1.3rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
+                className="sm:text-[1.5rem] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
               >
                 DevSecOps
               </Link>
@@ -28,7 +28,7 @@ const Index = ({ setOpenService }) => {
             <li className="sm:mb-[2rem] mb-[.7rem]">
               <Link
                 href="/services/message-broker"
-                className="sm:text-[1.5rem] text-[1.3rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
+                className="sm:text-[1.5rem] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
               >
                 Message Brokers
               </Link>
@@ -42,7 +42,7 @@ const Index = ({ setOpenService }) => {
             <li className="sm:mb-[2rem] mb-[.7rem]">
               <Link
                 href="/services/incident-management"
-                className="sm:text-[1.5rem] text-[1.3rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
+                className="sm:text-[1.5rem] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
               >
                 Incident Management
               </Link>
@@ -53,7 +53,7 @@ const Index = ({ setOpenService }) => {
             <li className="sm:mb-[2rem] mb-[.7rem]">
               <Link
                 href="/services/gemfire"
-                className="sm:text-[1.5rem] text-[1.3rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
+                className="sm:text-[1.5rem] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
               >
                 Gemfire
               </Link>
@@ -65,8 +65,8 @@ const Index = ({ setOpenService }) => {
         </div>
       </div>
       <div className="mt-[2rem] sm:mt-[0]">
-        <p className="font-[700] sm:mb-[2rem] text-accent-100">Other Service</p>
-        <ul className="mb-[3rem]">
+        <p className="font-[700] sm:mb-[2rem] mb-[.5rem] text-accent-100">Other Service</p>
+        <ul className="sm:mb-[3rem] mb-[1.7rem]">
           <Link href="/services/open-source">
             <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">
               OpenSource Support
@@ -96,7 +96,7 @@ const Index = ({ setOpenService }) => {
 
         <Link href="/services">
           <button className="border-none btn text-accent-100 bg-black">
-            All Services
+           Other services
           </button>
         </Link>
       </div>

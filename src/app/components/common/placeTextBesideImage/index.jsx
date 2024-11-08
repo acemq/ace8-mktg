@@ -11,7 +11,7 @@ const Index = ({ item }) => {
                     {/* <h2 className="text-[3rem] leading-[4rem] sm:text-[3.5rem] sm:leading-[4.5rem] font-[700]">{item.header}</h2> */}
                     {item.header}
                     <p className="font-[700] mb-[1.5rem]">{item.subheader}</p>
-                    <p className="font-[500]">{item.title}</p>
+                    <p className="font-[500] text-[1.25rem]">{item.title}</p>
                     {item.text && <p className="sm:w-[45rem] sm:block  hidden">{item.text}</p>}
                     <div className="mt-[1rem] sm:block hidden sm:w-[50rem]">
                         {item.roles.map((_item, i) => (<div className="flex gap-[1.5rem] mb-[.5rem]" key={i}>
@@ -27,6 +27,7 @@ const Index = ({ item }) => {
                             </div>
                             <p className="w-[90%]">{_item}</p>
                         </div>))}
+                        {item.paragraph_iii && item.paragraph_iii }
                         <Link href={`${item.link}`}>
                             <button className={`btn border-[2px] mt-[3rem] ${item.bordercolor}`}>Read More</button>
                         </Link>
@@ -34,31 +35,29 @@ const Index = ({ item }) => {
                 </div>
 
                 <div className={item.left ? `${item.left}` : ''}>
-                    {item.left && <Link className="sm:hidden" href={`${item.Link}`}>
+                    {item.left && <Link className="sm:hidden" href={`${item.link}`}>
                         <button className={`btn border-[2px] mt-[2.5rem] ${item.bordercolor}`}>Read More</button>
                     </Link>}
                     {item.mutipleImage ? item.mutipleImage : (
                         <>
                             <Image src={item.image} width={700} height={400} className={`w-[30rem] hidden sm:block mt-[1rem] sm:mt-[0] ${item.imageStyle} h-auto`} alt="capability image" />
-                            <img src={item.mobileImage} alt="image" className="w-[100%] sm:hidden mt-[1rem]" />
+                            {item.mobileImage && <img src={item.mobileImage} alt="image" className="w-[100%] sm:hidden mt-[1rem]" />}
                         </>
                     )}
                     <div className="mt-[2.5rem] sm:hidden">
                         {item.roles.map((_item, i) => (<div className={`flex gap-[1.5rem] ${item.roleOrientation} mb-[.5rem]`} key={i}>
-                            <div className="flex flex-col items-center w-[1.5rem]">
-                                {/* <svg width="20" height="20" className="w-[1.5rem] border h-[1.5rem] mb-[.5rem]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9" stroke={item.circle ? item.circle : '#0D1117'} strokeWidth="2" />
-                                </svg> */}
+                            <div className="flex flex-col items-center w-[2rem]">
                                 {
-                                    <div style={{ border: item.circle ? `2px solid ${item.circle}` : '2px solid #0D1117' }} className="w-[1.5rem] h-[1.5rem] rounded-full"></div>
+                                    <div style={{ border: item.circle ? `2px solid ${item.circle}` : '2px solid #0D1117' }} className="w-[1.5rem] mb-[.5rem] h-[1.5rem] rounded-full"></div>
                                 }
                                 {
-                                    (i + 1) !== rolesLength && (<div className={`w-[2px] ${item.lineColor} h-[100%]`}></div>)
+                                    (i + 1) !== rolesLength && (<div className={`w-[2px] ${item.lineColor} min-h-[2rem] h-auto flex-1`}></div>)
                                 }
                             </div>
-                            <p className="">{_item}</p>
+                            <p className="w-[90%]">{_item}</p>
                         </div>))}
-                        {!item.left && <Link href={`${item.Link}`}>
+                        {item.paragraph_iii && item.paragraph_iii }
+                        {!item.left && <Link href={`${item.link}`}>
                             <button className={`btn border-[2px] mt-[3rem] ${item.bordercolor}`}>Read More</button>
                         </Link>}
                     </div>

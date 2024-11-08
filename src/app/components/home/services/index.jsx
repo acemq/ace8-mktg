@@ -358,10 +358,10 @@ const Modal = ({ service, toggleModal, id }) => {
         className="bg-[#0009] w-[100vw] h-[100svh] fixed inset-0"
       ></motion.div>
       <div className="fixed flex flex-col z-40 top-1/2 left-1/2 rounded-[2rem] -translate-x-1/2 -translate-y-1/2 w-[30rem] bg-[#161B22] py-[3rem] px-[2rem]">
-        <h2 className="text-[1.8rem] mb-[1rem] font-[700] text-[#66E8E3]">{`(${service.Name})`}</h2>
-        <p className="text-[1.2rem]">{service.role} <Link className="text-[#66E8E3]" href={`${service?.link}`}>Read More...</Link></p>
+        <h2 className="text-[1.8rem] mb-[1rem] font-[700] text-[#66E8E3]">{`${service.Name}`}</h2>
+        <p className="text-[1.2rem]">{service.role} <Link className="text-[#66E8E3]" href={`${service?.link}`}>Learn More...</Link></p>
         <button
-          className="self-end text-[1.2rem] mt-[2rem] py-[.6rem] px-[1rem] text-black font-[500] bg-[#66E8E3] rounded-[.3rem]"
+          className="self-end text-[1.2rem] mt-[2rem] py-[.6rem] px-[1rem] text-white font-[500] bg-[#66E8E3] rounded-[.3rem]"
           onClick={() => toggleModal(id)}
         >
           Close

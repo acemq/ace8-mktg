@@ -19,10 +19,10 @@ const Intro = () => {
             <MaxContainer>
                 <div className="px-[3rem] sm:px-[10rem]">
                     <div data-animation-id='slideIn' className="sm:flex sm:justify-between sm:flex-row-reverse">
-                        <Image src='/system.png' width={1000} className='sm:w-[60rem] w-[30rem] sm:h-auto' height={200} alt='laptop' />
+                        <Image src='/system.png' width={1000} className='sm:w-[60rem] w-full sm:h-auto' height={200} alt='laptop' />
                         <div className="sm:w-[55rem] mt-[5rem] sm:mt-[0]">
-                            <h2 className="sm:text-[5rem] sm:leading-[5.3rem] leading-[4rem] w-[28rem] text-[3rem] font-[500]  sm:w-[95%] sm:mb-[2rem] mt-[3.5rem]"><span className="text-[#FF88C3]">Experience Proactive</span> <span className="font-[400]"> Incident Management</span></h2>
-                            <p className="text-white mt-[1.2rem] sm:w-[80%] sm:mb-[2rem] bg-gradient_ii px-[.7rem] py-[.5rem] rounded-[.5rem]">Are you tired of experiencing critical incidents and not having a comprehensive solution in place?</p>
+                            <h2 className="sm:text-[5rem] sm:leading-[5.3rem] leading-[4rem] w-[28rem] text-[3rem] font-[500]  sm:w-[95%] sm:mb-[2rem] mt-[3.5rem]"><span className="text-[#9B86FE] sm:text-[#FF88C3]">Experience <span className="text-white sm:text-[#FF88C3] font-[400] sm:font-[500]">Proactive</span></span> <span className="font-[400]"> <span className="font-[600] sm:font-[400]">Incident</span> Management</span></h2>
+                            <p className="text-white mt-[1.2rem] sm:w-[80%] sm:mb-[2rem] sm:bg-gradient_ii bg-[#9B86FE] px-[.7rem] py-[.5rem] rounded-[.5rem]">Are you tired of experiencing critical incidents and not having a comprehensive solution in place?</p>
                             <p className="mt-[.8rem]">Our approach focuses on two critical components often overlooked in traditional incident management strategies: intense documentation efforts and the design and execution of chaos engineering experiments. By thoroughly documenting your system and running simulated chaos scenarios, we ensure that we are fully prepared to handle any incident that comes our way.</p>
                         </div>
                     </div>
@@ -69,7 +69,7 @@ const Leveraging = () => {
 
 const Response = () => {
     return (
-        <div  data-animation-id='slideIn' className="mt-[5rem] mb-[5rem] sm:mb-[5rem]">
+        <div data-animation-id='slideIn' className="mt-[5rem] mb-[5rem] sm:mb-[5rem]">
             <div className="sm:flex sm:flex-row-reverse justify-between items-center">
                 <div className="sm:w-[50rem]">
                     <h2 className="sub-header mb-[1rem] sm:w-[35rem]"><span className="sm:text-[#8FD5CC] text-[#FA9531]">Rapid Response</span> <span className="font-[400] sm:font-[700]">and 24/7 Support</span></h2>
@@ -98,8 +98,8 @@ const SubIntro = () => {
         <section className="bg-white text-black">
             <MaxContainer>
                 <div className="px-[3rem] sm:px-[10rem] relative py-[5rem]">
-                    <h1  data-animation-id='slideIn' className="text-center hidden sm:block mx-auto sm:text-[5rem] sm:leading-[5.5rem] text-[3rem] leading-[4rem] font-[700] sm:w-[60rem]"><span className="text-[#5747A5]">Ace8</span> Incident <span className="font-[400]">Management</span> Plans</h1>
-                    <div  data-animation-id='slideIn' className="mb-[3rem] sm:mt-[5rem]  sm:flex flex-row-reverse justify-between">\
+                    <h1 data-animation-id='slideIn' className="text-center hidden sm:block mx-auto sm:text-[5rem] sm:leading-[5.5rem] text-[3rem] leading-[4rem] font-[700] sm:w-[60rem]"><span className="text-[#5747A5]">Ace8</span> Incident <span className="font-[400]">Management</span> Plans</h1>
+                    <div data-animation-id='slideIn' className="mb-[3rem] sm:mt-[5rem]  sm:flex flex-row-reverse justify-between">\
                         <div className="max-w-[70rem] relative sm:left-[-7rem] sm:top-[5rem]">
                             <h2 className="sm:text-[4rem] sm:leading-[5rem] leading-[4rem] font-[700] text-[3rem] text-center sm:text-start"><span className="font-[400]">Streamline </span>Your <span className="text-[#E485FD]"> Incident </span><span className="font-[400] text-[#E485FD]">Management</span> with Ace8</h2>
                             <p className="sm:mt-[3.5rem] hidden sm:block">Streamline Your Incident Management with Ace8</p>
@@ -118,7 +118,7 @@ const SubIntro = () => {
                             alt='customer_portal' />
                     </div>
 
-                    <div  data-animation-id='slideIn' className="sm:flex flex-row-reverse justify-between hidden my-[10rem] w-[100%]">
+                    <div data-animation-id='slideIn' className="sm:flex flex-row-reverse justify-between hidden my-[10rem] w-[100%]">
                         <Image src='/workflow.png' width={1000} className='w-[50rem] border' height={500} alt='netflix dispatch' />
                         <div className="mt-[1.5rem] sm:w-[65rem] flex flex-col gap-[2rem]">
                             <div className="sm:block  hidden">
@@ -177,40 +177,41 @@ const SubIntro = () => {
                                 height={500}
                                 alt='netflix dispatch' />
                         </div>
-                        <div className="mt-[1.5rem] sm:w-[95rem] flex flex-col gap-[2rem] sm:gap-[.5rem]">
+                        <div className="sm:mt-[1.5rem] mt-[2.5rem] sm:w-[95rem] flex flex-col gap-[2rem] sm:gap-[.5rem]">
                             <div className="sm:block  hidden">
                                 <h2 className="sub-header w-[25rem] sm:w-[40rem] mb-[1rem]">Ace8 <span className="text-[#7E63FF]">Incident Management</span> <span className="font-[400]">Workflow</span></h2>
                                 <p className=""> Incident management refers to the processes and steps taken to respond to anything that disrupts normal system operations. It involves detecting incidents, communicating them to stakeholders, and utilizing appropriate tools to resolve them.</p>
                             </div>
-                            <div className="flex gap-[1rem]">
-                                <div className="flex flex-col items-center w-[5rem]">
-                                    <img src="/ellipse.png" alt="circle icon" />
-                                    <div className="w-[1.5px] h-[100%] mt-[.6rem] bg-[#9B86FE]"></div>
+                            <div className="flex flex-col gap-[.5rem]">
+                                <div className="flex  gap-[1rem]">
+                                    <div className="flex flex-col items-center w-[8rem] sm:w-[5rem]">
+                                        <div className="w-[1.5rem] h-[1.5rem] border-[1.5px] border-[#000000] rounded-full"></div>
+                                        <div className="w-[1.5px]  mt-[.6rem] flex-1 bg-[#9B86FE]"></div>
+                                    </div>
+                                    <p className="sm:text-[1.5rem] sm:leading-[2.2rem]"><span className="font-[700]">Identification & Logging:</span> Incidents are identified either manually by a user or automatically through monitoring tools. James Wilhoite is responsible for entering the incident details as a ticket in Jira.</p>
                                 </div>
-                                <p className="sm:text-[1.5rem] sm:leading-[2.2rem]"><span className="font-[700]">Identification & Logging:</span> Incidents are identified either manually by a user or automatically through monitoring tools. James Wilhoite is responsible for entering the incident details as a ticket in Jira.</p>
-                            </div>
-                            <div className="flex gap-[1rem]">
-                                <div className="flex flex-col items-center w-[5rem]">
-                                    <img src="/ellipse.png" alt="circle icon" />
-                                    <div className="w-[1.5px] h-[100%] mt-[.6rem] bg-[#9B86FE]"></div>
+                                <div className="flex gap-[1rem]">
+                                    <div className="flex flex-col items-center w-[5rem]">
+                                        <div className="w-[1.5rem] h-[1.5rem] border-[1.5px] border-[#000000] rounded-full"></div>
+                                        <div className="w-[1.5px] flex-1 mt-[.6rem] bg-[#9B86FE]"></div>
+                                    </div>
+                                    <p className="sm:text-[1.5rem] sm:leading-[2.2rem]"><span className="font-[700]">Categorization:</span> Once an incident is identified, it is categorized to determine how it will be handled and prioritized. An incident manager is assigned to the ticket, initiating the next stage in the workflow.</p>
                                 </div>
-                                <p className="sm:text-[1.5rem] sm:leading-[2.2rem]"><span className="font-[700]">Categorization:</span> Once an incident is identified, it is categorized to determine how it will be handled and prioritized. An incident manager is assigned to the ticket, initiating the next stage in the workflow.</p>
-                            </div>
-                            <div className="flex gap-[1rem]">
-                                <div className="flex flex-col items-center w-[5rem]">
-                                    <img src="/ellipse.png" alt="circle icon" />
-                                    <div className="w-[1.5px] h-[100%] mt-[.6rem] bg-[#9B86FE]"></div>
+                                <div className="flex gap-[1rem]">
+                                    <div className="flex flex-col items-center w-[5rem]">
+                                        <div className="w-[1.5rem] h-[1.5rem] border-[1.5px] border-[#000000] rounded-full"></div>
+                                        <div className="w-[1.5px] flex-1 mt-[.6rem] bg-[#9B86FE]"></div>
+                                    </div>
+                                    <p className="sm:text-[1.5rem] sm:leading-[2.2rem]"><span className="font-[700]">Diagnosis & Investigation:</span> Incident managers investigate the incident, troubleshooting and defining the problem to develop an initial hypothesis.
+                                        <span className="opacity-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                                    </p>
                                 </div>
-                                <p className="sm:text-[1.5rem] sm:leading-[2.2rem]"><span className="font-[700]">Diagnosis & Investigation:</span> Incident managers investigate the incident, troubleshooting and defining the problem to develop an initial hypothesis.
-                                    <span className="opacity-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                                </p>
-                            </div>
-                            <div className="flex gap-[1rem]">
-                                <div className="flex flex-col items-center w-[5rem]">
-                                    <img src="/ellipse.png" alt="circle icon" />
-
+                                <div className="flex gap-[1rem]">
+                                    <div className="flex flex-col items-center w-[5rem]">
+                                    <div className="w-[1.5rem] h-[1.5rem] border-[1.5px] border-[#000000] rounded-full"></div>
+                                    </div>
+                                    <p className="sm:text-[1.5rem] sm:leading-[2.2rem]"><span className="font-[700]">Escalation:</span> Incidents may be minor, and their details can be logged or notifications sent without escalation. Escalation occurs based on the assigned categorization and the responsible individuals for response procedures.</p>
                                 </div>
-                                <p className="sm:text-[1.5rem] sm:leading-[2.2rem]"><span className="font-[700]">Escalation:</span> Incidents may be minor, and their details can be logged or notifications sent without escalation. Escalation occurs based on the assigned categorization and the responsible individuals for response procedures.</p>
                             </div>
                         </div>
                     </div>

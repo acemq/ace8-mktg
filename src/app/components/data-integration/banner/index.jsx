@@ -3,7 +3,7 @@ const Index = () => {
     return (
         <section className="pt-[2rem] sm:mt-[30rem] sm:pt-[0] sm:pb-[0] sm:px-[10rem] text-white">
             <div data-animation-Id='slideIn' className="relative">
-                <img src="/_border.png" alt="border" className="absolute z-[0] w-[100%] h-[100%]  inset-0 top-[-1.5rem] left-[1.5rem]" />
+                <img src="/_border.png" alt="border" className="absolute hidden sm:block z-[0] w-[100%] h-[100%]  inset-0 top-[-1.5rem] left-[1.5rem]" />
                 <div className="sm:py-[3rem] relative z-[1] sm:rounded-[2rem] sm:pb-[5rem] bg-black px-[3rem] py-[3rem] sm:grid sm:place-content-center">
                     <div className="sm:w-[100rem] sm:mt-[3rem] flex flex-col">
                         <h2 className="text-[2.8rem] sm:text-[4.4rem] font-[700]  self-center text-center mt-[1rem] sm:w-[91rem] sm:mt-[0]"><span className="font-[400]">Ready to</span> Overcome Integration <span className="sm:text-[#8FD5CC] text-[#F8D449]">Challenges</span> and <span className="font-[400]">Unlock the</span> Power of Seamless <span className="font-[400]">Integration</span> <span className="sm:text-[#8FD5CC] text-[#F8D449]">for E-commerce Success</span></h2>

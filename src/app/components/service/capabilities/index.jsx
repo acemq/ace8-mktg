@@ -38,7 +38,7 @@ const Index = () => {
             image: '/big_OBS.png',
             roleOrientation: 'flex-row-reverse',
             imageStyle: 'w-[65rem] h-auto sm:mt-[10rem]',
-            bordercolor: 'border-[#1C83EE] text-[#1C83EE] sm:border-[#FF88C3] text-[#FF88C3]'
+            bordercolor: 'border-[#1C83EE] text-[#1C83EE] sm:border-[#FF88C3] sm:text-[#FF88C3]'
         },
         {
             header: <h2 className="header_ii"><span className="text-[#5747A5]">Incident</span> Management</h2>,
@@ -57,7 +57,7 @@ const Index = () => {
             containerStyle: 'mt-[5rem]',
             imageStyle: 'sm:w-[55rem] sm:h-[53rem]',
             bordercolor: 'border-[#4D4DAE] text-[#4D4DAE]',
-            left:   'flex flex-col flex-col-reverse',
+            left: 'flex flex-col flex-col-reverse',
             mobileImage: '/_time.png'
         },
         {
@@ -67,17 +67,17 @@ const Index = () => {
             title: 'Achieve Scalability with Asynchronous Messaging',
             lineColor: 'sm:bg-[#FF88C3]  bg-[#B98959]',
             roles: [
-                'Appropriate Message Patterns : Our experts guide you in selecting the right message patterns for scalability.',
-                'Testing Throughput and Latency : AceMQ conducts thorough testing to assess system performance.',
-                'Resilient and Available Clusters : Our experts demonstrate best practices for cluster resilience and availability.',
-                'Disaster Recovery (DR) Solutions : AceMQ helps implement effective DR solutions.'
+                <span className=""><span className="font-[600]">Appropriate Message Patterns :</span> Our experts guide you in selecting the right message patterns for scalability.</span>,
+                <span className=""><span className="font-[600]">Testing Throughput and Latency :</span> AceMQ conducts thorough testing to assess system performance.</span>,
+                <span className=""><span className="font-[600]">Resilient and Available Clusters :</span> Our experts demonstrate best practices for cluster resilience and availability.</span>,
+                <span className=""><span className="font-[600]">Disaster Recovery (DR) Solutions :</span> AceMQ helps implement effective DR solutions.</span>,
             ],
             text: 'At AceMQ, we provide expert guidance for scalable systems through asynchronous messaging. Our services cover the selection of appropriate message patterns and testing of throughput and latency to ensure optimal performance.',
             link: '/services/message-broker',
             containerStyle: 'sm:mt-[10rem] text-end sm:text-start flex-row-reverse mt-[5rem] ',
             roleOrientation: 'flex-row-reverse',
             imageStyle: 'sm:w-[65rem] sm:h-auto hidden sm:block',
-            bordercolor: 'text-[#B98959] border-[#B98959] sm:border-[#FF88C3] text-[#FF88C3]'
+            bordercolor: 'text-[#B98959] border-[#B98959] sm:border-[#FF88C3] sm:text-[#FF88C3]'
         },
     ]
 
@@ -89,9 +89,9 @@ const Index = () => {
             text: 'AceMQ offers comprehensive microservices design, development, and refactoring services that strictly adhere to industry best practices, including loose coupling and the 12Factor approach.',
             lineColor: 'sm:bg-[#FF88C3] bg-[#F9A7FC]',
             roles: [
-                'Ecommerce Starter kits : Our Team of experts provides solutions tailored to your specific needs, specializing in eCommerce services for customers, carts, orders, returns, payments, and accounting',
-                'Golang starter kits : for quick development, expert guidance through microservices architecture, and assistance with refactoring to AWS Lambda.',
-                'AWS Lambda migration : process includes careful planning, automated conversion, redesign and optimization, and enhanced functionality and configuration.'
+                <span className=""><span className="font-[600]">Ecommerce Starter kits :</span> Our Team of experts provides solutions tailored to your specific needs, specializing in eCommerce services for customers, carts, orders, returns, payments, and accounting,</span>,
+                <span className=""><span className="font-[600]">Golang starter kits :</span> for quick development, expert guidance through microservices architecture, and assistance with refactoring to AWS Lambda.</span>,
+                <span className=""><span className="font-[600]">AWS Lambda migration :</span> process includes careful planning, automated conversion, redesign and optimization, and enhanced functionality and configuration.</span>,
             ],
             link: '/services/micro-service',
             containerStyle: 'sm:mt-[15rem]',
@@ -99,12 +99,12 @@ const Index = () => {
             imageStyle: 'sm:w-[70rem] hidden sm:block h-auto',
             circle: '#fff',
             bordercolor: 'border-[#F9A7FC] text-[#F9A7FC]',
-            mobileImage: '/_microservice.png',
-            left:   'flex flex-col flex-col-reverse',
+            mobileImage: '',
+            left: 'flex flex-col flex-col-reverse',
         },
         {
             header: <h2 className="header_ii"><span className="sm:text-[#9B86FE] text-[#13C0C8]">Automated</span> Testing</h2>,
-            subheader: 'Streamline Your Testing Process with Automated Testing',                               
+            subheader: 'Streamline Your Testing Process with Automated Testing',
             title: 'Save Time and Resources with Our Unique Approach',
             image: '/service_automated_testing.png',
             text: 'Are you tired of manual testing for your e-commerce application? Our automated testing service offers a unique approach that saves time, resources, and sets us apart from the competition.',
@@ -120,8 +120,9 @@ const Index = () => {
             imageStyle: 'sm:w-[60rem] hidden sm:block h-auto',
             circle: '#fff',
             bordercolor: 'border-[#F9A7FC] text-[#F9A7FC]',
-            mobileImage: '/_automated.png',
-            left:   'flex flex-col flex-col-reverse',
+            mobileImage: '',
+            left: 'flex flex-col flex-col-reverse',
+            paragraph_iii: <p className="font-[500] mt-[2rem]">Our thorough testing approach consists of three critical components: crowd-sourced development of diverse test cases, AI-enhanced test code, and seamless integration into your existing  CI/CD pipeline.</p>,
         },
         {
             header: <h2 className="header_ii sm:w-[28rem]">Data <span className="sm:text-[#F888C6] text-[#F8D449]">Analytics</span> Integration</h2>,
@@ -140,7 +141,7 @@ const Index = () => {
             containerStyle: 'sm:mt-[10rem] items-center',
             imageStyle: 'sm:w-[60rem] hidden sm:block h-auto',
             circle: '#fff',
-            bordercolor: 'border-[#F8D449] text-[#F8D449] sm:border-[#FF88C3] text-[#FF88C3]'
+            bordercolor: 'border-[#F8D449] text-[#F8D449] sm:border-[#FF88C3] sm:text-[#FF88C3]'
         },
     ]
     return (

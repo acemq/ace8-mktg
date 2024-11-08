@@ -143,16 +143,16 @@ const Index = () => {
               <Banner
                 header={
                   <h3 className="sm:text-[5rem] text-[2.8rem] font-[800] text-center">
-                    <span className="font-[400]">Explore</span> transformative
-                    case studies showcasing the{" "}
-                    <span className="font-[400]">impact of</span> our Open
-                    Source architects.
+                    <span className="font-[400]">Explore</span> Transformative
+                    Case-Studies showcasing the{" "}
+                    <span className="font-[400]">Impact of</span> our Open
+                    Source Architects.
                   </h3>
                 }
                 text={
                   "Delve into success stories of businesses leveraging Open Source technology for optimal workflows, collaboration, efficiency, and cost reduction."
                 }
-                btn={"learn more"}
+                btn={"Learn more"}
                 containerStyles={"sm:bg-black mt-[1rem] bg-banner-key bg-contain bg-no-repeat sm:hidden"}
               />
               

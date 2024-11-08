@@ -30,7 +30,8 @@ const FormularDesktop = () => (
 )
 
 const FormularMobile = () => (
-    <section className="sm:hidden flex my-[3rem] justify-center">
-        <Image src='/_our_formular.png' className="w-[25rem]" width={280} height={540} alt="formulars" />
+    <section className="sm:hidden flex flex-col items-center mx-auto my-[3rem] justify-center">
+        <h2 className="text-[#C496FF] text-[3rem] mb-[2rem] font-[700]"><span className="text-white font-[400]">Our</span> Formula</h2>
+        <Image src='/_formular.png' className="w-[25rem]" width={280} height={540} alt="formulars" />
     </section>
 )

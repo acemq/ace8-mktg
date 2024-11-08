@@ -148,7 +148,7 @@ const Banner = ({ header, text, btn, containerStyles, backgroundColor }) => {
     <div className={`${containerStyles} relative`} >
 
       <div data-animation-id='slideIn' className="relative">
-        <img src="/_border.png" alt="border" className="absolute inset-0 left-[2rem] top-[-2rem] z-[0]" />
+        <img src="/_border.png" alt="border" className="absolute hidden sm:block inset-0 left-[2rem] top-[-2rem] z-[0]" />
         <div
           style={{ backgroundSize: '100% 100%, 100% 100%' }}
           className={`px-[3rem] z-[1] mt-[5rem] py-[2rem] sm:pt-[7rem] sm:pb-[10rem] relative ${backgroundColor}`}
@@ -157,7 +157,7 @@ const Banner = ({ header, text, btn, containerStyles, backgroundColor }) => {
           <p className="text-center mt-[3rem] sm:mt-[1rem] sm:w-[95rem] sm:mx-auto">{text}</p>
           {btn && (
 
-            <button className="border-[1.2px] sm:px-[3rem] sm:py-[1.2rem] sm:rounded-[1rem] font-[800] sm:text-[1.2rem] mt-[2.5rem] mx-auto block">
+            <button className="border-[1.2px] px-[2rem] py-[1rem] rounded-[.5rem] sm:px-[3rem] sm:py-[1.2rem] sm:rounded-[1rem] font-[800] sm:text-[1.2rem] mt-[2.5rem] mx-auto block">
               <Link href='#contact'>
                 {btn}
               </Link>

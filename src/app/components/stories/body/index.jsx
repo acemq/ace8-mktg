@@ -64,7 +64,7 @@ const Index = () => {
       </div>
 
       <div className="sm:hidden">
-        <Carousel showDots={true} autoPlay={true} autoPlaySpeed={1000} infinite={true} removeArrowOnDeviceType={["tablet", "mobile", 'desktop']} responsive={responsive}>
+        <Carousel showDots={true} autoPlay={true} autoPlaySpeed={5000} infinite={true} removeArrowOnDeviceType={["tablet", "mobile", 'desktop']} responsive={responsive}>
           {cards.map((card, index) => (
             <Card card={card} key={index} id={index} />
           ))}

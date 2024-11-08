@@ -15,12 +15,12 @@ export default Index;
 
 const Intro = () => (
   <section className="bg-white sm:pb-[10rem] py-[3rem]">
-        <img
-          src="/OBAAS_code_snippet2.png"
-          alt="code snippet"
-          data-animation-id='slideIn'
-          className="relative sm:mx-auto sm:w-[120rem] top-[-12rem] sm:block hidden"
-        />
+    <img
+      src="/OBAAS_code_snippet2.png"
+      alt="code snippet"
+      data-animation-id='slideIn'
+      className="relative sm:mx-auto sm:w-[120rem] top-[-12rem] sm:block hidden"
+    />
     <MaxContainer>
       <div className="px-[3rem] sm:px-[10rem]">
         <div data-animation-id='slideIn' className="text-black sm:justify-between  text-center sm:flex">
@@ -45,7 +45,7 @@ const SubIntro = () => (
   <section className="">
     <MaxContainer>
       <div className="py-[5rem] pb-[3rem] sm:pb-[0] sm:pt-[10rem]">
-        <div  data-animation-id='slideIn' className="sm:flex px-[3rem] sm:pr-[0] justify-between sm:pl-[10rem]">
+        <div data-animation-id='slideIn' className="sm:flex px-[3rem] sm:pr-[0] justify-between sm:pl-[10rem]">
           <div className="sm:w-[57rem]" >
             <h2 className="text-[3rem] font-[700] mb-[1rem]">
               <span className="font-[400]">Our</span> Solution:
@@ -134,7 +134,7 @@ const SubIntro = () => (
         <div className="px-[3rem] sm:hidden">
           <div className="flex justify-between mb-[3rem] sm:hidden">
             <div className="w-[14rem]">
-              <h4 className="text-[1.5rem] mb-[1rem] font-[700]">
+              <h4 className="text-[1.5rem] w-[12rem] mb-[1rem] font-[700]">
                 <span className="font-[400]">Customized</span>{" "}
                 <span className="text-[#DC71AD]">Dev-Containers:</span>
               </h4>
@@ -196,7 +196,7 @@ const SubIntro = () => (
 
         <div className="sm:px-[10rem] px-[3rem]">
           <div className="sm:mt-[7rem]">
-            <h2  data-animation-id='slideIn' className="sub-header text-center mb-[2rem] sm:w-[82rem] sm:mx-auto">
+            <h2 data-animation-id='slideIn' className="sub-header text-center mb-[2rem] sm:w-[82rem] sm:mx-auto">
               Why <span className="font-[400]">Choose </span>
               <span className="text-[#9B86FE]">OBaaS</span> for{" "}
               <span className="text-[#9B86FE] sm:font-[400] sm:text-white"> Developer</span> Onboarding?
@@ -204,13 +204,13 @@ const SubIntro = () => (
           </div>
           <img
             src="/heroku.png"
-             data-animation-id='slideIn'
+            data-animation-id='slideIn'
             alt="heroku icon"
             className="mb-[2rem] sm:w-[100rem] sm:mx-auto"
           />
           <img src="/properties.png" data-animation-id='slideIn' alt="properties" className="sm:hidden" />
           <div className="hidden sm:block mt-[5rem]">
-            <div className="flex justify-between"  data-animation-id='slideIn'>
+            <div className="flex justify-between" data-animation-id='slideIn'>
               <div className="">
                 <div className="flex items-center gap-[3rem] mb-[1rem]">
                   <h1 className="font-[700] text-[7rem] text-[#7972BD] opacity-[.3]">
@@ -276,7 +276,7 @@ const SubIntro = () => (
                 </div>
               </div>
             </div>
-            <Link  data-animation-id='slideIn' href={'#contact'}>
+            <Link data-animation-id='slideIn' href={'#contact'}>
               <button className="border-[1.3px] text-[1.2rem] px-[4rem] py-[1.2rem] font-[800] rounded-[1rem] block mx-auto mt-[3rem]">
                 Propel Your Developers to Productivity with OBaaS
               </button>
@@ -294,10 +294,12 @@ const SubIntro = () => (
                 <span className="text-[#FF88C3]">Accelerate onboarding,</span>
                 <span className="font-[400]"> reduce</span> idle time, and{" "}
                 <span className="font-[400]"> witness immediate</span>{" "}
-                productivity gains. <span className="font-[400]]"> Choose</span>{" "}
-                <span className="text-[#FF88C3]"> OBaaS</span> for a customized,
-                fully managed, <span className="font-[400]"> and</span> swift
-                onboarding experience.
+                productivity gains. <span className="hidden sm:inline">
+                  <span className="font-[400]]"> Choose</span>{" "}
+                  <span className="text-[#FF88C3]"> OBaaS</span> for a customized,
+                  fully managed, <span className="font-[400]"> and</span> swift
+                  onboarding experience.
+                </span>
               </h3>
             }
             text={
@@ -319,7 +321,7 @@ const SubIntro = () => (
 const Banner = ({ header, text, btn, containerStyles, backgroundColor }) => {
   return (
     <div className={`${containerStyles}`}>
-      <div className="relative"  data-animation-id='slideIn'>
+      <div className="relative" data-animation-id='slideIn'>
         <img src="/_border.png" alt="border" className="w-[100%] hidden sm:block h-[100%] absolute inset-0 top-[-1.5rem] z-[0] left-[1.5rem]" />
         <div
           className={`px-[3rem] relative z-[1] sm:mt-[5rem] mt-[3rem] py-[2rem] sm:py-[5rem] rounded-[2rem] ${backgroundColor}`}

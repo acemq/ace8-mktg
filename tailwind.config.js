@@ -41,7 +41,7 @@ module.exports = {
         'accent-300': '#33B3AE'
       },
       animation: {
-        'spin-slow': 'spin 3s linear infinite'
+        'spin-slow': 'spin 5s linear infinite'
       },
       backdropBlur:  {
         '200':  '200px'

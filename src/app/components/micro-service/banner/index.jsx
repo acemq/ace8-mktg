@@ -3,13 +3,13 @@ import Image from "next/image";
 const Index = () => {
     return (
         <section className="mt-[6rem]  pt-[3rem] bg-black sm:bg-transparent sm:pt-[0] pb-[4rem] sm:pb-[0] sm:px-[10rem]">
-            <div data-animation-id='slideIn' className="relative sm:top-[-20rem]">
+            <div  className="relative sm:top-[-20rem]">
                 <Image
                     src={'/_border.png'}
                     width={1620}
                     height={574}
                     alt="border"
-                    className="absolute hidden sm:block inset-0 w-[100%] h-[100%] left-[1rem] z-[0] isolate top-[-2rem]"
+                    className="absolute hidden sm:block inset-0 w-[100%] h-[100%] left-[1rem] z-[0] top-[-2rem]"
                 />
                 <div  style={{ backgroundSize: '100% 100%, 100% 100%, 100% 100%' }} className="sm:pl-[5rem] px-[3rem] sm:py-[3rem] sm:pb-[5rem] sm:bg-banner_hand bg-contain  bg-no-repeat sm:grid sm:place-content-center  relative z-[1]">
                     <div className="sm:w-[80rem] sm:mt-[3rem] flex flex-col">

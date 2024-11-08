@@ -59,7 +59,7 @@ const Index = ({ route }) => {
   };
   return (
     <section
-      className="sm:px-[10rem] sm:mt-[7rem] pb-[5rem] scroll-mt-[5rem]"
+      className="sm:px-[10rem] overflow-hidden sm:mt-[7rem] pb-[5rem] scroll-mt-[5rem]"
       id="contact"
     >
       <ToastContainer />
@@ -100,7 +100,7 @@ const Index = ({ route }) => {
             </li>
           </ul>
         </div>
-        <div className="sm:flex-[.8] sm:relative sm:top-[-10rem]">
+        <div className="sm:flex-[.8] mt-[3rem] sm:mt-[0] sm:relative sm:top-[-10rem]">
           <div className="relative rounded-[1rem] p-[1px] bg-gradient-to-b from-[#FF88C3] to-[#9B86FE]">
             <form
               action=""

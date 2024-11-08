@@ -48,7 +48,7 @@ const Intro = () => {
     ]
 
     return (
-        <section className="bg-white text-black pt-[4rem] sm:pt-[0] pb-[4rem]">
+        <section className="bg-white text-black  sm:pt-[0] mt-[-1rem] pb-[4rem]">
             <MaxContainer>
                 <div className="px-[3rem] sm:flex sm:flex-col">
                     <div data-animation-id='slideIn' className="sm:w-[85rem] sm:flex sm:flex-col sm:self-center items-center">

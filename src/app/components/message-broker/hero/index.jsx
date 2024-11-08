@@ -10,7 +10,7 @@ const Index = () => {
         fadeIn()
     }, [])
     return (
-        <section className="bg-white text-black pt-[7rem] sm:pt-[9rem] pb-[5rem]">
+        <section className="bg-white text-black pt-[7rem] sm:pt-[9rem] sm:pb-[5rem] pb-[2rem]">
             <MaxContainer>
                 <div className="">
                     <div  className="sm:bg-patterns bg-patterns_mobile bg-contain bg-no-repeat grid place-content-center sm:px-[5rem] sm:h-[65rem] h-[35rem] ">
