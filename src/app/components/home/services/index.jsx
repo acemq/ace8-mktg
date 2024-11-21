@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import milestone, { fadeIn, slideIn } from "@/app/Animations/common";
+import milestone, { fadeIn, slideIn } from "../../../Animations/common";
 const Index = () => {
   useEffect(() => {
     milestone()

@@ -1,6 +1,8 @@
 import MaxContainer from "../components/common/maxContainer";
 import Hero from "../components/stories/hero";
 import Body from "../components/stories/body";
+import { QAllStories } from "../../sanity/lib/query";
+import { client } from "../../sanity/lib/client";
 
 export const metadata = {
   title:
@@ -22,11 +24,19 @@ export const metadata = {
   },
 };
 
-const Stories = () => {
+async function getData() {
+  const allstories = await client.fetch(QAllStories);
+  return {
+    allstories
+  }
+}
+
+const Stories = async () => {
+  const {allstories} = await getData()
   return (
     <MaxContainer>
       <Hero />
-      <Body />
+      <Body allstories={allstories}/>
     </MaxContainer>
   );
 };

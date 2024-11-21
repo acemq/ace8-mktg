@@ -1,10 +1,9 @@
 import { Inter } from "next/font/google";
 import localFont from "@next/font/local";
 import "./globals.css";
-import Footer from "./components/common/footer";
-import Navbar from "./components/common/navbar";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import CookiesConsent from "./components/common/cookiesconsent";
+import MainLayout from "./components/mainLayout"
 
 const inter = Inter({ subsets: ["latin"] });
 const monaSans = localFont({
@@ -37,10 +36,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <GoogleTagManager gtmId="GTM-5KV9QH2R" />
       <body className={monaSans.className}>
-        <Navbar />
-        {children}
-        <CookiesConsent />
-        <Footer />
+        <MainLayout>
+          {children}
+          <CookiesConsent />
+        </MainLayout>
       </body>
       <GoogleAnalytics gaId="G-M4SF4DQ96L" />
     </html>

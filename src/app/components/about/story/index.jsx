@@ -1,6 +1,6 @@
 'use client';
 import { useEffect } from "react";
-import { slideIn } from "@/app/Animations/common";
+import { slideIn } from "../../../Animations/common";
 import Image from "next/image";
 import MaxContainer from '../../common/maxContainer/index';
 

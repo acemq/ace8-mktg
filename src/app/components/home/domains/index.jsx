@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import milestone, {slideIn} from "@/app/Animations/common";
+import milestone, {slideIn} from "../../../Animations/common";
 import { useEffect } from "react";
 
 const Index = () => {

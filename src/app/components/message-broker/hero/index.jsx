@@ -1,7 +1,7 @@
 'use client'
 import { useEffect } from 'react';
 import MaxContainer from '../../common/maxContainer'
-import { fadeIn, slideIn } from '@/app/Animations/common';
+import { fadeIn, slideIn } from '../../../Animations/common';
 import Link from 'next/link';
 
 const Index = () => {

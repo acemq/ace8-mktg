@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import Carousel from 'react-multi-carousel';
-import milestone, { slideIn } from "@/app/Animations/common";
+import milestone, { slideIn } from "../../../Animations/common";
 import 'react-multi-carousel/lib/styles.css';
 import { useState, useEffect } from "react";
 

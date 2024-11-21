@@ -2,7 +2,7 @@
 import Image from "next/image";
 import MaxContainer from '../../../components/common/maxContainer'
 import { useEffect } from "react";
-import { slideIn } from "@/app/Animations/common";
+import { slideIn } from "../../../Animations/common";
 
 const Index = () => {
     useEffect(() => {
