@@ -205,6 +205,14 @@ p {
   text-decoration: none !important;
 }
 
+._heading span{
+  text-decoration: none !important;
+}
+
+.domain_section span{
+  color: #EA9EFF;
+}
+
 @media (min-width: 640px) {
   .who-title span {
     background: linear-gradient(to right, #EA9EFF); 

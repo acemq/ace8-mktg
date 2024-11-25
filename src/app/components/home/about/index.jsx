@@ -20,7 +20,7 @@ const Index = ({ data }) => {
                 typeof child === 'string' ? (
                   child
                 ) : (
-                  <span className="sm:hero_gradient_text text-[#EA9EFF] font-[800]">{child}</span>
+                  <span className="sm:hero_gradient_text text-[#EA9EFF] font-[800] !no-underline">{child}</span>
                 )
               )}
             </strong>
@@ -38,13 +38,12 @@ const Index = ({ data }) => {
                 <div className="flex flex-col">
                     <p className="text-center sm:text-start text-[1.8rem] mb-[.5rem] sm:text-[2rem] sm:mb-[1.5rem] mt-[3rem]">{data?.who_label}</p>
                     {/* <h2 className="text-center sm:text-start text-[2.2rem] leading-[2.5rem] font-[400] sm:text-[5rem] sm:leading-[5.7rem]"> <span className="font-[700]">We are a </span><span className="sm:hero_gradient_text text-[#EA9EFF] font-[800]">People-Focused Organization</span> <span className="font-[700]"> that</span> Solves Business Problem <span className="sm:hero_gradient_text_ii text-[#EA9EFF] font-[700]" > Through Technology.</span></h2> */}
-                    <div className="text-center sm:text-start text-[2.2rem] leading-[2.5rem] font-[400] sm:text-[5rem] sm:leading-[5.7rem]">
+                    <div className="text-center _heading sm:text-start text-[2.2rem] leading-[2.5rem] font-[400] sm:text-[5rem] sm:leading-[5.7rem]">
                         <BlockContent
                             blocks={data?.who_title}
                             projectId="ordduge7"
                             dataset="production"
                             serializers={serializers}
-
                         />
                     </div>
                     <p className="sm:text-[1.5rem] sm:w-[60rem] sm:mt-[1rem] hidden sm:block">{data?.who_short_info}</p>

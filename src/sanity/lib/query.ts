@@ -94,10 +94,17 @@ export const QHomePage = `*[ _type == "home"]{
   domain_title,
   domain_short_info,
   domain_list[]{
-    icon,
+    icon{
+      asset->{
+        url
+      }
+    },
     title,
     short_info
   },
-  domain_middle_icon
-
+  domain_middle_icon{
+    asset->{
+      url
+    }
+  }
 }`

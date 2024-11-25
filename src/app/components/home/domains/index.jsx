@@ -1,11 +1,11 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import milestone, {slideIn} from "../../../Animations/common";
-import { useEffect } from "react";
+import milestone, { slideIn } from "../../../Animations/common";
+import React, { useEffect } from "react";
+import BlockContent from "@sanity/block-content-to-react";
 
-const Index = ({data}) => {
-    console.log("🚀 ~ Index ~ data:", data)
+const Index = ({ data }) => {
     useEffect(() => {
         milestone()
         slideIn()
@@ -62,54 +62,106 @@ const Index = ({data}) => {
     ]
     return (
         <>
-            <DomiansMobile domains={domains} />
-            <DomainsDesktop domains={domains} />
+            <DomiansMobile domains={data} />
+            <DomainsDesktop domains={data} />
         </>
     );
 }
 
 export default Index;
 
-const DomiansMobile = ({ domains }) => (
-    <section className="sm:hidden" id="domains">
-        <div className="px-[3rem] sm:px-[10rem]">
-            <h2 className="text-[3rem] text-center font-[700]"><span className="text-accent-200">Our</span> 8 Domains</h2>
-            <div className="flex flex-col mt-[3rem]">
-                {domains.map((domain, index) => <DomainMobile domain={domain} id={index} key={index} />)}
+const DomiansMobile = ({ domains }) => {
+    return (
+        <section className="sm:hidden" id="domains">
+            <div className="px-[3rem] sm:px-[10rem]">
+                <h2 className="text-[3rem] text-center font-[700]"><span className="text-accent-200">Our</span> 8 Domains</h2>
+                <div className="flex flex-col mt-[3rem]">
+                    {domains?.domain_list?.map((domain, index) => <DomainMobile domain={domain} id={index} key={index} />)}
+                </div>
             </div>
-        </div>
-    </section>
-)
+        </section>
+    )
+}
 
 
-const DomainsDesktop = ({ domains }) => (
-    <section className="hidden scroll-mt-[6rem] sm:flex px-[3rem] sm:px-[10rem] gap-x-[4rem]" id="
+const DomainsDesktop = ({ domains }) => {
+    const serializers = {
+        marks: {
+            strong: ({ children }) => (
+                <strong className="font-extrabold">
+                    {React.Children.map(children, (child) =>
+                        typeof child === 'string' ? (
+                            child
+                        ) : (
+                            <span className="sm:hero_gradient_text text-[#EA9EFF] font-[800] !no-underline">{child}</span>
+                        )
+                    )}
+                </strong>
+            ),
+        },
+    };
+
+    return (
+        <section className="hidden scroll-mt-[6rem] sm:flex px-[3rem] sm:px-[10rem] gap-x-[4rem]" id="
     domains">
-        
-        <img src="/mile_4.png" alt="arrow" className="hidden mt-[1.8rem] sm:w-[3.7rem] sm:block" />
-        <div className="flex flex-col">
-            <div className="">
-                <h2 className="text-[5rem] font-[700]"  data-animation-id='slideIn'><span className="text-accent-200">Our</span> 8 Domains</h2>
-                <p className="text-[1.5rem]"  data-animation-id='slideIn'>At Ace8, we empower businesses to thrive in the digital age through cutting-edge technology services spanning eight crucial domains. From Advanced Architectures to Microservices, Code & Development, we're dedicated to delivering unparalleled expertise and innovative solutions tailored to meet your specific needs.</p>
-            </div>
+            <img src="/mile_4.png" alt="arrow" className="hidden mt-[1.8rem] sm:w-[3.7rem] sm:block" />
+            <div className="flex flex-col">
+                <div className="">
+                    <div className="text-[5rem] font-[700] _heading" data-animation-id='slideIn'>
+                        <BlockContent
+                            blocks={domains?.domain_title}
+                            projectId="ordduge7"
+                            dataset="production"
+                            serializers={serializers}
+                        />
+                    </div>
+                    <p className="text-[1.5rem]" data-animation-id='slideIn'>At Ace8, we empower businesses to thrive in the digital age through cutting-edge technology services spanning eight crucial domains. From Advanced Architectures to Microservices, Code & Development, we're dedicated to delivering unparalleled expertise and innovative solutions tailored to meet your specific needs.</p>
+                </div>
 
-            <div className="h-[93rem] sm:mt-[8rem] grid place-content-center relative">
-                <Image src='/center_logo.png'  data-animation-id='slideIn' className="w-[45rem]" width={550} height={178} />
-                {domains.map((domain, index) => <DomainDesktop domain={domain} key={index} id={index} />)}
+                <div className="h-[93rem] sm:mt-[8rem] grid place-content-center relative">
+                    <Image src={domains?.domain_middle_icon?.asset?.url} data-animation-id='slideIn' className="w-[45rem]" width={550} height={178} />
+                    {domains.domain_list?.map((domain, index) => <DomainDesktop domain={domain} key={index} id={index} />)}
+                </div>
+                <Conntal />
+                {/* <p className="text-[3rem] leading-[4rem] font-[700] text-[#FFFFFF] mt-[9rem]">Ace8 is not just a technology services company; we are your strategic partner in navigating the ever-evolving landscape of technology. Elevate your business to new heights with Ace8 - Where innovation meets excellence!</p> */}
             </div>
-            <Conntal />
-            {/* <p className="text-[3rem] leading-[4rem] font-[700] text-[#FFFFFF] mt-[9rem]">Ace8 is not just a technology services company; we are your strategic partner in navigating the ever-evolving landscape of technology. Elevate your business to new heights with Ace8 - Where innovation meets excellence!</p> */}
+        </section>
+    )
+}
+
+
+const DomainMobile = ({ domain, id }) => {
+    const serializers = {
+        marks: {
+            strong: ({ children }) => (
+                <strong className="font-extrabold">
+                    {React.Children.map(children, (child) =>
+                        typeof child === 'string' ? (
+                            child
+                        ) : (
+                            <span className="sm:hero_gradient_text  text-[#EA9EFF] !no-underline">{child}</span>
+                        )
+                    )}
+                </strong>
+            ),
+        },
+    };
+
+    return (
+        <div className={`w-[230px] flex flex-col ${id % 2 ? 'self-end' : 'self-start'}`}>
+            <Image src={domain.icon?.asset?.url} width={115} height={90} className={`${id % 2 ? 'self-end' : 'self-start'}`} alt="icon" />
+            <p className={`text-[1.7rem] font-[700] ${id % 2 ? 'text-right' : 'text-left'}`}>{domain.name}</p>
+            <div className={`text-[1.6rem] domain_section _heading font-[700] ${id % 2 ? 'text-right' : 'text-left'}`}>
+                <BlockContent
+                    blocks={domain.title}
+                    projectId="ordduge7"
+                    dataset="production"
+                    serializers={serializers}
+                />
+            </div>
         </div>
-    </section>
-)
-
-const DomainMobile = ({ domain, id }) => (
-    <div className={`w-[230px] flex flex-col ${id % 2 ? 'self-end' : 'self-start'}`}>
-        <Image src={domain.image} width={115} height={90} className={`${id % 2 ? 'self-end' : 'self-start'}`} alt="icon" />
-        <p className={`text-[1.7rem] font-[700] ${id % 2 ? 'text-right' : 'text-left'}`}>{domain.name}</p>
-        <p className={`text-[1.6rem] font-[700] text-accent-200 ${id % 2 ? 'text-right' : 'text-left'}`}>{domain.title}</p>
-    </div>
-)
+    )
+}
 
 const DomainDesktop = ({ domain, id }) => {
     const returnAbsoluteValue = (index) => {
@@ -135,17 +187,23 @@ const DomainDesktop = ({ domain, id }) => {
         }
     }
     return (
-        <div className={`w-[25rem] flex flex-col absolute ${returnAbsoluteValue(id)}`}  data-animation-id='slideIn'>
-            <Image src={domain.image} width={115} height={90} className='w-[15rem]' alt="icon" />
-            <p className={`text-[2rem] font-[700]`}>{domain.name}</p>
-            <p className={`text-[2rem] font-[700] text-accent-200`}>{domain.title}</p>
-            <p className="mt-[.8rem] text-[1.4rem]">{domain.role}</p>
+        <div className={`w-[25rem] flex flex-col absolute ${returnAbsoluteValue(id)}`} data-animation-id='slideIn'>
+            <Image src={domain.icon?.asset?.url} width={115} height={90} className='w-[15rem]' alt="icon" />
+            {/* <p className={`text-[2rem] font-[700]`}>{domain.name}</p> */}
+            <div className={`text-[2rem] font-[700] _heading domain_section`}>
+                <BlockContent
+                    blocks={domain.title}
+                    projectId="ordduge7"
+                    dataset="production"
+                />
+            </div>
+            <p className="mt-[.8rem] text-[1.4rem]">{domain.short_info}</p>
         </div>
     )
 }
 
 const Conntal = () => (
-    <Link href='http://conntalent.com'  data-animation-id='slideIn' className="py-[2rem] hover:opacity-[.7] transition-all px-[2rem] sm:mt-[10rem] w-fit bg-conner-gradient rounded-[10rem] self-center mt-[6rem]">
+    <Link href='http://conntalent.com' data-animation-id='slideIn' className="py-[2rem] hover:opacity-[.7] transition-all px-[2rem] sm:mt-[10rem] w-fit bg-conner-gradient rounded-[10rem] self-center mt-[6rem]">
         <div className="flex gap-[1rem]">
             <div className="bg-black rounded-full w-[7rem] h-[7rem] grid place-content-center">
                 <img src='/profile.png' width={48} className="w-[3rem] h-[3rem]" alt="profile icon" height={48} />
