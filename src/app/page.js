@@ -12,6 +12,8 @@ import Approach from "./components/home/approach";
 import Contact from "./components/home/contact";
 import Formular from "./components/home/formula";
 import MaxContainer from "./components/common/maxContainer/index";
+import { client } from "../sanity/lib/client";
+import { QHomePage } from "../sanity/lib/query";
 
 export const metadata = {
   title: "Ace8 | Digital Transformation, DevSecOps, Cloud-Native & Automation",
@@ -32,16 +34,26 @@ export const metadata = {
   },
 };
 
-export default function Home() {
+async function getData() {
+  const homepage = await client.fetch(QHomePage);
+  return {
+    homepage:homepage[0]
+  }
+}
+
+export default async function Home() {
+  const { homepage } = await getData()
+  console.log("🚀 ~ Home ~ homepage:", homepage)
+
   return (
     <>
       <MaxContainer>
-        <Hero />
+        <Hero data={homepage}/>
         <div className="flex flex-col sm:flex-col-reverse">
-          <About />
-          <Brands />
+          <About data={homepage}/>
+          <Brands data={homepage?.brands}/>
         </div>
-        <Domians />
+        <Domians data={homepage}/>
         <Services />
         <Impact />
         <Partners />

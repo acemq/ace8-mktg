@@ -5,7 +5,7 @@ import milestone, { slideIn } from "../../../Animations/common";
 import 'react-multi-carousel/lib/styles.css';
 import { useState, useEffect } from "react";
 
-const Index = () => {
+const Index = ({data}) => {
     useEffect(() => {
         milestone()
         slideIn()
@@ -57,11 +57,11 @@ const Index = () => {
             <img src="/brands_flare.png" alt="flare" className="absolute sm:hidden top-[-20rem] left-[3rem] z-[-1]" />
                 <h2 className="text-[2.9rem] sm:text-[3.2rem] text-center sm:text-left font-[700] mb-[3rem]">Trusted By <span className="text-accent-100">Brands Globally</span></h2>
                 <div className="hidden sm:flex items-center justify-between w-[100%]">
-                    {_brands.map((item, i) => <Brand item={item} key={i} />)}
+                    {data?.map((item, i) => <Brand item={item.asset?.url} key={i} id={i}/>)}
                 </div>
                 <div className="sm:hidden">
                     <Carousel showDots={true} autoPlay={true} autoPlaySpeed={1000} infinite={true} removeArrowOnDeviceType={["tablet", "mobile", 'desktop']} responsive={responsive}>
-                        {_brands.map((item, i) => <Image src={item.icon} key={i} className={`${item.style}`} width={150} height={100} />)}
+                        {data?.map((item, i) => <Image src={item.asset?.url} key={i} className={`${item.style}`} width={150} height={100} />)}
                     </Carousel>
                 </div>
             </div>
@@ -72,14 +72,14 @@ const Index = () => {
 export default Index;
 
 
-const Brand = ({ item }) => {
+const Brand = ({ item, id }) => {
     const [hovered, setHovered] = useState(false)
     return (
         <Image
-            src={hovered && item.hoveredIcon ? item.hoveredIcon : item.icon}
+            src={item}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className={`${item.style} cursor-pointer`}
+            className={`${item.style} ${id === 0 && "sm:w-[6rem] w-[7rem]"}  cursor-pointer grayscale hover:grayscale-0`}
             width={150}
             height={100} />
     )

@@ -4,7 +4,8 @@ import Link from "next/link";
 import milestone, {slideIn} from "../../../Animations/common";
 import { useEffect } from "react";
 
-const Index = () => {
+const Index = ({data}) => {
+    console.log("🚀 ~ Index ~ data:", data)
     useEffect(() => {
         milestone()
         slideIn()

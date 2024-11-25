@@ -70,3 +70,34 @@ export const QsingleStory = `*[ _type == "customer-stories" && slug.current == $
   nofollow,
   _createdAt
 }`
+
+export const QHomePage = `*[ _type == "home"]{
+  hero_title,
+  hero_short_info,
+  hero_button_text,
+  hero_button_link,
+  brands[]{
+    asset->{
+      url
+    }
+  },
+  who_label,
+  who_title,
+  who_short_info,
+  who_button_text,
+  who_button_url,
+  who_image{
+    asset->{
+      url
+    }
+  },
+  domain_title,
+  domain_short_info,
+  domain_list[]{
+    icon,
+    title,
+    short_info
+  },
+  domain_middle_icon
+
+}`

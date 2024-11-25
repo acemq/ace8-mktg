@@ -186,3 +186,29 @@ p {
 .header_ii {
   @apply text-[3rem] leading-[4rem] sm:text-[3.5rem] sm:leading-[5rem] font-[700]
 }
+
+.hero_title span {
+  color: #9B86FE;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .hero_title span {
+    font-size: 14rem;
+  }
+}
+
+.who-title strong span{
+  color: #EA9EFF;
+  font-weight: 800;
+  text-decoration: none !important;
+}
+
+@media (min-width: 640px) {
+  .who-title span {
+    background: linear-gradient(to right, #EA9EFF); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

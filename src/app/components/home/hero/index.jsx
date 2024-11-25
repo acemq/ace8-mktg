@@ -2,8 +2,10 @@
 import milestone, { slideIn } from "../../../Animations/common";
 import { useEffect } from "react";
 import Image from "next/image";
+import BlockContent from "@sanity/block-content-to-react";
 import Link from "next/link";
-const Index = () => {
+
+const Index = ({ data }) => {
     useEffect(() => {
         slideIn()
         milestone()
@@ -30,13 +32,19 @@ const Index = () => {
                     <img src="/mile_1.png" className="hidden sm:w-[4rem] sm:mt-[3rem] sm:block" alt="line" />
                 </div>
                 <div className="sm:ml-[7rem]" data-animation-id="slideIn">
-                    <h1 className="text-[4rem] leading-[5rem] sm:text-[8rem] sm:w-[80rem] sm:leading-[12rem] font-[700]">We Empower <span className="text-[#9B86FE] text-[5rem] md:text-[14rem] font-[900]">Innovations</span></h1>
-                    <p className="text-[1.2rem] sm:leading-[2.8rem] mt-[.5rem] sm:text-[1.8rem] sm:w-[59rem] md:mt-[.5rem]">We are a people-focused organization that solves business problems through technology.</p>
-                    <Link 
-                        href='#about'
+                    <div className="hero_title text-[4rem] leading-[5rem] sm:text-[8rem] sm:w-[80rem] sm:leading-[12rem] font-[700]">
+                        <BlockContent
+                            blocks={data?.hero_title}
+                            projectId="ordduge7"
+                            dataset="production"
+                        />
+                    </div>
+                    <p className="text-[1.2rem] sm:leading-[2.8rem] mt-[.5rem] sm:text-[1.8rem] sm:w-[59rem] md:mt-[.5rem]">{data?.hero_short_info}</p>
+                    <Link
+                        href={data?.hero_button_link}
                         className="inline-block px-[2rem] py-[.6rem] mt-[3rem] text-[.9rem] md:text-[1.3rem] rounded-[.5rem] font-[800] border border-accent-100"
                     >
-                        Learn More
+                        {data?.hero_button_text}
                     </Link>
                 </div>
             </div>
