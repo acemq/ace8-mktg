@@ -15,24 +15,26 @@ import MaxContainer from "./components/common/maxContainer/index";
 import { client } from "../sanity/lib/client";
 import { QHomePage } from "../sanity/lib/query";
 
-export const metadata = {
-  title: "Ace8 | Digital Transformation, DevSecOps, Cloud-Native & Automation",
-  description:
-    "Empowering businesses with cutting-edge solutions in DevSecOps, cloud-native development, automation, and data management. Unlock innovation and resilience with Ace8.",
-  alternates: {
-    canonical: "https://www.ace8.io/",
-  },
-  openGraph: {
-    title:
-      "Ace8 | Digital Transformation, DevSecOps, Cloud-Native & Automation",
-    description:
-      "Empowering businesses with cutting-edge solutions in DevSecOps, cloud-native development, automation, and data management. Unlock innovation and resilience with Ace8.",
-    url: "https://www.ace8.io/",
-    siteName: "Ace8",
-    locale: "en_US",
-    type: "website",
-  },
-};
+
+export async function generateMetadata() {
+  const home = await client.fetch(QHomePage);  
+  return {
+    title: home[0]?.meta_title,
+    description: home[0]?.meta_description,
+    alternates: {
+      canonical: "https://www.ace8.io/",
+    },
+    keywords: home[0]?.meta_tags,
+    openGraph: {
+      title:home[0]?.meta_title,
+      description: home[0]?.meta_description,
+      url: `https://www.ace8.io/`,
+      siteName: "Ace8",
+      locale: "en_US",
+      type: "website",
+    },
+  };
+}
 
 async function getData() {
   const homepage = await client.fetch(QHomePage);

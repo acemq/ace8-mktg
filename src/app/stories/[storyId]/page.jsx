@@ -14,12 +14,12 @@ export async function generateMetadata({ params }) {
     title: story?.meta_title || story?.title,
     description: story?.meta_description || story?.excerpt,
     alternates: {
-      canonical: `https://acemq.com/stories/${story?.slug?.current}/`,
+      canonical: `https://www.ace8.io/stories/${story?.slug?.current}/`,
     },
     openGraph: {
       title:story?.meta_title || story?.title,
       description: story?.meta_description || story?.excerpt,
-      url: `https://acemq.com/stories/${story?.slug?.current}/`,
+      url: `https://www.ace8.io/stories/${story?.slug?.current}/`,
       siteName: "AceMQ Consulting",
       // Add image URL here if available
       locale: "en_US",

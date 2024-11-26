@@ -7,7 +7,6 @@ import Image from "next/image";
 import MaxContainer from '../../common/maxContainer'
 
 const Index = ({stories}) => {
-    console.log("🚀 ~ Index ~ stories:", stories)
     //   useEffect(() => {
     //     split();
     //     slideIn();

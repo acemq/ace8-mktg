@@ -2,24 +2,27 @@ import MaxContainer from "../components/common/maxContainer";
 import Hero from "../components/contact/hero";
 import Body from "../components/contact/body";
 import Brands from "../components/common/brand";
+import { client } from "../../sanity/lib/client";
 
-export const metadata = {
-  title: "Contact Us for Expert DevSecOps & Cloud Solutions | Ace8",
-  description:
-    "Get in touch with Ace8 for expert consulting on DevSecOps, cloud solutions, messaging systems, and more. We're here to help you with your digital transformation needs.",
-  alternates: {
-    canonical: "https://www.ace8.io/contact-us",
-  },
-  openGraph: {
-    title: "Contact Us for Expert DevSecOps & Cloud Solutions | Ace8",
-    description:
-      "Get in touch with Ace8 for expert consulting on DevSecOps, cloud solutions, messaging systems, and more. We're here to help you with your digital transformation needs.",
-    url: "https://www.ace8.io/contact-us",
-    siteName: "Ace8",
-    locale: "en_US",
-    type: "website",
-  },
-};
+export async function generateMetadata() {
+  const page = await client.fetch(`*[ _type == "about"]`);  
+  return {
+    title: page[0]?.meta_title,
+    description: page[0]?.meta_description,
+    alternates: {
+      canonical: "https://www.ace8.io/about",
+    },
+    keywords: page[0]?.meta_tags,
+    openGraph: {
+      title:page[0]?.meta_title,
+      description: page[0]?.meta_description,
+      url: `https://www.ace8.io/about`,
+      siteName: "Ace8",
+      locale: "en_US",
+      type: "website",
+    },
+  };
+}
 
 const Index = () => {
   return (

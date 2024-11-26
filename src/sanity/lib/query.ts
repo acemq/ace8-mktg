@@ -129,5 +129,8 @@ export const QHomePage = `*[ _type == "home"]{
         url
       }
     }
-  }
+  },
+  meta_title,
+  meta_description,
+  meta_tags
 }`
