@@ -4,7 +4,10 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import milestone, { fadeIn, slideIn } from "../../../Animations/common";
-const Index = () => {
+import BlockContent from "@sanity/block-content-to-react";
+
+const Index = ({ data }) => {
+  console.log("🚀 ~ Index ~ data:", data)
   useEffect(() => {
     milestone()
     slideIn()
@@ -126,11 +129,11 @@ const Index = () => {
 
   return (
     <section>
-      <ServiceMobile services={services_mobile} />
-      <ServiceDesktop services={services} />
+      <ServiceMobile services={data} />
+      <ServiceDesktop services={data} />
       <div className=" px-[3rem] sm:px-[10rem] mt-[6rem]">
         <div className="responsive-grid flex flex-col-reverse">
-          {features.map((service, index) => <Card service={service} key={index} />)}
+          {data?.fs_list?.slice(0, 6)?.map((service, index) => <Card service={service} key={index} />)}
         </div>
         <div className="pl-[8rem] pr-[4rem] sm:items-center sm:pl-[4rem] py-[7rem] sm:py-[3rem] hidden bg-black sm:flex justify-between w-[100%] mt-[4rem]">
           <Link href='/services/devsecops' data-animation-id="slideIn" className="block w-[450px]">
@@ -152,7 +155,7 @@ const Index = () => {
 export default Index;
 
 const ServiceMobile = ({ services }) => {
-  const [_services, setServices] = useState(services);
+  const [_services, setServices] = useState(services?.fs_list);
 
   const toggleModal = (id) => {
     setServices((prevServices) =>
@@ -195,9 +198,9 @@ const ServiceMobile = ({ services }) => {
                       className={`flex px-[2.8rem] py-[.8rem] justify-between w-[100%] items-center`}
                     >
                       <div className="flex gap-[1rem]">
-                        <Image src={service.image} className="hidden sm:block" width={17} height={17} />
-                        <Image src={service.mobileImage} className="sm:hidden w-[2.5rem] h-[2.5rem]" width={17} height={17} />
-                        <p className="text-[1.3rem]">{service.Name}</p>
+                        <Image src={service.icon?.asset?.url} className="hidden sm:block" width={17} height={17} />
+                        <Image src={service.icon?.asset?.url} className="sm:hidden w-[2.5rem] h-[2.5rem]" width={17} height={17} />
+                        <p className="text-[1.3rem]">{service.title}</p>
                       </div>
                       <img
                         src="/angle-right.svg"
@@ -226,11 +229,31 @@ const ServiceMobile = ({ services }) => {
 };
 
 const ServiceDesktop = ({ services }) => {
-  const [_services, setServices] = useState(services);
+  const [_services, setServices] = useState(services?.fs_list);
+  const [active, setActive] = useState(0)
 
   const toggleActive = (id) => {
+    setActive(id+1);
     setServices(prevServices => prevServices.map((item, i) => id == i ? { ...item, active: true } : { ...item, active: false }))
+
   }
+
+  const serializers = {
+    marks: {
+      strong: ({ children }) => (
+        <strong className="font-extrabold">
+          {React.Children.map(children, (child) =>
+            typeof child === 'string' ? (
+              child
+            ) : (
+              <strong className="sm:hero_gradient_text text-[#EA9EFF]">{child}</strong>
+            )
+          )}
+        </strong>
+      ),
+    },
+  };
+
   return (
     <div className="px-[3rem] sm:px-[10rem] relative sm:flex gap-x-[4rem] hidden">
       {/* <div className="overflow-hidden sm:w-[4.555rem] z-[-1]  absolute sm:block">
@@ -242,24 +265,41 @@ const ServiceDesktop = ({ services }) => {
       <div className="flex justify-between sm:ml-[7rem] w-[100%]" data-animation-id='slideIn'>
         <div className="flex flex-col">
           <div className="border border-white px-[2.4rem] rounded-[2rem] mb-[2rem] py-[.8rem] self-start">
-            <p className="text-[1.2rem]">Featured Services</p>
+            <p className="text-[1.2rem]">{services?.fs_label}</p>
           </div>
           <div className="w-[40rem]">
-            <h2 className="font-[700] text-[5rem] mb-[2rem]">What We Can Do <span className="font-[400]">For You:</span></h2>
-            <p className="">Ace8 offers a suite of cutting-edge services, from Message Brokersto DevSecOps, empowering enterprises with services to thrive in today's digital economy. With streamlined data flow and robust development practices, Ace8 ensures unparalleled efficiency and resilience, driving extreme value for modern businesses.</p>
+            <div className=" text-[5rem] mb-[2rem]">
+              <BlockContent
+                blocks={services?.fs_title}
+                projectId="ordduge7"
+                dataset="production"
+                serializers={serializers}
+              />
+            </div>
+            <p className="">{services?.fs_short_info}</p>
           </div>
         </div>
         <div className="flex bg-[#161B22] p-[1.5rem] rounded-[1.5rem]  gap-x-[2rem]">
           <div className="bg-[#0D1117] rounded-[1rem] py-[2.5rem]">
-            {/* <div className="flex px-[2.8rem] gap-[1rem] pt-[3rem]">
-                            <Image src="/settings.svg" className="w-[2.5rem] h-[2.5rem]" width={17} height={17} alt="" />
-                            <h4 className="font-[600] text-[1.5rem]">Featured Services</h4>
-                        </div> */}
+            {/* <div className="flex px-[2.8rem] gap-[1rem] pt-[3rem] cursor-pointer" onClick={() => {setActive(0);toggleActive(-1)}}>
+              <Image src="__featured_services.svg" className="w-[2.5rem] h-[2.5rem]" width={17} height={17} alt="" />
+              <h4 className="font-[600] text-[1.5rem]">Featured Services</h4>
+            </div> */}
             <ul className="mt-[1.5rem] flex flex-col justify-center gap-[1.5rem] sm:gap-[.5rem]">
-              {_services.map((service, index) => <li onClick={() => toggleActive(index)} className={`flex px-[2.2rem] py-[.8rem] items-center hover:cursor-pointer hover:bg-purple_gradient rounded-[.5rem] gap-[1rem] ${service.active && index != 0 ? "bg_gradient font-[500]" : ''}`} key={index}><Image src={service.image} className={`${index == 0 ? 'w-[2.5rem] ml-[.5rem]' : 'w-[4rem] aspect-square'}`} alt="icon" width={17} height={17} /> <p className={`${index == 0 ? 'font-[600]' : ''}`}>{service.Name}</p></li>)}
+              {_services.map((service, index) => <li onClick={() => toggleActive(index)} className={`flex px-[2.2rem] py-[.8rem] items-center hover:cursor-pointer hover:bg-purple_gradient rounded-[.5rem] gap-[1rem] ${service.active && index != 0 ? "bg_gradient font-[500]" : ''}`} key={index}><Image src={service.icon?.asset?.url} className={`${index == 0 ? 'w-[2.5rem] ml-[.5rem]' : 'w-[4rem] aspect-square'}`} alt="icon" width={17} height={17} /> <p className={`${index == 0 ? 'font-[600]' : ''}`}>{service.title}</p></li>)}
             </ul>
           </div>
+
           <div className="bg-[#0D1117] p-[1.5rem] rounded-[1rem]" >
+            {
+              active === 0 && <>
+                <div className="mb-[3rem] pt-[3rem] max-w-[326px]">
+                  <h2 className="font-[700] text-[2.5rem]  mt-2 md:w-[402px]">{`Featured Services`}</h2>
+                  <Image src='/featured.png' alt="icon" className="w-[15rem] mt-6" width={396} height={367} />
+                </div>
+              </>
+            }
+
             {_services.map((item, i) => item.active && (
               <div className="bg-[#161B22] pb-[1.5rem] px-[2rem] h-[100%] rounded-[.8rem]" key={item.Name}>
                 {
@@ -269,14 +309,14 @@ const ServiceDesktop = ({ services }) => {
                       <img src={item.defualtImage} className="w-[20rem] self-center mt-[8rem]" alt="featured_icon" />
                     </div>
                   ) : (
-                    <React.Fragment>
+                    <>
                       <div className="mb-[3rem] pt-[3rem]">
-                        <Image src={item.image} alt="icon" className="w-[8rem]  h-[8rem]" width={84} height={84} />
-                        <h2 className="font-[700] text-[2.5rem] w-[20rem]">{item.Name}</h2>
+                        <Image src={item.icon?.asset?.url} alt="icon" className="w-[8rem]  h-[8rem]" width={84} height={84} />
+                        <h2 className="font-[700] text-[2.5rem] mt-2 w-[20rem]">{item.title}</h2>
                       </div>
                       {/* <Image src='/automated-testing.png' alt="icon" className="w-[25rem] h-[20rem]" width={396} height={367} /> */}
-                      <p className="w-[27rem]">{item.role}</p>
-                    </React.Fragment>
+                      <p className="w-[27rem]">{item.short_info}</p>
+                    </>
                   )
                 }
               </div>
@@ -290,11 +330,11 @@ const ServiceDesktop = ({ services }) => {
 
 
 const Card = ({ service }) => (
-  <Link href={service.link} className="hover:scale-[1.07] transition-all" data-animation-id="fadeIn">
+  <Link href={`/sevices/${service.link}`} className="hover:scale-[1.07] transition-all" data-animation-id="fadeIn">
     <div className="bg-black py-[1.8rem] sm:py-[3rem] rounded-[1rem] px-[1.2rem] sm:px-[1.6rem] w-[100%] sm:w-[38rem] flex flex-col items-center sm:items-start">
-      <img src={service.image} className="w-[4rem] h-[6rem]" alt="icon" />
-      <h4 className="font-[600] mb-1 text-[2rem] sm:mb-[2rem] text-center sm:text-start">{service.Name}</h4>
-      <p className="text-[1.2rem] sm:text-[1.7rem] text-center sm:text-start">{service.role}</p>
+      <img src={service.icon?.asset?.url} className="w-[6rem] h-[6rem]" alt="icon" />
+      <h4 className="font-[600] mb-1 text-[2rem] sm:mb-[2rem] text-center sm:text-start">{service.title}</h4>
+      <p className="text-[1.2rem] sm:text-[1.7rem] text-center sm:text-start">{service.short_info}</p>
       <img src="/Arrow.svg" alt="" className="w-[3rem] ml-auto mt-[2rem]" />
     </div>
   </Link>
@@ -358,8 +398,8 @@ const Modal = ({ service, toggleModal, id }) => {
         className="bg-[#0009] w-[100vw] h-[100svh] fixed inset-0"
       ></motion.div>
       <div className="fixed flex flex-col z-40 top-1/2 left-1/2 rounded-[2rem] -translate-x-1/2 -translate-y-1/2 w-[30rem] bg-[#161B22] py-[3rem] px-[2rem]">
-        <h2 className="text-[1.8rem] mb-[1rem] font-[700] text-[#66E8E3]">{`(${service.Name})`}</h2>
-        <p className="text-[1.2rem]">{service.role} <Link className="text-[#66E8E3]" href={`${service?.link}`}>Read More...</Link></p>
+        <h2 className="text-[1.8rem] mb-[1rem] font-[700] text-[#66E8E3]">{`(${service.title})`}</h2>
+        <p className="text-[1.2rem]">{service.role} <Link className="text-[#66E8E3]" href={`/services/${service?.link}`}>Read More...</Link></p>
         <button
           className="self-end text-[1.2rem] mt-[2rem] py-[.6rem] px-[1rem] text-black font-[500] bg-[#66E8E3] rounded-[.3rem]"
           onClick={() => toggleModal(id)}

@@ -6,7 +6,8 @@ import Image from "next/image";
 // import { slideIn } from "@/app/Animations/common";
 import MaxContainer from '../../common/maxContainer'
 
-const Index = () => {
+const Index = ({stories}) => {
+    console.log("🚀 ~ Index ~ stories:", stories)
     //   useEffect(() => {
     //     split();
     //     slideIn();
@@ -42,7 +43,7 @@ const Index = () => {
                         outcomes
                     </p>
                     <div className="sm:flex-row flex flex-col gap-[5rem] sm:gap-[0] w-[100%] sm:h-fit justify-between">
-                        {cards.map((card, index) => (
+                        {stories?.slice(0, 2)?.map((card, index) => (
                             <Card card={card} key={index} />
                         ))}
                     </div>
@@ -56,14 +57,14 @@ export default Index;
 
 const Card = ({ card }) => (
     <div className='sm:w-[45%] sm:ml-[7rem]'>
-        <h2 className="text-center font-[700] sm:mb-[2rem] mb-[1rem] hidden sm:block sm:text-[2.2rem] text-[1.5rem]">{card.header}</h2>
+        <h2 className="text-center font-[700] sm:mb-[2rem] mb-[1rem] hidden sm:block sm:text-[2.2rem] text-[1.5rem]">{card.sub_title}</h2>
         <div className="relative w-[100%] flex flex-col h-[24rem] sm:h-[40rem]">
             <p className="text-center relative font-[700] text-[1.7rem] sm:text-[1.9rem] top-[1.5rem] z-[3]">
                 Customer Story
             </p>
             <Image
-                className="absolute inset-0 top-0 w-[100%] h-[24rem] sm:h-[100%] bottom-0 z-[0]`"
-                src={card.image}
+                className="absolute inset-0 top-0 w-[100%] h-full sm:h-[100%] bottom-0 z-[0]`"
+                src={card.image.asset.url}
                 alt={card.alt}
                 width={611}
                 height={444}
@@ -78,10 +79,10 @@ const Card = ({ card }) => (
 
             <div className="absolute z-[3] bottom-[.7rem] sm:bottom-[2.5rem] w-[30rem] sm:w-[35rem] flex flex-col items-center self-center">
                 <p className="text-center sm:leading-[2rem]">
-                    {card.role}
+                    {card.title}
                 </p>
                 <Link
-                    href={card.link}
+                    href={`/stories/${card.slug.current}`}
                     className="flex items-center font-[500] mt-[2rem] gap-[1.5rem]"
                 >
                     <p>Read Story</p>

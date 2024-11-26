@@ -54,8 +54,8 @@ export default async function Home() {
           <Brands data={homepage?.brands}/>
         </div>
         <Domians data={homepage}/>
-        <Services />
-        <Impact />
+        <Services data={homepage}/>
+        <Impact stories={homepage?.stories}/>
         <Partners />
         <Management />
         <Formular />

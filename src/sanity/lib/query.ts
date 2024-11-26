@@ -106,5 +106,28 @@ export const QHomePage = `*[ _type == "home"]{
     asset->{
       url
     }
+  },
+  fs_label,
+  fs_title,
+  fs_short_info,
+  fs_list[]{
+    icon{
+      asset->{
+        url
+      }
+    },
+    title,
+    link,
+    short_info
+  },
+  stories[]->{
+    title,
+    sub_title,
+    slug,
+    image{
+      asset->{
+        url
+      }
+    }
   }
 }`

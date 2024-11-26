@@ -22,6 +22,12 @@ export const customerStories = defineType({
       group: 'data-fields'
     }),
     defineField({
+      title: "Sub Title",
+      name: "sub_title",
+      type: "string",
+      group: 'data-fields'
+    }),
+    defineField({
       title: 'Slug',
       name: 'slug',
       type: 'slug',
