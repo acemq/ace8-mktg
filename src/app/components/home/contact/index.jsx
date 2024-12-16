@@ -1,4 +1,9 @@
+'use client'
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Index = () => {
     return (
         <>
@@ -11,8 +16,58 @@ const Index = () => {
 export default Index;
 
 const ContactDesktop = () => {
+    const router = useRouter()
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        phoneNumber: "",
+        email: "",
+        description: ""
+
+    })
+    const [loading, setLoading] = useState(false)
+
+    const handleInputChange = (e) => {
+        const { id, value } = e.target
+        setFormData(prev => ({
+            ...prev,
+            [id]: value
+        }))
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true)
+        try {
+            const json = await fetch(
+                "https://76h86gyo24.execute-api.us-west-2.amazonaws.com/prod/contactUs",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        subject: "This is a ContactUS email from ACE8",
+                        message: formData,
+                        toaddress: "randall.mcclure@acemq.com",
+                        toaddress2: "info@acemq.com",
+                    }),
+                }
+            )
+            const response = await json.json()
+            if (response) {
+                setLoading(false)
+                router.push(`/thank-you?source=contact-us`);
+            }
+        } catch (error) {
+            setLoading(false)
+            toast.error(error?.message)
+        }
+    }
+
     return (
         <section className="pr-[10rem sm:block hidden">
+            <ToastContainer />
             <div className="flex justify-between">
                 <div className="">
                     <div className="flex gap-[4rem]">
@@ -34,32 +89,55 @@ const ContactDesktop = () => {
                             <div className="flex gap-x-[1rem]">
                                 <div className="flex flex-1 flex-col">
                                     <label htmlFor="" className="font-[600] text-[1.5rem] mb-[1rem]">First Name</label>
-                                    <input type="text" placeholder="Enter Your First Name ..." className="h-[3.5rem] text-black text-[1.4rem] focus:outline-none font-[500] py-[1.5rem] pl-[1rem] rounded-[.5rem]" />
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        onChange={handleInputChange}
+                                        placeholder="Enter Your First Name ..."
+                                        className="h-[3.5rem] text-black text-[1.4rem] focus:outline-none font-[500] py-[1.5rem] pl-[1rem] rounded-[.5rem]" />
                                 </div>
                                 <div className="flex flex-1 flex-col">
                                     <label htmlFor="" className="font-[600] text-[1.5rem] mb-[1rem]">Last Name</label>
-                                    <input type="text" placeholder="Enter Your Last Name ..." className="h-[3.5rem] text-[1.4rem] focus:outline-none font-[500] py-[1.5rem] pl-[1rem] text-black rounded-[.5rem]" />
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        onChange={handleInputChange}
+                                        placeholder="Enter Your Last Name ..."
+                                        className="h-[3.5rem] text-[1.4rem] focus:outline-none font-[500] py-[1.5rem] pl-[1rem] text-black rounded-[.5rem]" />
                                 </div>
                             </div>
                             <div className="flex gap-x-[1rem] my-[2rem]">
                                 <div className="flex flex-1 flex-col">
                                     <label htmlFor="" className="font-[600] text-[1.5rem] mb-[1rem]">Email</label>
-                                    <input type="text" placeholder="Enter Your Email Address ..." className="h-[3.5rem] text-[1.4rem] focus:outline-none font-[500] py-[1.5rem] pl-[1rem] text-black rounded-[.5rem]" />
+                                    <input
+                                        type="text"
+                                        id="email"
+                                        onChange={handleInputChange}
+                                        placeholder="Enter Your Email Address ..."
+                                        className="h-[3.5rem] text-[1.4rem] focus:outline-none font-[500] py-[1.5rem] pl-[1rem] text-black rounded-[.5rem]" />
                                 </div>
                                 <div className="flex flex-1 flex-col">
                                     <label htmlFor="" className="font-[600] text-[1.5rem] mb-[1rem]">Contact Number</label>
-                                    <input type="text" placeholder="Enter Your Contact Number ..." className="h-[3.5rem] text-[1.4rem] focus:outline-none font-[500] py-[1.5rem] pl-[1rem] text-black rounded-[.5rem]" />
+                                    <input
+                                        type="text"
+                                        id="phoneNumber"
+                                        onChange={handleInputChange}
+                                        placeholder="Enter Your Contact Number ..."
+                                        className="h-[3.5rem] text-[1.4rem] focus:outline-none font-[500] py-[1.5rem] pl-[1rem] text-black rounded-[.5rem]" />
                                 </div>
                             </div>
                             <div className="flex flex-col">
                                 <label htmlFor="" className="font-[600] text-[1.5rem] mb-[1rem]">What can we help you with?</label>
-                                <textarea name="" className="h-[17rem] text-black text-[1.4rem] focus:outline-none font-[500] pl-[1.5rem] pt-[1rem] resize-none" placeholder="Describe your problem in at least 250 characters..." id=""></textarea>
+                                <textarea
+                                    name=""
+                                    className="h-[17rem] text-black text-[1.4rem] focus:outline-none font-[500] pl-[1.5rem] pt-[1rem] resize-none"
+                                    onChange={handleInputChange}
+                                    placeholder="Describe your problem in at least 250 characters..."
+                                    id="description"></textarea>
                             </div>
-                            {/* <div className="flex mt-[1rem]">
-                                <input type="checkbox" className="mr-[.5rem]" />
-                                <p className="text-[1.2rem]">By ticking this box, I am consenting to be sent monthly articles and promotions through WaveNet newsletter.</p>
-                            </div> */}
-                            <button className="py-[1rem] px-[2.5rem] rounded-[.7rem] text-[1rem] font-[700] border-accent-200 border-[2px] mt-[3rem]">Send</button>
+                            <button
+                                onClick={handleSubmit}
+                                className="py-[1rem] px-[2.5rem] rounded-[.7rem] text-[1rem] font-[700] border-accent-200 border-[2px] mt-[3rem]">{loading ? "loading" : "Send"}</button>
                         </form>
                     </div>
                 </div>

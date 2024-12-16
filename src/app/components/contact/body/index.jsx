@@ -1,7 +1,7 @@
 "use client";
+import Link from "next/link";
 import PhoneInput from "react-phone-input-2";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import "react-toastify/dist/ReactToastify.css";
@@ -22,6 +22,7 @@ const Index = () => {
 export default Index;
 
 const Form = () => {
+  const router = useRouter()
   const [firstName, setFirstName] = useState('')
   const [loading, setLoading] = useState(null)
   const [lastName, setLastName] = useState('')
