@@ -201,7 +201,7 @@ const ContactMobile = () => {
             <h3 className="text-[2.5rem] font-[700] text-center">Contact <span className="text-accent-100">Us</span></h3>
             <p className="text-center font-1.2rem mb-[2rem]">Contact Us To Speak With One of Our Experts</p>
             <form action="" className="w-[100%]">
-                <div className="flex gap-x-[1rem]">
+                <div className="flex flex-col gap-[1.2rem] gap-x-[1rem]">
                     <div className="flex flex-1 flex-col">
                         <label htmlFor="" className="font-[600] text-[1.5rem] mb-[1rem]">First Name</label>
                         <input
@@ -209,7 +209,7 @@ const ContactMobile = () => {
                             id="firstName"
                             onChange={handleInputChange}
                             placeholder="Enter Your First Name ..."
-                            className="h-[3.5rem] pl-[2rem] rounded-[.5rem]" />
+                            className="h-[3.5rem] text-[#000000] pl-[1.2rem] text-[1.3rem] rounded-[.5rem]" />
                     </div>
                     <div className="flex flex-1 flex-col">
                         <label htmlFor="" className="font-[600] text-[1.5rem] mb-[1rem]">Last Name</label>
@@ -218,10 +218,10 @@ const ContactMobile = () => {
                             onChange={handleInputChange}
                             type="text"
                             placeholder="Enter Your Last Name ..."
-                            className="h-[3.5rem] pl-[2rem] rounded-[.5rem]" />
+                            className="h-[3.5rem] text-[#000000] pl-[1.2rem] text-[1.3rem] rounded-[.5rem]" />
                     </div>
                 </div>
-                <div className="flex gap-x-[1rem] my-[2rem]">
+                <div className="flex flex-col gap-[1.2rem] gap-x-[1rem] my-[2rem]">
                     <div className="flex flex-1 flex-col">
                         <label htmlFor="" className="font-[600] text-[1.5rem] mb-[1rem]">Email</label>
                         <input
@@ -229,7 +229,7 @@ const ContactMobile = () => {
                             id="email"
                             onChange={handleInputChange}
                             placeholder="Enter Your Email Address ..."
-                            className="h-[3.5rem] pl-[2rem] rounded-[.5rem]" />
+                            className="h-[3.5rem] text-[#000000] pl-[1.2rem] text-[1.3rem] rounded-[.5rem]" />
                     </div>
                     <div className="flex flex-1 flex-col">
                         <label htmlFor="" className="font-[600] text-[1.5rem] mb-[1rem]">Contact Number</label>
@@ -238,14 +238,14 @@ const ContactMobile = () => {
                             id="phoneNumber"
                             onChange={handleInputChange}
                             placeholder="Enter Your Contact Number ..."
-                            className="h-[3.5rem] pl-[2rem] rounded-[.5rem]" />
+                            className="h-[3.5rem] text-[#000000] pl-[1.2rem] text-[1.3rem] rounded-[.5rem]" />
                     </div>
                 </div>
                 <div className="flex flex-col">
                     <label htmlFor="" className="font-[600] text-[1.5rem] mb-[1rem]">What can we help you with?</label>
                     <textarea
                         name=""
-                        className="h-[17rem] resize-none"
+                        className="h-[17rem] pl-[1rem] pt-[.7rem] rounded-[.4rem] text-[1.3rem] text-[#000000] resize-none"
                         placeholder="Describe your problem in at least 250 characters..."
                         onChange={handleInputChange}
                         id="description"></textarea>

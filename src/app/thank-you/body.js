@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Body = () => {
   return (
-    <div className="flex h-screen items-center justify-center">
+    <div className="flex h-screen  items-center justify-center">
       <div>
         <div className="flex flex-col items-center space-y-4">
           <svg
@@ -21,11 +21,14 @@ const Body = () => {
               d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <h1 className="text-8xl font-bold">Thank You!</h1>
-          <p className="text-3xl text-center">
+
+          <h1 className="sm:text-8xl text-[2.5rem] font-bold">Thank You!</h1>
+          
+          <p className="sm:text-3xl text-[1.5rem]  sm:w-full w-[80%] text-center">
             Thank you for your interest! We will contact you soon.
           </p>
-          <div className="flex space-x-4 mt-4">
+
+          <div className="flex space-x-4 sm:mt-4">
             <button
               className="inline-flex items-center rounded border border-gray-600 bg-gray-600 px-6 py-3 text-white text-xl font-medium hover:bg-gray-700 focus:outline-none focus:ring"
               onClick={() => window.history.back()}
