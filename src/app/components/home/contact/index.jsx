@@ -2,8 +2,11 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import formatPageName from "@/app/utili/formatPageName";
+
 const Index = () => {
     return (
         <>
@@ -16,7 +19,9 @@ const Index = () => {
 export default Index;
 
 const ContactDesktop = () => {
+    const pathname = usePathname()
     const router = useRouter()
+    console.log(formatPageName(pathname))
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -40,7 +45,7 @@ const ContactDesktop = () => {
         setLoading(true)
         try {
             const json = await fetch(
-                "https://76h86gyo24.execute-api.us-west-2.amazonaws.com/prod/contactUs",
+                "https://formspree.io/f/xldgoqqn",
                 {
                     method: "POST",
                     headers: {
@@ -48,9 +53,10 @@ const ContactDesktop = () => {
                     },
                     body: JSON.stringify({
                         subject: "This is a ContactUS email from ACE8",
-                        message: formData,
-                        toaddress: "randall.mcclure@acemq.com",
-                        toaddress2: "info@acemq.com",
+                        "Full Name": `${formData.firstName} ${formData.lastName}`,
+                        Email: formData.email,
+                        Description: formData.description,
+                        Page: formatPageName(pathname),
                     }),
                 }
             )
@@ -149,6 +155,7 @@ const ContactDesktop = () => {
 
 const ContactMobile = () => {
     const router = useRouter()
+    const pathName = usePathname()
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -172,7 +179,7 @@ const ContactMobile = () => {
         setLoading(true)
         try {
             const json = await fetch(
-                "https://76h86gyo24.execute-api.us-west-2.amazonaws.com/prod/contactUs",
+                "https://formspree.io/f/xldgoqqn",
                 {
                     method: "POST",
                     headers: {
@@ -180,9 +187,10 @@ const ContactMobile = () => {
                     },
                     body: JSON.stringify({
                         subject: "This is a ContactUS email from ACE8",
-                        message: formData,
-                        toaddress: "randall.mcclure@acemq.com",
-                        toaddress2: "info@acemq.com",
+                        "Full Name": `${formData.firstName} ${formData.lastName}`,
+                        Email: formData.email,
+                        Description: formData.description,
+                        Page: pathName,
                     }),
                 }
             )
