@@ -31,7 +31,8 @@ module.exports = {
         'blue_border': "url('/_green_border.png')",
         'integration_bg': "url('/_integration_service.png')",
         'banner-key': "url('/banner_key.png')",
-        'multi-color': "url('/multi_color.png')"
+        'multi-color': "url('/multi_color.png')",
+        'tomcat-hero-bg': "url('/tomcat/hero-lg.png')",
       },
       colors: {
         'bg-100': '#0D1117',
@@ -43,8 +44,8 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 5s linear infinite'
       },
-      backdropBlur:  {
-        '200':  '200px'
+      backdropBlur: {
+        '200': '200px'
       }
     },
   },
