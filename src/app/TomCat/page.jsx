@@ -11,8 +11,8 @@ const TomCat = () => {
             <Hero />
             <SupportServices />
             <SupportCloudBased />
-            <Partner />
             <SupportOnPremises />
+            <Partner />
             <CTA />
         </div>
     );
