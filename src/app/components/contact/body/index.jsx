@@ -49,7 +49,7 @@ const Form = () => {
     }
     try {
       const json = await fetch(
-        "https://76h86gyo24.execute-api.us-west-2.amazonaws.com/prod/contactUs",
+        "https://formspree.io/f/mwpvdabg",
         {
           method: "POST",
           headers: {
