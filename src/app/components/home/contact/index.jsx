@@ -45,7 +45,7 @@ const ContactDesktop = () => {
         setLoading(true)
         try {
             const json = await fetch(
-                "https://formspree.io/f/xldgoqqn",
+                "https://formspree.io/f/mwpvdabg",
                 {
                     method: "POST",
                     headers: {
@@ -179,7 +179,7 @@ const ContactMobile = () => {
         setLoading(true)
         try {
             const json = await fetch(
-                "https://formspree.io/f/xldgoqqn",
+                "https://formspree.io/f/mwpvdabg",
                 {
                     method: "POST",
                     headers: {
