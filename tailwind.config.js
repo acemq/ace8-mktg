@@ -34,6 +34,8 @@ module.exports = {
         'multi-color': "url('/multi_color.png')",
         'tomcat-hero-bg': "url('/tomcat/hero-lg.png')",
         'cloud-based-service-outline': "url('/tomcat/cloud-based-service-outline.png')",
+        'tomcat-banner': "url('/tomcat/tomcat-banner.png')",
+        'banner-outline': "url('/banner-outline.png')",
       },
       colors: {
         'bg-100': '#0D1117',
