@@ -4,27 +4,27 @@ import ButtonLink from "../common/buttonLink";
 const SupportServices = () => {
     const services = [
         {
-            title: <h3 className="sm:text-[1.5rem] text-[1.7rem] text-center font-[700]">24/7 Technical <span className="text-[#9B86FE]">Support</span></h3>,
+            title: <h3 className="sm:text-[1.7rem] text-[1.7rem] text-center font-[700]">24/7 Technical <span className="text-[#9B86FE]">Support</span></h3>,
             description: "Access to our experts around the clock",
             icon: "/support.svg",
         },
         {
-            title: <h3 className="sm:text-[1.5rem] text-[1.7rem] text-center font-[700]"><span className="text-[#FF88C3]">Installation</span> and Configuration</h3>,
+            title: <h3 className="sm:text-[1.7rem] text-[1.7rem] text-center font-[700]"><span className="text-[#FF88C3]">Installation</span> and Configuration</h3>,
             description: "Optimize your Tomcat setup for peak Performance",
             icon: "/installation.svg",
         },
         {
-            title: <h3 className="sm:text-[1.5rem] text-[1.7rem] text-center font-[700]">Emergency <span className="text-[#5747A5]">Hot Fixes</span></h3>,
+            title: <h3 className="sm:text-[1.7rem] text-[1.7rem] text-center font-[700]">Emergency <span className="text-[#5747A5]">Hot Fixes</span></h3>,
             description: "Rapid solutions for critical issues.",
             icon: "/Hot-fixes.svg",
         },
         {
-            title: <h3 className="sm:text-[1.5rem] text-[1.7rem] text-center font-[700]">Security <span className="text-[#8FD5CC]">Vulnerability</span> Notifications</h3>,
-            description: "Expert support services for integrating Apache Tomcat with other technologies.",
+            title: <h3 className="sm:text-[1.7rem] text-[1.7rem] text-center font-[700]">Security <span className="text-[#8FD5CC]">Vulnerability</span> Notifications</h3>,
+            description: "Stay informed about potential threats.",
             icon: "/vulnerability.svg",
         },
         {
-            title: <h3 className="sm:text-[1.5rem] text-[1.7rem] text-center font-[700]">Compliance <span className="text-[#5747A5]">Assistance</span></h3>,
+            title: <h3 className="sm:text-[1.7rem] text-[1.7rem] text-center font-[700]">Compliance <span className="text-[#5747A5]">Assistance</span></h3>,
             description: "Meet internal and external policy requirements",
             icon: "/assistance.svg",
         },
@@ -53,7 +53,7 @@ const SupportServices = () => {
                 </div>
 
                 <ButtonLink
-                    link="/tomcat"
+                    link="#contact"
                     text="Connect with Our Tomcat Experts"
                     className="sm:mt-[5rem] mt-[4rem] font-[800] border border-[#5545A0] px-[5rem] rounded-[.7rem] mx-auto hover:bg-[#5545A0]
                     transition-all duration-300 ease-in-out"
@@ -65,14 +65,14 @@ const SupportServices = () => {
 
 const Card = ({ title, description, icon, id }) => {
     return (
-        <div className={`flex flex-col   sm:col-span-2 ${id == 3 ? "sm:col-start-2" : ""} items-center w-[290px]`}>
+        <div className={`flex flex-col sm:col-span-2 ${id == 3 ? "sm:col-start-2" : ""} items-center`}>
             <Img
                 src={`/tomcat/${icon}`}
                 className="w-[10rem] mb-[2rem] h-[6rem]"
                 alt="icon"
             />
             {title}
-            <p className="text-center mx-auto sm:mt-[2rem] mt-[1rem]">{description}</p>
+            <p className="text-center sm:w-[25rem] mx-auto sm:mt-[1.8rem] mt-[1rem]">{description}</p>
         </div>
     )
 }

@@ -30,7 +30,7 @@ const CTA = () => {
     return (
         <section className="py-[6rem] sm:py-[5rem]">
             <h2 className="text-center text-[3rem]">Getting <span className="font-[800] text-[#9B86FE] mb-[4rem]">Started</span></h2>
-            <p className="text-center mt-[2rem] sm:mt-[0] sm:w-[0] w-[90%] mx-auto">Taking the first step toward an optimized Apache Tomcat deployment is simple</p>
+            <p className="text-center mt-[2rem] sm:mt-[0] sm:w-[100%]  w-[90%] mx-auto">Taking the first step toward an optimized Apache Tomcat deployment is simple</p>
 
             <div className="flex flex-col mt-[5rem] sm:flex-row sm:mt-[9rem] justify-center sm:gap-x-[5rem] gap-y-[4rem] sm:mx-auto w-[100%] sm:px-[6rem] max-w-[1200px]">
                 {
@@ -98,7 +98,7 @@ const Banner = () => {
             </p>
 
             <ButtonLink
-                link="/tomcat"
+                link="#contact"
                 text="Contact Us for Free Consultation"
                 className="sm:mt-[3rem] mt-[5rem] font-[800] border border-[#ffffff] sm:px-[5rem] px-[2rem] rounded-[.7rem] mx-auto hover:text-[#0D1117] hover:bg-[#ffffff]
                     transition-all duration-300 ease-in-out"

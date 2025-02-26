@@ -46,7 +46,7 @@ const SupportCloudBased = () => {
             </div>
 
             <ButtonLink
-                link="/tomcat"
+                link="#contact"
                 text="Discover Cloud-Based Tomcat Solutions"
                 className="mt-[2rem] font-[800] border border-[#5545A0] sm:px-[5rem] px-[2rem] rounded-[.7rem] mx-auto hover:bg-[#5545A0]
                     transition-all duration-300 ease-in-out"

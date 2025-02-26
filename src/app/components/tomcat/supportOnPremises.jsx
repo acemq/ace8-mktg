@@ -58,7 +58,7 @@ const SupportOnPremises = () => {
             </div>
 
             <ButtonLink
-                link="/tomcat"
+                link="#contact"
                 text="Explore On-Premises Tomcat Services"
                 className="mt-[5rem] font-[800] border border-[#5545A0] px-[5rem] rounded-[.7rem] mx-auto hover:bg-[#5545A0]
                     transition-all duration-300 ease-in-out"
