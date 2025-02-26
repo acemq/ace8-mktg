@@ -37,9 +37,9 @@ const SupportOnPremises = () => {
     ]
 
     return (
-        <section className="flex bg-[#0D1117] flex-col pt-[3.5rem] pb-[7rem] px-[8rem]">
-            <h2 className="text-center max-w-[50rem] mx-auto text-[3.8rem] font-[800]"><span className="font-[400]">Support for</span> <span className="text-[#FF88C3]"> On-Premises </span>
-                Tomcat <span className="font-[400]">Deployments </span></h2>
+        <section className="flex bg-[#0D1117] flex-col pt-[3.5rem] pb-[7rem] sm:px-[8rem] px-[2rem]">
+            <h2 className="text-center sm:max-w-[50rem] max-w-[30rem] mx-auto sm:text-[3.8rem] text-[2.8rem] font-[800]"><span className="font-[400]">Support for<br className="sm:hidden"></br></span> <span className="text-[#FF88C3]"> On-Premises </span>
+                <br className="sm:hidden"></br>Tomcat <span className="font-[400]">Deployments </span></h2>
 
             <p className="text-center max-w-[60rem] mx-auto mt-[2rem]">For enterprises running Apache Tomcat on-premises, maintaining optimal performance and security is vital. We provide comprehensive on-premises support to help you leverage Tomcat’s full potential.</p>
 

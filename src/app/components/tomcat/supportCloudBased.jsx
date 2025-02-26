@@ -29,11 +29,11 @@ const SupportCloudBased = () => {
     ]
 
     return (
-        <section className="bg-[#ffffff] flex flex-col pt-[3.5rem] pb-[7rem] px-[8rem] text-[#0D1117]">
-            <h2 className="text-center max-w-[50rem] mx-auto text-[3.8rem] font-[800]"><span className="font-[400]">Support for</span><span className="text-[#8FD5CC]"> Cloud-Based </span>Tomcat <span className="font-[400]">Deployments</span> </h2>
-            <p className="mt-[2rem] font-[400] max-w-[65rem] mx-auto text-center">As more businesses transition to the cloud, ensuring a seamless Tomcat experience becomes critical. Our team delivers tailored support to maximize the advantages of cloud-based deployments.</p>
+        <section className="bg-[#ffffff] flex flex-col pt-[3.5rem] pb-[7rem] sm:px-[8rem] px-[2.5rem] text-[#0D1117]">
+            <h2 className="text-center sm:max-w-[50rem] mx-auto sm:text-[3.8rem] text-[2.8rem] max-w-[30rem] font-[800]"><span className="font-[400]">Support for <br className="sm:hidden"></br></span><span className="text-[#8FD5CC]"> Cloud-Based </span><br className="sm:hidden"></br>Tomcat <span className="font-[400]">Deployments</span> </h2>
+            <p className="mt-[2rem] font-[400] sm:max-w-[65rem] max-w-[28rem] mx-auto text-center">As more businesses transition to the cloud, ensuring a seamless Tomcat experience becomes critical. Our team delivers tailored support to maximize the advantages of cloud-based deployments.</p>
 
-            <div className="grid mt-[5rem] grid-cols-2 gap-y-[5rem] gap-x-[1.5rem] mx-auto max-w-[1200px]">
+            <div className="grid mt-[5rem] sm:grid-cols-2 gap-y-[5rem] gap-x-[1.5rem] mx-auto max-w-[1200px]">
                 {
                     services.map((service, idx) =>
                         <Service
@@ -48,7 +48,7 @@ const SupportCloudBased = () => {
             <ButtonLink
                 link="/tomcat"
                 text="Discover Cloud-Based Tomcat Solutions"
-                className="mt-[2rem] font-[800] border border-[#5545A0] px-[5rem] rounded-[.7rem] mx-auto hover:bg-[#5545A0]
+                className="mt-[2rem] font-[800] border border-[#5545A0] sm:px-[5rem] px-[2rem] rounded-[.7rem] mx-auto hover:bg-[#5545A0]
                     transition-all duration-300 ease-in-out"
             />
         </section>

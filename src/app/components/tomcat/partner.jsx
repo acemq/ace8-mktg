@@ -35,17 +35,23 @@ const Partner = () => {
 
 
     return (
-        <section className="bg-[#ffffff] sm:px-[10rem] py-[7rem]">
-            <h2 className="text-[3.8rem] text-[#000000] text-center font-[700]"><span className="font-[300]">Why</span> <span className="text-[#FF88C3]">Partner</span> With Us?</h2>
+        <section className="bg-[#ffffff] sm:px-[10rem] px-[2rem] py-[4rem] sm:py-[7rem]">
+            <h2 className="sm:text-[3.8rem] text-[2.8rem] w-[80%] mx-auto
+            sm:w-[100%] sm:mx-0 text-[#000000] text-center font-[700]"><span className="font-[300]">Why</span> <span className="text-[#FF88C3]">Partner</span> With Us?</h2>
 
-            <div className="grid gap-x-[1.2rem] items-center grid-cols-8 mt-[3rem] mx-auto max-w-[1400px] grid-rows-auto gap-y-[1rem]">
+            <div className="grid gap-x-[1.2rem] sm:items-center sm:grid-cols-8 sm:mt-[3rem] mx-auto max-w-[1400px] sm:grid-rows-auto gap-y-[1rem]">
+                <Img
+                    src={`/tomcat/tomcat-partner.png`}
+                    className="w-[55rem] sm:hidden inline-block mb-[2rem] h-[auto]"
+                    alt="icon"
+                />
                 {
                     Partners.map((partner, index) => {
                         if (!partner.title) return (
-                            <div className="col-start-5  justify-items-center col-span-2 col-end-9">
+                            <div className="sm:col-start-5  justify-items-center sm:col-span-2 sm:col-end-9">
                                 <Img
                                     src={`/tomcat/tomcat-partner.png`}
-                                    className="w-[55rem] mb-[2rem] h-[auto]"
+                                    className="w-[55rem] hidden sm:inline-block mb-[2rem] h-[auto]"
                                     alt="icon"
                                 />
                             </div>
@@ -68,10 +74,10 @@ const Partner = () => {
 }
 
 const Card = ({ title, description, icon, id }) =>
-    <div className={`px-[2rem] pr-[3rem] h-[40rem] col-span-2 ${id == 3 ? "col-start-3" : ""} rounded-[1.5rem] shadow pt-[4rem] pb-[5rem] bg-[#11151A]`}>
+    <div className={`px-[2rem] pr-[3rem] sm:h-[40rem] h-[32rem] sm:col-span-2 ${id == 3 ? "sm:col-start-3" : ""} rounded-[1.5rem] shadow pt-[4rem] pb-[5rem] bg-[#11151A]`}>
         <Img
             src={`/tomcat/${icon}`}
-            className={` ${title ? "w-[6rem] h-[6rem]" : "w-[30rem] h-[auto]"}  mb-[12rem]`}
+            className={` ${title ? "w-[6rem] h-[6rem]" : "w-[30rem] h-[auto]"}  sm:mb-[12rem] mb-[8rem]`}
             alt="icon"
         />
         {title && title}
