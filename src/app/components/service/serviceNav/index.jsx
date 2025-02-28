@@ -17,7 +17,7 @@ const Index = ({ setOpenService }) => {
             <li className="sm:mb-[2rem] mb-[.7rem]">
               <Link
                 href="/services/devsecops"
-                className="sm:text-[1.5rem] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
+                className="sm:text-[1.5rem] text-[#FF88C3] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
               >
                 DevSecOps
               </Link>
@@ -28,7 +28,7 @@ const Index = ({ setOpenService }) => {
             <li className="sm:mb-[2rem] mb-[.7rem]">
               <Link
                 href="/services/message-broker"
-                className="sm:text-[1.5rem] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
+                className="sm:text-[1.5rem] text-[#FF88C3] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
               >
                 Message Brokers
               </Link>
@@ -42,7 +42,7 @@ const Index = ({ setOpenService }) => {
             <li className="sm:mb-[2rem] mb-[.7rem]">
               <Link
                 href="/services/incident-management"
-                className="sm:text-[1.5rem] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
+                className="sm:text-[1.5rem] text-[#FF88C3] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
               >
                 Incident Management
               </Link>
@@ -53,7 +53,7 @@ const Index = ({ setOpenService }) => {
             <li className="sm:mb-[2rem] mb-[.7rem]">
               <Link
                 href="/services/gemfire"
-                className="sm:text-[1.5rem] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
+                className="sm:text-[1.5rem] text-[#FF88C3] text-[1.4rem] font-[500] sm:font-[700] hover:text-accent-100 transition-all"
               >
                 Gemfire
               </Link>
@@ -68,28 +68,33 @@ const Index = ({ setOpenService }) => {
         <p className="font-[700] sm:mb-[2rem] mb-[.5rem] text-accent-100">Other Service</p>
         <ul className="sm:mb-[3rem] mb-[1.7rem]">
           <Link href="/services/open-source">
-            <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">
+            <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 text-[#FF88C3] transition-all">
               OpenSource Support
             </li>
           </Link>
           <Link href="/services/micro-service">
-            <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">
+            <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 text-[#FF88C3] transition-all">
               Microservices
             </li>
           </Link>
           <Link href="/services/OBAAS">
-            <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">
-              Onboarding as a service
+            <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 text-[#FF88C3] transition-all">
+              Onboarding as a Service
             </li>
           </Link>
           <Link href="/services/data-integration">
-            <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">
+            <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 text-[#FF88C3] transition-all">
               Data Analytics Integration
             </li>
           </Link>
           <Link href="/services/automated-testing">
-            <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 transition-all">
-              Automated testing
+            <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 text-[#FF88C3] transition-all">
+              Automated Testing
+            </li>
+          </Link>
+          <Link href="/services/tomcat">
+            <li className="font-[500] text-[1.4rem] mb-[.5rem] hover:text-accent-100 text-[#FF88C3] transition-all">
+              Tomcat
             </li>
           </Link>
         </ul>
