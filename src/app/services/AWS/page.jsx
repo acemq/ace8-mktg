@@ -1,6 +1,6 @@
 "use client"
 import Hero from "../../components/AWS/hero";
-import AWSServices from "../../components/AWS/AWSSERVICES";
+import AWSServices from "../../components/AWS/AWSServices";
 import AWSOfferings from "../../components/AWS/AWSOfferings";
 import AWSCloud from "../../components/AWS/AWSCloud";
 import AWSPartners from "../../components/AWS/AWSPartners";
