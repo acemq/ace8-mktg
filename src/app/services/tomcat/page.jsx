@@ -16,7 +16,7 @@ const TomCat = () => {
         slideIn()
     }, [])
     return (
-        <div className="sm:pt-[9rem] pt-[6rem]  pb-[7rem] overflow-x-hidden w-[100vw]">
+        <div className="sm:pt-[9rem] pt-[6rem] pb-[7rem] overflow-x-hidden w-[100vw]">
             <Hero />
             <SupportServices />
             <SupportCloudBased />
